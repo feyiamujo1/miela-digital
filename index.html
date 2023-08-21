@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script src="/tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                    "custom-ash": "hsl(0 0% 30% / 0.3)",
+                    "custom-white": "#bbb6b9",
+                },
+                backgroundImage:{
+                    'hero-image': 'linear-gradient(to right, rgba(5, 13, 1, 0.5), rgba(130, 2, 26, 0)), url("../src/images/hero-bg.png")',
+                }
+            }
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Meila Digital - Marketing, ESports & Influencer Services</title>
+  </head>
+  <body class="w-full p-0 m-0 font-teko relative scroll-smooth" x-data="{ open: false }" 
+    class="{'h-screen overflow-hidden': open,' -translate-y-1.5': !open }">
+    <div class="relative w-full ">
+        <nav class="w-full fixed z-30">
+            <div class="w-11/12 mx-auto py-2 sm:py-4 flex justify-between items-center ">
+                <img class="w-[70px]" src="./src/images/Miela-Logo.png" alt="logo" />
+                <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
+                    <ul class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#383636] gap-6 lg:gap-16 md:gap-8 
+                        md:items-center bg-custom-ash backdrop-blur-xl text-white transition-all duration-300 overflow-hidden pl-10
+                        md:px-10 md:py-4 text-lg tracking-wider md:rounded-full" 
+                        :class="{'w-3/5 opacity-100': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
+                        <li class="mt-24 md:mt-0 cursor-pointer font-thin hover:text-yellow overflow-hidden">
+                            Home
+                        </li>
+                        <li class="cursor-pointer font-thin hover:text-yellow overflow-hidden">
+                            About Us
+                        </li>
+                        <li class="cursor-pointer font-thin hover:text-yellow overflow-hidden">
+                            Our Services
+                        </li>
+                        <li class="cursor-pointer font-thin hover:text-yellow overflow-hidden">
+                            Clients
+                        </li>
+                        <li class="cursor-pointer font-thin hover:text-yellow overflow-hidden">
+                            Contact Us
+                        </li>
+                        <li class="cursor-pointer font-thin hover:text-yellow overflow-hidden">
+                            Case Study
+                        </li>
+                    </ul>
+                    <div class="md:hidden">
+                        <button class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white md:hidden" @click="open = !open">
+                            <span class="sr-only">Open main menu</span>
+                            <div class="block w-5 absolute left-[18px] top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                                <span aria-hidden="true" class="block absolute h-0.5 w-6 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                                <span aria-hidden="true" class="block absolute  h-0.5 w-6 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                                <span aria-hidden="true" class="block absolute  h-0.5 w-6 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="w-full min-h-screen pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat relative">
+            <div class="w-11/12 mx-auto h-full flex flex-col gap-3 md:flex-row justify-between items-center">
+                <div class="h-full w-full md:w-[55%] flex flex-col gap-2 justify-center md:mt-0 z-10 md:mb-20">
+                    <h1 class=" font-extrabold text-4xl md:text-6xl w-fit pt-2.5 text-white neonText">MIELA DIGITAL</h1>
+                    <p class=" text-custom-white font-thin text-lg md:text-xl tracking-wider">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci animi atque error quidem. Reprehenderit 
+                        qui sunt alias harum voluptatem eaque, cum eveniet aliquid deserunt, quae dolor, natus numquam nemo mollitia.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci animi atque error quidem. Reprehenderit 
+                        qui sunt alias harum voluptatem eaque, cum eveniet aliquid deserunt, quae dolor, natus numquam nemo mollitia.
+                    </p>
+                </div>
+                <div class=" h-full w-fit bottom-0 md:right-10 lg:right-32 flex flex-col justify-end items-center md:absolute">
+                    <img class="sm:h-[470px] md:h-[80%] lg:h-[85%] w-fit" src="src/images/hero-1.png" alt="charater" >
+                </div>
+            </div>
+        </section>
+    </div>
+    
+  </body>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</html>

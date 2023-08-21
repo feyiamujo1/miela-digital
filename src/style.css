@@ -1,0 +1,13 @@
+body{
+    font-family: "Teko", sans-serif;
+}
+.neonText {
+    color: #fff;
+    text-shadow:
+      /* White glow */
+      0 0 14px #f1f1f1,
+      0 0 500px #afb4af;
+  }
+
+  /* 0 0 24px #bfce0b,
+      0 0 500px #c5d80a; */
