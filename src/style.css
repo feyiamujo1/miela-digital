@@ -5,9 +5,33 @@ body{
     color: #fff;
     text-shadow:
       /* White glow */
+      0 0 7px #f1f1f1,
+      0 0 50px #f6fad2;
+}
+.inactive_link:hover{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    text-shadow:
+      /* White glow */
       0 0 14px #f1f1f1,
-      0 0 500px #afb4af;
-  }
+      0 0 500px #ffdf07;
+}
+.active_link{
+    color: #ffdf07;
+    border-bottom: 1.5px solid #ffdf07;
+    text-shadow:
+      /* White glow */
+      0 0 14px #f1f1f1,
+      0 0 500px #c5d80a;
+}
+@media screen and (max-width: 768px) {
+    .active_link{
+        border-bottom: 1.5px solid #ffdf07;
+    }
+    .inactive_link:hover{
+        border-bottom: 1.5x solid #fff;
+    }
+}
 
   /* 0 0 24px #bfce0b,
       0 0 500px #c5d80a; */
