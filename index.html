@@ -33,7 +33,7 @@
     <title>Meila Digital - Marketing, ESports & Influencer Services</title>
   </head>
   <body class="w-full p-0 m-0 font-teko relative scroll-smooth" x-data="{ open: false }" 
-    class="{'h-screen overflow-hidden': open,' -translate-y-1.5': !open }">
+    class="{'max-h-screen overflow-hidden': open,' h-full': !open }">
     <nav class="w-full absolute z-30">
         <div class="w-11/12 mx-auto py-2 sm:py-4 flex justify-between items-center ">
             <img class="w-[70px]" src="./src/images/Miela-Logo.png" alt="logo" />
@@ -42,7 +42,7 @@
                     md:flex-row md:border md:border-[#383636] gap-6 lg:gap-8 
                     md:items-center bg-custom-ash backdrop-blur-xl text-white transition-all duration-75 md:duration-100 overflow-hidden pl-10 pr-5
                     md:px-10 md:py-2 text-lg tracking-wider md:rounded-full" 
-                    :class="{'w-3/5 opacity-100': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
+                    :class="{'w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
                     <li 
                     class="mt-24 md:mt-0 md:py-3 md:px-2 md:border-b border-custom-yellow cursor-pointer font-thin overflow-hidden active_link">
                         Home
@@ -137,7 +137,7 @@
             </div>
             <div class="space-y-12">
                 <div class="flex flex-col md:flex-row gap-3 md:gap-6">
-                    <div class="w-full min-w-[370px]">
+                    <div class="w-full md:min-w-[370px]">
                         <h2 class="text-custom-yellow text-5xl font-semibold">
                             Influencer Management
                         </h2>
@@ -155,7 +155,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row-reverse gap-3 md:gap-6">
-                    <div class="w-full min-w-[370px]">
+                    <div class="w-full md:min-w-[370px]">
                         <h2 class="text-custom-yellow text-5xl font-semibold">
                             Esports Consulting
                         </h2>
@@ -173,7 +173,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row gap-3 md:gap-6">
-                    <div class="w-full min-w-[370px]">
+                    <div class="w-full md:min-w-[370px]">
                         <h2 class="text-custom-yellow text-5xl font-semibold">
                             Live Events Production
                         </h2>
@@ -191,7 +191,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row-reverse gap-3 md:gap-6">
-                    <div class="w-full min-w-[370px]">
+                    <div class="w-full md:min-w-[370px]">
                         <h2 class="text-custom-yellow text-5xl font-semibold">
                             Social Media Management
                         </h2>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row gap-3 md:gap-6">
-                    <div class="w-full min-w-[370px]">
+                    <div class="w-full md:min-w-[370px]">
                         <h2 class="text-custom-yellow text-5xl font-semibold">
                             Paid Media
                         </h2>
