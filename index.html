@@ -9,6 +9,19 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap"
       rel="stylesheet" />
+    <link rel="shortcut icon" href="/src/images/Miela-Logo.png" type="image/x-icon">
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"        
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="/tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script></script>
@@ -19,7 +32,7 @@
               colors: {
                     "custom-ash": "hsl(0 0% 30% / 0.3)",
                     "custom-white": "#bbb6b9",
-                    "custom-yellow": "#ffdf07",
+                    "custom-yellow": "#e9fc0c",
                 },
                 backgroundImage:{
                     'hero-image': 'linear-gradient(to right, rgba(5, 13, 1, 0.5), rgba(130, 2, 26, 0)), url("../src/images/hero-bg-custom.png")',
@@ -29,42 +42,50 @@
           }
         }
     </script>
+    <link rel="stylesheet" href="/src/slider.css">
+
     <link rel="stylesheet" href="/src/style.css" />
     <title>Meila Digital - Marketing, ESports & Influencer Services</title>
   </head>
-  <body class="w-full p-0 m-0 font-teko relative scroll-smooth" x-data="{ open: false }" 
-    class="{'max-h-screen overflow-hidden': open,' h-full': !open }">
+  <body class="w-full p-0 m-0 font-teko relative scroll-smooth" x-data="{ open: false }" :class="{'max-h-screen overflow-hidden': open,' h-max': !open }">
     <nav class="w-full absolute z-30">
-        <div class="w-11/12 mx-auto py-2 sm:py-4 flex justify-between items-center ">
+        <div class="w-11/12 mx-auto py-2 sm:py-4 flex justify-between items-center " >
             <img class="w-[70px]" src="./src/images/Miela-Logo.png" alt="logo" />
-            <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
+            <div class="flex flex-col-reverse md:flex-row items-center md:gap-4" >
                 <ul class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col            
                     md:flex-row md:border md:border-[#383636] gap-6 lg:gap-8 
-                    md:items-center bg-custom-ash backdrop-blur-xl text-white transition-all duration-75 md:duration-100 overflow-hidden pl-10 pr-5
+                    md:items-center bg-custom-ash backdrop-blur-xl text-white transition-all duration-150 overflow-hidden pl-10 pr-5
                     md:px-10 md:py-2 text-lg tracking-wider md:rounded-full" 
-                    :class="{'w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
+                    :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}"
+                     >
                     <li 
-                    class="mt-24 md:mt-0 md:py-3 md:px-2 md:border-b border-custom-yellow cursor-pointer font-thin overflow-hidden active_link">
+                    class="mt-24 md:mt-0 md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin 
+                        overflow-hidden nav_link active_link " @click.inside="open = false">
                         Home
                     </li>
                     <li 
-                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-100 font-thin overflow-hidden inactive_link">
+                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link
+                        inactive_link" @click.inside="open = false">
                         About Us
                     </li>
                     <li 
-                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden inactive_link">
+                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link 
+                        inactive_link" @click.inside="open = false">
                         Our Services
                     </li>
                     <li 
-                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden inactive_link">
+                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link
+                        inactive_link" @click.inside="open = false">
                         Our Clients
                     </li>
                     <li 
-                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden inactive_link">
+                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link
+                        inactive_link" @click.inside="open = false">
                         Contact Us
                     </li>
                     <li 
-                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden inactive_link">
+                        class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link
+                        inactive_link" @click.inside="open = false">
                         Case Study
                     </li>
                 </ul>
@@ -84,7 +105,7 @@
             </div>
         </div>
     </nav>
-    <section class="w-full min-h-screen pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-[75%] md:bg-center relative">
+    <section @click.inside="open = false" id="home" class="section w-full min-h-screen pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-[75%] md:bg-center relative">
         <div class="w-11/12 mx-auto h-full flex flex-col gap-3 md:flex-row justify-between items-center">
             <div class="h-full w-full md:w-[55%] flex flex-col gap-2 justify-center md:mt-0 z-10 md:mb-20">
                 <h1 class=" font-extrabold text-4xl md:text-6xl w-fit pt-2.5 text-white neonText selection:bg-custom-yellow selection:text-black">MIELA DIGITAL</h1>
@@ -99,9 +120,12 @@
             <div class=" h-full w-fit bottom-0 md:right-16 lg:right-36 flex flex-col justify-end items-center md:absolute">
                 <img class="sm:h-[470px] md:h-[80%] lg:h-[85%] w-fit" src="src/images/hero-1.png" alt="charater" >
             </div>
+            <!-- <div>
+
+            </div> -->
         </div>
     </section>
-    <section class="w-full bg-[#0d0d0d] py-8 md:py-10">
+    <section id="about-us" class="section w-full bg-[#0d0d0d] py-8 md:py-10">
         <div class="w-11/12 mx-auto  flex flex-row-reverse  md:gap-20">
             <div class="space-y-3">
                 <h2 class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow before:absolute before:-left-5 
@@ -123,7 +147,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-section-image py-8 md:py-10">
+    <section id="our-services" class="section bg-section-image py-8 md:py-10">
         <div class="w-11/12 mx-auto space-y-5 md:space-y-8">
             <div>
                 <h2 class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow before:absolute before:-left-5 
@@ -230,22 +254,130 @@
             </div>
         </div>
     </section>
-    <section class="w-full bg-[#0d0d0d] py-8 md:py-10">
-        <div class="w-11/12 mx-auto flex flex-row-reverse md:gap-20">
-            <div class="space-y-3">
-                <h2 class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow before:absolute before:-left-5 
-                    before:bottom-2.5 md:before:bottom-3 before:-skew-x-12 ml-6">
+    <section id="our-clients" class="section w-full bg-[#0d0d0d] py-8 md:py-10">
+        <div class="w-11/12 mx-auto md:gap-20">
+            <div class="space-y-3 flex flex-col justify-center items-center">
+                <h2 class="font-extrabold text-3xl lg:text-4xl text-white text-center mx-auto relative before:w-2 before:h-6 before:bg-custom-yellow 
+                    before:absolute before:-left-5 before:bottom-2.5 md:before:bottom-3 before:-skew-x-12">
                     Our Clients
                 </h2>
-                <p class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl tracking-wider selection:bg-custom-yellow selection:text-black 
-                    selection:font-extralight">
-                    Miela Digital is an agency specialized in the Gaming and iGaming sectors. We are dedicated to generating activations focused on 
-                    brand awareness and user acquisition. We believe in targeted advertising that does not waste resources on non-accessible users, 
-                    maximizing conversion through reach. We differentiate ourselves by focusing on the narrow part of the funnel: conversion.
+                <p class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl text-center tracking-wider selection:bg-custom-yellow 
+                    selection:text-black selection:font-extralight">
+                    Discover the diverse range of partners and collaborators who have benefited from Miela Digital's tailored strategies and expertise
                 </p>
+            </div>
+            <div class="row">
+                <div class="container">
+                  <section class="logo-carousel slider" data-arrows="true">
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/Intel_logo_2006-2020.svg1_-300x198.png">
+                        </div>  
+                    </div>
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/wg_footer-logo.png" >
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/tencent_logo-300x169.png">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/ggbet-logo-white.png">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/Trovo_Logo-300x82.png">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/termaltakelogo.png">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/betanologo.png">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/western digital.png">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="inner-slide">
+                            <img src="/src/images/2560px-Twitch_logo_wordmark_only.svg_-300x100.png">
+                        </div>
+                    </div>
+                  </section>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="container">
+                  <section class="logo-carousel slider" data-arrows="true">
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png">
+                    </div>
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png">
+                    </div>
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png">
+                    </div>
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png">
+                    </div>
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png">
+                    </div>
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png">
+                    </div>
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image7.png">
+                    </div>
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png">
+                    </div>
+                  </section>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <section class="section bg-section-image py-8 md:py-10">
+        <div class="w-11/12 mx-auto md:gap-20">
+            <div>
+                <h2 class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow 
+                    before:absolute before:-left-5 
+                    before:bottom-2.5 md:before:bottom-3 before:-skew-x-12 ml-6 selection:bg-custom-yellow selection:text-black">
+                    Contact Us
+                </h2>
+                <p class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl tracking-wider selection:bg-custom-yellow  
+                    selection:text-black 
+                    selection:font-extralight">
+                    Interested? Let's get in touch!
+                </p>
+            </div>
+            <div>
+
             </div>
         </div>
     </section>
-  </body>
+    <footer class=" bg-section-image pb-3">
+        <div class="w-11/12 mx-auto space-y-5">
+            <hr class=" bg-[#353535]">
+            <p class="text-custom-white font-thin text-lg tracking-wider selection:bg-custom-yellow  
+            selection:text-black selection:font-extralight text-center">
+                ©2023 Miela Digital. All rights reserved.
+            </p>
+        </div>
+    </footer>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="/src/script.js" ></script>
+  </body>
 </html>
