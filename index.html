@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="/src/images/Miela-Logo.png" type="image/x-icon">
     <!-- Font Awesome Icon -->
     <script src="https://kit.fontawesome.com/527da9814d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/paper-plane-top?f=classic&s=regular" >
       <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -130,7 +131,7 @@
         </div>
     </section>
     <section id="about-us" class="section w-full bg-[#0d0d0d] py-8 md:py-10">
-        <div class="w-11/12 mx-auto  flex flex-row-reverse  md:gap-20">
+        <div class="w-11/12 mx-auto flex flex-row-reverse md:gap-10">
             <div class="space-y-3">
                 <h2 class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow before:absolute before:-left-5 
                     before:bottom-2.5 md:before:bottom-3 before:-skew-x-12 ml-6">
@@ -277,12 +278,12 @@
     </section>
     <section id="our-clients" class="section w-full bg-[#0d0d0d] py-8 md:py-10">
         <div class="w-11/12 mx-auto md:gap-20">
-            <div class="space-y-3 flex flex-col justify-center items-center">
-                <h2 class="font-extrabold text-3xl lg:text-4xl text-white text-center mx-auto relative before:w-2 before:h-6 before:bg-custom-yellow 
+            <div class="">
+                <h2 class="font-extrabold text-3xl lg:text-4xl ml-6 text-white relative before:w-2 before:h-6 before:bg-custom-yellow 
                     before:absolute before:-left-5 before:bottom-2.5 md:before:bottom-3 before:-skew-x-12">
                     Our Clients
                 </h2>
-                <p class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl text-center tracking-wider selection:bg-custom-yellow 
+                <p class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl tracking-wider selection:bg-custom-yellow 
                     selection:text-black selection:font-extralight">
                     Discover the diverse range of partners and collaborators who have benefited from Miela Digital's tailored strategies and expertise
                 </p>
@@ -397,7 +398,9 @@
                             selection:font-extralight">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae perspiciatis necessitatibus iste magnam. 
                         </p>
-                        <button class="py-2.5 px-4 font-semibold text-lg md:text-xl bg-custom-yellow hover:bg-[#f3e694] -skew-x-12 mt-2 md:mt-4 text-black">
+                        <button onclick="window.location.href='/src/pdf/CaseStudy.pdf'" class="py-2.5 px-4 font-semibold text-lg md:text-xl   
+                            bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black 
+                            active:outline-none focus:outline-none">
                             Download <i class="fa fa-download"></i>
                         </button>
                     </div>
@@ -409,7 +412,7 @@
         </div>
     </section>
     <section id="contact-us" class="section bg-[#0d0d0d] py-8 md:py-10">
-        <div class="w-11/12 mx-auto md:gap-20">
+        <div class="w-11/12 mx-auto space-y-5 md:space-y-8">
             <div>
                 <h2 class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow 
                     before:absolute before:-left-5 
@@ -419,11 +422,35 @@
                 <p class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl tracking-wider selection:bg-custom-yellow  
                     selection:text-black 
                     selection:font-extralight">
-                    Interested? Let's get in touch!
+                    Interested in working with us? Let's get in touch! 
                 </p>
             </div>
-            <div>
-
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="w-full">
+                    <p class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl tracking-wider selection:bg-custom-yellow  
+                        selection:text-black 
+                        selection:font-extralight">
+                        For inquires or questions contact us at <a href="mailto:" class="text-custom-yellow hover:no-underline 
+                        hover:text-black hover:bg-custom-yellow">contact@mieladigital.com</a> or fill out the form below. 
+                        You can also reach out to us through our various media platforms. 
+                    </p>
+                </div>
+                <form class="w-full space-y-5">
+                    <div class="flex flex-col md:flex-row gap-5 w-full">
+                       <input type="text" name="" class="md:w-1/2 p-2.5 focus:outline-custom-yellow" 
+                            placeholder="Full Name/Organization"> 
+                       <input type="email" name="" class="md:w-1/2 p-2.5 focus:outline-custom-yellow" 
+                            placeholder="Email">
+                    </div>
+                    <input type="text" name="" class="w-full p-2.5 focus:outline-custom-yellow" 
+                        placeholder="Subject">
+                    <textarea rows="5" class="w-full p-2.5 focus:outline-custom-yellow" placeholder="Message ..."></textarea>
+                    <button onclick="window.location.href='/src/pdf/CaseStudy.pdf'" class="py-2.5 px-4 font-semibold text-lg md:text-xl   
+                        bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black 
+                        active:outline-none focus:outline-none">  
+                        Submit <i class="fa-regular fa-paper-plane "></i> 
+                    </button>
+                </form>
             </div>
         </div>
     </section>
