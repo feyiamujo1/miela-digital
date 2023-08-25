@@ -53,29 +53,38 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 sections.forEach((section) => {
-    console.log(section)
+  console.log(section);
   observer.observe(section);
 });
 
-$(document).ready(function() {
-    $('.logo-carousel').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 800,
-      arrows: false,
-      dots: false,
-      pauseOnHover: false,
-      responsive: [{
+$(document).ready(function () {
+  $(".logo-carousel").slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 800,
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 920,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3
-        }
-      }, {
+          slidesToShow: 3,
+        },
+      },
+      {
         breakpoint: 520,
         settings: {
-          slidesToShow: 2
-        }
-      }]
-    });
+          slidesToShow: 2,
+        },
+      },
+    ],
   });
+});

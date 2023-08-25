@@ -1,5 +1,5 @@
-body{
-    font-family: "Teko", sans-serif;
+body {
+  font-family: "Teko", sans-serif;
 }
 .neonText {
     color: #fff;
@@ -8,30 +8,65 @@ body{
       0 0 7px #f1f1f1,
       0 0 50px #f6fad2;
 }
-.inactive_link:hover{
+/* .inactive_link:hover{
     color: #fff;
     border-bottom: 1px solid #fff;
     text-shadow:
-      /* White glow */
+      /* White glow 
       0 0 14px #f1f1f1,
-      0 0 500px #ffdf07;
-}
-.active_link{
-    color: #ffdf07;
-    border-bottom: 1.5px solid #ffdf07;
-    text-shadow:
+      0 0 500px #e9fc0c;
+}*/
+/*.active_link{
+    color: #e9fc0c;
+    
+    border-bottom: 1.5px solid #e9fc0c;
+     text-shadow: */
       /* White glow */
-      0 0 14px #f1f1f1,
-      0 0 500px #c5d80a;
-}
+      /* 0 0 14px #f1f1f1,
+      0 0 500px #e9fc0c; 
+} */
 @media screen and (max-width: 768px) {
     .active_link{
-        border-bottom: 1.5px solid #ffdf07;
+        border-bottom: 1.5px solid #e9fc0c;
+        padding-bottom: 4px;
     }
     .inactive_link:hover{
         border-bottom: 1.5x solid #fff;
     }
 }
 
-  /* 0 0 24px #bfce0b,
+/* 0 0 24px #bfce0b,
       0 0 500px #c5d80a; */
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/helvetica-light-587ebe5a59211.ttf");
+  font-weight: 100;
+  font-style: thin;
+}
+/* @font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/helvetica-light-587ebe5a59211.ttf");
+  font-weight: 300;
+  font-style: light;
+} */
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/Helvetica.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/Helvetica-Bold.ttf");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("./fonts/HelveticaNeue-CondObl.ttf");
+    font-weight: 800;
+    font-style: extrabold;
+  }
+
