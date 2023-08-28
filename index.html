@@ -62,8 +62,8 @@
               "white-section": 'url("../src/images/Backgrounds/BG-2.png")'
             },
             fontFamily: {
-              helvetica: ["Helvetica", "sans-serif"],
-              "helvetica-bold": ["Helvetica-Condense", "sans-serif"]
+              "helvetica": ["Helvetica", "sans-serif"],
+              "helveticanue": ["Helveticanue", "sans-serif"]
             }
           }
         }
@@ -81,12 +81,12 @@
       <div
         class="w-11/12 mx-auto py-3 sm:py-5 flex justify-between items-center">
         <img
-          class="w-[70px]"
+          class="w-[70px] md:w-[90px]"
           src="./src/images/Logos/MIELA-LOGO-BLACK.png"
           alt="logo" />
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
-            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 md:gap-4 lg:gap-6 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg md:rounded-full"
+            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 md:gap-5 lg:gap-9 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg md:rounded-full"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
               class="mt-24 md:mt-0 md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link active_link"
@@ -142,17 +142,17 @@
     <section
       @click.inside="open = false"
       id="home"
-      class="section w-full min-h-screen pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-bottom md:bg-bottom relative">
+      class="section w-full md:min-h-screen pt-20 md:pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-bottom relative">
       <div
-        class="w-11/12 mx-auto h-full flex flex-col gap-5 md:flex-row justify-between items-center">
+        class="md:w-11/12 md:mx-auto h-full flex flex-col-reverse md:gap-5 md:flex-row md:justify-between md:items-center">
         <div
-          class="h-full w-full flex flex-col gap-3 md:gap-7 justify-center mt-10 md:mt-0 z-10 md:mb-20">
+          class="h-full w-full overflow md:w-fit flex flex-col py-6 -mt-4 bg-white-section bg-no-repeat bg-top md:bg-none md:py-0 gap-3 md:gap-7 md:justify-center md:mt-0 z-10 md:mb-20">
           <h1
-            class="font-extrabold text-4xl md:text-6xl w-fit pt-2.5 text-black tracking-tighter">
+            class="font-helveticanue w-11/12 mx-auto md:ml-0 font-extrabold text-4xl md:text-6xl md:w-full text-black tracking-tighter">
             MIELA DIGITAL
           </h1>
           <p
-            class="text-custom-ash font-thin text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[480px] lg:w-[525px] text-justify">
+            class="text-custom-ash w-11/12 mx-auto font-thin text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[480px] lg:w-[525px] text-justify">
             Miela Digital is an agency specialized in the Gaming and iGaming
             sectors. We are dedicated to generating activations focused on brand
             awareness and user acquisition. We differentiate ourselves by
@@ -160,50 +160,57 @@
           </p>
         </div>
         <div
-          class="h-full w-fit bottom-0 md:right-10 lg:right-20 flex flex-col justify-end items-center md:absolute">
+          class="h-full w-11/12 md:w-fit md:-bottom-6 md:right-10 lg:right-20 flex flex-col justify-end items-center md:absolute">
           <img
-            class="sm:h-[470px] md:h-[77%] lg:h-[83%] w-fit"
+            class="sm:h-[400px] md:h-[77%] lg:h-[83%] w-fit"
             src="src/images/People/hero-2.png"
             alt="charater" />
         </div>
       </div>
     </section>
-    <section id="our-services" class="section bg-section-image py-8 md:py-10 lg:py-14">
+    <section
+      id="our-services"
+      class="section bg-section-image py-8 md:py-10 lg:py-14">
       <div class="w-11/12 mx-auto space-y-5 md:space-y-8">
         <h2
-          class="font-extrabold text-2xl lg:text-4xl w-fit text-white uppercase">
+          class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit text-white uppercase">
           Our Services
         </h2>
-        <div class="space-y-12">
+        <div class="space-y-6 md:space-y-12">
           <div
-            class="flex flex-col-reverse md:flex-row-reverse gap-3 md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10">
             <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl -mt-16 md:mt-0 p-6 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
+              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
-                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-6 relative">
+                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
                 Influencer Management
               </h3>
               <p
-                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
                 We potentiate influencer's reach through dynamic graphics
                 management of gaming and non-gaming influencers across all
                 regions, ensuring the leveraging of their fanbase into the brand
                 conversion funnel.
               </p>
+              <p
+                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                We enhance the reach of influencers through creative graphics, 
+                managing both gaming and non-gaming influencers worldwide. 
+              </p>
             </div>
             <div class="w-full md:w-[920px]">
               <img
                 src="/src/images/People/IMG-01.png"
-                class="rounded-3xl w-full h-full object-fill"
+                class="rounded-3xl rounded-b-none md:rounded-t-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row gap-3 md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10">
             <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl -mt-16 md:mt-0 p-6 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
+              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
-                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-6 relative">
+                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
                 Esports Consulting
               </h3>
               <p
@@ -216,43 +223,48 @@
             <div class="w-full md:w-[920px]">
               <img
                 src="/src/images/People/IMG-02.jpg"
-                class="rounded-3xl w-full h-full object-fill"
+                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row-reverse gap-3 md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10">
             <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl -mt-16 md:mt-0 p-6 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
+              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
-                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-6 relative">
+                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
                 Live Events Production
               </h3>
               <p
-                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
                 Our event production captivates audiences, leaves enduring
                 memories, and opens the door for remarkable in-person
                 interactions due to our painstaking attention to detail,
                 inventiveness, and faultless execution.
               </p>
+              <p class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                Our event production creates captivating experiences, leaving 
+                lasting memories and enabling meaningful in-person interactions 
+                through meticulous attention to detail, creativity, and flawlessness.
+              </p>
             </div>
             <div class="w-full md:w-[920px]">
               <img
                 src="/src/images/People/IMG-03.jpg"
-                class="rounded-3xl w-full h-full object-fill"
+                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row gap-3 md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10">
             <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl -mt-16 md:mt-0 p-6 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
+              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
-                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-6 relative">
+                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
                 Social Media Management
               </h3>
               <p
-                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
                 We develop a tailored social media strategy that aligns with
                 your brand’s values and target audience. By conducting in-depth
                 research on your industry, competitors, and audience
@@ -260,20 +272,25 @@
                 on and determine the type of content that will resonate with
                 your target market.
               </p>
+              <p class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                Through thorough research on your industry, competition, and 
+                audience preferences, we select the right platforms and create 
+                engaging content to connect with your target market effectively.
+              </p>
             </div>
             <div class="w-full md:w-[920px]">
               <img
                 src="/src/images/People/IMG-04.png"
-                class="rounded-3xl w-full h-full object-fill"
+                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row-reverse gap-3 md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10">
             <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl -mt-16 md:mt-0 p-6 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
+              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
-                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-6 relative">
+                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
                 PAID MEDIA
               </h3>
               <p
@@ -286,38 +303,40 @@
             <div class="w-full md:w-[920px]">
               <img
                 src="/src/images/People/IMG-05.png"
-                class="rounded-3xl w-full h-full object-fill"
+                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row gap-3 md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10">
             <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl -mt-16 md:mt-0 p-6 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
+              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
-                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-6 relative">
+                class="text-white text-xl lg:text-3xl font-bold uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
                 Online Events
               </h3>
               <p
-                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
                 We leverage various technologies and platforms to create
                 engaging and interactive experiences for participants who are
-                attending the event remotely
+                attending the event remotely.
               </p>
             </div>
             <div class="w-full md:w-[920px]">
               <img
                 src="/src/images/People/IMG-06.png"
-                class="rounded-3xl w-full h-full object-fill"
+                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="clients" class="section w-full py-8 md:py-10 lg:py-14 bg-white-section">
+    <section
+      id="clients"
+      class="section w-full py-8 md:py-10 lg:py-14 bg-white-section">
       <div class="w-11/12 mx-auto">
-        <h2 class="font-extrabold text-2xl lg:text-4xl w-fit uppercase">
+        <h2 class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit uppercase">
           THEY TRUSTED US
         </h2>
       </div>
@@ -368,8 +387,9 @@
       <div
         class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 lg:gap-10">
         <div
-          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
-          <div class="w-24 h-24 rounded-full overflow-hidden mx-auto">
+          class="bg-black p-6 md:p-6 lg:p-8 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
+          <div
+            class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
               class="w-full h-full rounded-full object-fill mx-auto scale-150"
               src="/src/images/People/YASMINE.png"
@@ -391,7 +411,8 @@
         </div>
         <div
           class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
-          <div class="w-24 h-24 rounded-full overflow-hidden mx-auto">
+          <div
+            class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
               class="w-full h-full rounded-full object-fill mx-auto scale-150"
               src="/src/images/People/BAUER.png"
@@ -413,7 +434,8 @@
         </div>
         <div
           class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
-          <div class="w-24 h-24 rounded-full overflow-hidden mx-auto">
+          <div
+            class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
               class="w-full h-full rounded-full object-fill mx-auto scale-150"
               src="/src/images/People/JANE.png"
@@ -439,7 +461,7 @@
       <div class="w-11/12 mx-auto space-y-5 md:space-y-8">
         <div>
           <h2
-            class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow before:absolute before:-left-5 before:bottom-2.5 md:before:bottom-3 before:-skew-x-12 ml-6 selection:bg-custom-yellow selection:text-black">
+            class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-2.5 md:before:bottom-3 before:-skew-x-12 ml-4 md:ml-6 selection:bg-custom-yellow selection:text-black">
             Contact Us
           </h2>
           <p
@@ -493,20 +515,99 @@
         </div>
       </div>
     </section> -->
-    <footer class="bg-black py-8 md:py-10 lg:py-14">
-      <div class="w-11/12 mx-auto space-y-5">
-        <div class="w-full flex flex-col md:flex-row ">
-            <div class="space-y-5">
-                <img src="/src/images/Logos/MIELA LOGO COLORED.png" class="w-14" alt="" />
-                <h2 class="font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
-                    INTERESTED? <br>
-                    LET'S GET IN TOUCH!
-                </h2>
+    <footer class="bg-black pb-4 pt-8 md:py-10 lg:py-14">
+      <div
+        class="w-11/12 mx-auto space-y-6 md:space-y-8 lg:space-y-10 text-center md:text-right">
+        <div class="w-full flex flex-col md:flex-row justify-between gap-5">
+          <div class="space-y-5">
+            <img
+              src="/src/images/Logos/MIELA-LOGO-COLORED.png"
+              class="w-16 md:w-20 lg:w-24 mx-auto md:ml-0"
+              alt="" />
+            <h2
+              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0 hidden md:block">
+              INTERESTED?
+              <br />
+              LET'S GET IN TOUCH!
+            </h2>
+          </div>
+          <div class="space-y-3">
+            <h2
+              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0">
+              Main
+            </h2>
+            <div class="text-base text-[#3d3d3d] font-bold space-y-5">
+              <p>Home</p>
+              <p>Our Services</p>
+              <p>Clients</p>
+              <p>Case Study</p>
             </div>
+          </div>
+          <h2
+            class="font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0 md:hidden block">
+            INTERESTED?
+            <br />
+            LET'S GET IN TOUCH!
+          </h2>
+          <div class="space-y-3">
+            <h2
+              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0">
+              CONTACTS
+            </h2>
+            <div class="text-base text-[#3d3d3d] font-bold space-y-5">
+              <p>
+                <a
+                  href="mailto:contact@mieladigital.com"
+                  class="hover:no-underline hover:text-custom-yellow">
+                  contact@mieladigital.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <h2
+              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0">
+              FOLLOW US
+            </h2>
+            <div class="text-base text-[#3d3d3d] font-bold space-y-5">
+              <a
+                href="https://www.linkedin.com/company/mieladigital"
+                target="_blank"
+                rel="noopener noreferrer">
+              <?xml version="1.0" encoding="utf-8"?>
+              <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                class="fill-white hover:fill-custom-yellow w-8 cursor-pointer mx-auto md:ml-0"
+                viewBox="0 0 490.732 490.732"
+                xml:space="preserve">
+                <g>
+                  <g>
+                    <path
+                      d="M472.366,0.003H18.36C8.219,0.003,0,8.222,0,18.363v454.005c0,10.143,8.219,18.361,18.36,18.361h454.012
+                        c10.142,0,18.36-8.219,18.36-18.361V18.363C490.727,8.222,482.507,0.003,472.366,0.003z M130.375,403.808
+                        c0,6.762-5.478,12.238-12.24,12.238H69.132c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.484-12.24,12.24-12.24h49.003
+                        c6.762,0,12.24,5.477,12.24,12.24V403.808z M130.375,127.482c0,6.763-5.478,12.24-12.24,12.24H69.132
+                        c-6.756,0-12.24-5.478-12.24-12.24V83.969c0-6.763,5.484-12.24,12.24-12.24h49.003c6.762,0,12.24,5.477,12.24,12.24V127.482z
+                        M433.835,403.808c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.763,0-12.24-5.477-12.24-12.238v-90.436
+                        c0-29.988-1.566-49.383-4.712-58.189c-3.14-8.807-8.237-15.649-15.3-20.526c-7.062-4.884-15.558-7.32-25.496-7.32
+                        c-12.729,0-24.149,3.488-34.26,10.459c-10.11,6.977-17.038,16.211-20.79,27.717c-3.745,11.506-5.618,32.779-5.618,63.807v74.488
+                        c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.483-12.24,12.24-12.24h43.771
+                        c6.763,0,12.24,5.477,12.24,12.24v16.316c0,6.763,3.312,7.852,7.858,2.852c22.864-25.123,50.753-37.687,83.673-37.687
+                        c16.212,0,31.028,2.919,44.455,8.758c13.422,5.838,23.58,13.292,30.466,22.356c6.885,9.063,11.683,19.351,14.382,30.857
+                        c2.699,11.505,4.058,27.98,4.058,49.426V403.808L433.835,403.808z" />
+                  </g>
+                </g>
+              </svg></a>
+            </div>
+          </div>
         </div>
         <hr class="bg-[#303030]" />
         <p
-          class="text-custom-white font-thin text-lg tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight text-center">
+          class="text-custom-white font-normal text-base tracking-wider text-center">
           ©2023 Miela Digital. All rights reserved.
         </p>
       </div>
