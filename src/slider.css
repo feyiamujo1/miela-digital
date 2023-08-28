@@ -104,12 +104,13 @@
 
 /* Media Queries */
 
-/* @media (max-width: 768px) {
-  .slide {
-    height: 200px !important; 
-    background-color: #666666; 
+@media (max-width: 768px) {
+  .slide img {
+    width: 130px;
+    height: fit-content;
+    object-fit: contain;
   }
-} */
+}
 
 .row {
   overflow: hidden;
