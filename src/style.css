@@ -8,29 +8,21 @@ body {
       0 0 7px #f1f1f1,
       0 0 50px #f6fad2;
 }
-/* .inactive_link:hover{
-    color: #fff;
-    border-bottom: 1px solid #fff;
-    text-shadow:
-      /* White glow 
-      0 0 14px #f1f1f1,
-      0 0 500px #e9fc0c;
-}*/
-/*.active_link{
+.inactive_link:hover{
     color: #e9fc0c;
-    
-    border-bottom: 1.5px solid #e9fc0c;
-     text-shadow: */
-      /* White glow */
-      /* 0 0 14px #f1f1f1,
-      0 0 500px #e9fc0c; 
-} */
+    /* border-bottom: 1px solid #fff; */
+}
+.active_link{
+    color: #e9fc0c;
+    /* border-bottom: 1.5px solid #e9fc0c; */
+}
 @media screen and (max-width: 768px) {
     .active_link{
         border-bottom: 1.5px solid #e9fc0c;
         padding-bottom: 4px;
     }
     .inactive_link:hover{
+      color: #e9fc0c;
         border-bottom: 1.5x solid #fff;
     }
 }

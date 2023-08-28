@@ -10,7 +10,9 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap"
       rel="stylesheet" />
-    <link href="https://db.onlinewebfonts.com/c/db43803fb4a7ccad71c4b2c69d32922f?family=HelveticaNeue-CondensedBlack" rel="stylesheet">
+    <link
+      href="https://db.onlinewebfonts.com/c/db43803fb4a7ccad71c4b2c69d32922f?family=HelveticaNeue-CondensedBlack"
+      rel="stylesheet" />
     <!-- Logo -->
     <link
       rel="shortcut icon"
@@ -45,6 +47,11 @@
       crossorigin="anonymous"></script>
     <!-- Slick Slider JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="/tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -63,8 +70,8 @@
               "white-section": 'url("../src/images/Backgrounds/BG-2.png")'
             },
             fontFamily: {
-              "helvetica": ["Helvetica", "sans-serif"],
-              "helveticanue": ["HelveticaNeue-CondensedBlack", "sans-serif"]
+              helvetica: ["Helvetica", "sans-serif"],
+              helveticanue: ["HelveticaNeue-CondensedBlack", "sans-serif"]
             }
           }
         }
@@ -90,27 +97,27 @@
             class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 md:gap-5 lg:gap-9 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg md:rounded-full"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
-              class="mt-24 md:mt-0 md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link active_link"
+              class="mt-24 md:mt-0 md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link active_link"
               @click.inside="open = false">
               Home
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
+              class="md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
               @click.inside="open = false">
               Our Services
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
+              class="md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
               @click.inside="open = false">
               Clients
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
+              class="md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
               @click.inside="open = false">
               Case Study
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
+              class="md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
               @click.inside="open = false">
               Contact Us
             </li>
@@ -121,7 +128,7 @@
               @click="open = !open">
               <span class="sr-only">Open main menu</span>
               <div
-                class="block w-5 absolute left-[18px] top-1/2 text-custom-yellow transform -translate-x-1/2 -translate-y-1/2">
+                class="block w-5 absolute left-[18px] top-1/2 text-custom-yellow transform -translate-x-1/2 -translate-y-1/2 duration-150">
                 <span
                   aria-hidden="true"
                   class="block absolute h-0.5 w-6 bg-current transform transition duration-500 ease-in-out"
@@ -153,7 +160,7 @@
             MIELA DIGITAL
           </h1>
           <p
-            class="text-custom-ash w-11/12 mx-auto font-thin text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[480px] lg:w-[525px] text-justify">
+            class="text-custom-ash w-11/12 mx-auto font-thin text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[480px] lg:w-[525px] bg-blend-color-burn text-justify">
             Miela Digital is an agency specialized in the Gaming and iGaming
             sectors. We are dedicated to generating activations focused on brand
             awareness and user acquisition. We differentiate ourselves by
@@ -171,15 +178,21 @@
     </section>
     <section
       id="our-services"
-      class="section bg-section-image py-8 md:py-10 lg:py-14">
+      class="section bg-section-image py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 mx-auto space-y-5 md:space-y-8">
         <h2
-          class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit text-white uppercase">
+          class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit text-white uppercase"
+          data-aos="fade-up"
+          data-aos-duration="1300"
+          data-aos-delay="100">
           Our Services
         </h2>
         <div class="space-y-6 md:space-y-12">
           <div
-            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="500">
             <div
               class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
@@ -195,19 +208,22 @@
               </p>
               <p
                 class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We enhance the reach of influencers through creative graphics, 
-                managing both gaming and non-gaming influencers worldwide. 
+                We enhance the reach of influencers through creative graphics,
+                managing both gaming and non-gaming influencers worldwide.
               </p>
             </div>
-            <div class="w-full md:w-[920px]">
+            <div class="w-full md:max-w-[920px]">
               <img
                 src="/src/images/People/IMG-01.png"
-                class="rounded-3xl rounded-b-none md:rounded-t-3xl w-full h-full object-fill"
+                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full lg:h-full lg:object-fill"
                 alt="influencers" />
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-delay="100">
             <div
               class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
@@ -215,10 +231,16 @@
                 Esports Consulting
               </h3>
               <p
-                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
                 We are proud to have more than 10 years of experience in the
                 esports industry, with mastery in securing sponsorship deals,
                 optimizing marketing campaigns, and operating tournaments.
+              </p>
+              <p
+                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                We have experience in the esports industry, with mastery in
+                securing sponsorship deals, optimizing marketing campaigns, and
+                operating tournaments.
               </p>
             </div>
             <div class="w-full md:w-[920px]">
@@ -229,7 +251,10 @@
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="100">
             <div
               class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
@@ -243,10 +268,10 @@
                 interactions due to our painstaking attention to detail,
                 inventiveness, and faultless execution.
               </p>
-              <p class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                Our event production creates captivating experiences, leaving 
-                lasting memories and enabling meaningful in-person interactions 
-                through meticulous attention to detail, creativity, and flawlessness.
+              <p
+                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                Our event production creates captivating experiences, leaving
+                lasting memories and fosters meaningful in-person interactions.
               </p>
             </div>
             <div class="w-full md:w-[920px]">
@@ -257,7 +282,10 @@
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-delay="100">
             <div
               class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
@@ -273,10 +301,10 @@
                 on and determine the type of content that will resonate with
                 your target market.
               </p>
-              <p class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                Through thorough research on your industry, competition, and 
-                audience preferences, we select the right platforms and create 
-                engaging content to connect with your target market effectively.
+              <p
+                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                We select the right platforms and create engaging content to
+                connect with your target market effectively.
               </p>
             </div>
             <div class="w-full md:w-[920px]">
@@ -287,7 +315,10 @@
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="100">
             <div
               class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
@@ -295,10 +326,15 @@
                 PAID MEDIA
               </h3>
               <p
-                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
                 We target specific audiences to increase brand awareness and
                 drive traffic to their websites to generate leads, and
                 ultimately increase sales and revenue.
+              </p>
+              <p
+                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                We increase brand awareness and drive traffic to their websites
+                to generate leads, and ultimately increase sales and revenue.
               </p>
             </div>
             <div class="w-full md:w-[920px]">
@@ -309,7 +345,10 @@
             </div>
           </div>
           <div
-            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10">
+            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="100">
             <div
               class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
               <h3
@@ -317,10 +356,15 @@
                 Online Events
               </h3>
               <p
-                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
                 We leverage various technologies and platforms to create
                 engaging and interactive experiences for participants who are
                 attending the event remotely.
+              </p>
+              <p
+                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                We create engaging and interactive experiences for participants
+                who are attending the event remotely.
               </p>
             </div>
             <div class="w-full md:w-[920px]">
@@ -337,11 +381,19 @@
       id="clients"
       class="section w-full py-8 md:py-10 lg:py-14 bg-white-section">
       <div class="w-11/12 mx-auto">
-        <h2 class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit uppercase md:mb-8">
-          THEY TRUSTED US G
+        <h2
+          class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit uppercase md:mb-8"
+          data-aos="fade-up"
+          data-aos-duration="1300"
+          data-aos-delay="100">
+          THEY TRUSTED US
         </h2>
       </div>
-      <div class="row">
+      <div
+        class="row"
+        data-aos="zoom-in-up"
+        data-aos-duration="1300"
+        data-aos-delay="100">
         <div class="container">
           <section class="logo-carousel slider" data-arrows="true">
             <div class="slide">
@@ -388,7 +440,8 @@
       <div
         class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 lg:gap-10">
         <div
-          class="bg-black p-6 md:p-6 lg:p-8 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
+          class="bg-black p-6 md:p-6 lg:p-8 border-[#303030] border-[1.5px] rounded-3xl space-y-5"
+         >
           <div
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
@@ -398,10 +451,13 @@
           </div>
           <div class="">
             <p
-              class="text-center text-white font-bold uppercase text-lg md:text-xl">
+              class="text-center font-helveticanue font-extrabold text-white uppercase text-lg md:text-xl">
               Yasmine
             </p>
-            <p class="text-center text-custom-yellow">GGBET</p>
+            <p
+              class="text-center font-helveticanue font-extrabold text-custom-yellow">
+              GGBET
+            </p>
           </div>
           <p class="w-full text-justify text-sm text-[#bebebe]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -411,7 +467,8 @@
           </p>
         </div>
         <div
-          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
+          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5"
+          >
           <div
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
@@ -421,10 +478,13 @@
           </div>
           <div class="">
             <p
-              class="text-center text-white font-bold uppercase text-lg md:text-xl">
+              class="text-center text-white font-helveticanue font-extrabold uppercase text-lg md:text-xl">
               BAUER
             </p>
-            <p class="text-center text-custom-yellow">INTEL</p>
+            <p
+              class="text-center font-helveticanue font-extrabold text-custom-yellow">
+              INTEL
+            </p>
           </div>
           <p class="w-full text-justify text-sm text-[#bebebe]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -434,7 +494,8 @@
           </p>
         </div>
         <div
-          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
+          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5"
+         >
           <div
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
@@ -444,10 +505,13 @@
           </div>
           <div class="">
             <p
-              class="text-center text-white font-bold uppercase text-lg md:text-xl">
+              class="text-center text-white font-helveticanue font-extrabold uppercase text-lg md:text-xl">
               JANE
             </p>
-            <p class="text-center text-custom-yellow">BETANO</p>
+            <p
+              class="text-center text-custom-yellow font-helveticanue font-extrabold">
+              BETANO
+            </p>
           </div>
           <p class="w-full text-justify text-sm text-[#bebebe]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -516,43 +580,55 @@
         </div>
       </div>
     </section> -->
-    <footer class="bg-black pb-4 pt-8 md:py-10 lg:py-14">
-      <div
-        class="w-11/12 mx-auto space-y-6 md:space-y-8 lg:space-y-10 text-center md:text-right">
+    <footer class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden">
+      <div class="w-11/12 mx-auto space-y-6 md:space-y-8 lg:space-y-10">
         <div class="w-full flex flex-col md:flex-row justify-between gap-5">
-          <div class="space-y-5">
+          <div
+            class="w-full md:w-fit flex flex-col items-center md:block space-y-5">
             <img
               src="/src/images/Logos/MIELA-LOGO-COLORED.png"
-              class="w-16 md:w-20 lg:w-24 mx-auto md:ml-0"
+              class="w-16 md:w-20 lg:w-24"
               alt="" />
             <h2
-              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0 hidden md:block">
+              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase hidden md:block">
               INTERESTED?
               <br />
               LET'S GET IN TOUCH!
             </h2>
           </div>
-          <div class="space-y-3">
+          <div
+            class="w-full flex flex-col items-center md:block md:w-fit space-y-3">
             <h2
-              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0">
+              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
               Main
             </h2>
-            <div class="text-base text-[#3d3d3d] font-bold space-y-5">
-              <p>Home</p>
-              <p>Our Services</p>
-              <p>Clients</p>
-              <p>Case Study</p>
+            <div
+              class="font-bold text-base text-[#3d3d3d] space-y-5 w-full flex flex-col items-center md:block">
+              <p
+                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
+                Home
+              </p>
+              <p
+                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
+                Our Services
+              </p>
+              <p
+                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
+                Clients
+              </p>
+              <p>
+                Case Study
+              </p>
             </div>
           </div>
-          <h2
-            class="font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0 md:hidden block">
+          <h2 class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit mx-auto uppercase md:hidden block text-center">
             INTERESTED?
             <br />
             LET'S GET IN TOUCH!
           </h2>
-          <div class="space-y-3">
-            <h2
-              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0">
+          <div
+            class="space-y-3 w-full md:w-fit flex flex-col items-center md:block">
+            <h2 class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
               CONTACTS
             </h2>
             <div class="text-base text-[#3d3d3d] font-bold space-y-5">
@@ -565,30 +641,32 @@
               </p>
             </div>
           </div>
-          <div class="space-y-3">
+          <div
+            class="space-y-3 w-full md:w-fit md:block flex flex-col items-center">
             <h2
-              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase mx-auto md:ml-0">
+              class="font-helveticanue font-extrabold whitespace-nowrap text-white text-lg lg:text-xl w-full text-center md:text-left uppercase">
               FOLLOW US
             </h2>
-            <div class="text-base text-[#3d3d3d] font-bold space-y-5">
+            <div
+              class="text-base text-[#3d3d3d] font-bold space-y-5">
               <a
                 href="https://www.linkedin.com/company/mieladigital"
                 target="_blank"
                 rel="noopener noreferrer">
-              <?xml version="1.0" encoding="utf-8"?>
-              <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-              <svg
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                class="fill-white hover:fill-custom-yellow w-8 cursor-pointer mx-auto md:ml-0"
-                viewBox="0 0 490.732 490.732"
-                xml:space="preserve">
-                <g>
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  class="fill-white hover:fill-custom-yellow w-7 cursor-pointer"
+                  viewBox="0 0 490.732 490.732"
+                  xml:space="preserve">
                   <g>
-                    <path
-                      d="M472.366,0.003H18.36C8.219,0.003,0,8.222,0,18.363v454.005c0,10.143,8.219,18.361,18.36,18.361h454.012
+                    <g>
+                      <path
+                        d="M472.366,0.003H18.36C8.219,0.003,0,8.222,0,18.363v454.005c0,10.143,8.219,18.361,18.36,18.361h454.012
                         c10.142,0,18.36-8.219,18.36-18.361V18.363C490.727,8.222,482.507,0.003,472.366,0.003z M130.375,403.808
                         c0,6.762-5.478,12.238-12.24,12.238H69.132c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.484-12.24,12.24-12.24h49.003
                         c6.762,0,12.24,5.477,12.24,12.24V403.808z M130.375,127.482c0,6.763-5.478,12.24-12.24,12.24H69.132
@@ -600,22 +678,27 @@
                         c6.763,0,12.24,5.477,12.24,12.24v16.316c0,6.763,3.312,7.852,7.858,2.852c22.864-25.123,50.753-37.687,83.673-37.687
                         c16.212,0,31.028,2.919,44.455,8.758c13.422,5.838,23.58,13.292,30.466,22.356c6.885,9.063,11.683,19.351,14.382,30.857
                         c2.699,11.505,4.058,27.98,4.058,49.426V403.808L433.835,403.808z" />
+                    </g>
                   </g>
-                </g>
-              </svg></a>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-        <hr class="bg-[#303030]" />
-        <p
-          class="text-custom-white font-normal text-base tracking-wider text-center">
-          ©2023 Miela Digital. All rights reserved.
-        </p>
       </div>
+      <hr
+        class="bg-[#303030] mt-8 md:mt-10 mb-4" />
+      <p
+        class="text-custom-white font-normal text-base tracking-wider text-center -mt-2">
+        ©2023 Miela Digital. All rights reserved.
+      </p>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer></script>
     <script src="/src/script.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
