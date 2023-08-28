@@ -106,8 +106,8 @@
 
 @media (max-width: 768px) {
   .slide img {
-    height: 125px;
-    /* width: 100px; */
+    width: 70%;
+    border: 1px solid;
     object-fit: contain;
   }
 }
