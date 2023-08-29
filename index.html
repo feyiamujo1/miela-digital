@@ -45,8 +45,12 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
-    <!-- Slick Slider JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- Slick Slider JS
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+    <!-- Swiper slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- AOS CSS CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- AOS JS CDN -->
@@ -97,30 +101,34 @@
           alt="logo" />
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
-            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 md:gap-4 lg:gap-7 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg lg:text-xl md:rounded-full"
+            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg lg:text-xl md:rounded-full box-border"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
-              class="mt-24 md:mt-0 md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link active_link"
+              class="mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link active_link md:w-[54px] lg:w-[56px]"
               @click.inside="open = false">
               Home
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link"
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[115px] lg:w-[125px]"
               @click.inside="open = false">
               Our Services
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link"
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[64px] lg:w-[66px]"
               @click.inside="open = false">
               Clients
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link"
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[103px] lg:w-[110px]"
               @click.inside="open = false">
-              Case Study
+              <a
+                href="/casestudy.html"
+                class="w-full h-full no-underline hover:text-inherit hover:no-underline active:no-underline">
+                Case Study
+              </a>
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link"
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[95px] lg:w-[107px]"
               @click=" open = false, showModal = !showModal">
               Contact Us
             </li>
@@ -189,25 +197,20 @@
         x-show.transition.opacity.duration.600ms="showModal"
         :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
         <div
-          class=" w-11/12 md:w-fit flex flex-row py-3 px-3 bg-white mx-auto gap-3 md:gap-5 relative rounded-lg transition-all duration-500 "
-          x-show.transition.scale.duration.800ms="showModal" x-transition.delay.50ms @click.away="showModal = false"
-          >
-          <div class="bg-section-image hidden pr-2 md:flex md:h-full md:w-[250px] lg:w-[250px] overflow-hidden items-end justify-end">
-            <img
-              src="/src/images/People/hero-1.png"
-              class="w-full object-fill"
-              alt="" />
-          </div>
-          <div class="md:w-[350px] lg:w-[400px]">
-            <div class=" mb-3">
+          class="w-11/12 md:w-fit p-4 bg-white-section bg-[150%] mx-auto gap-3 md:gap-5 relative rounded-lg transition-all duration-500"
+          x-show.transition.scale.duration.800ms="showModal"
+          x-transition.delay.50ms
+          @click.away="showModal = false">
+          <div class="md:w-[400px] lg:w-[500px]">
+            <div class="mb-3">
               <h2
                 class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit text-custom-black uppercase">
                 Contact Us
               </h2>
               <p
-                class="text-custom-black text-base tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight ">
-                Contact us at contact@mieladigital.com
-                or fill out the form below.
+                class="text-custom-black text-base tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight">
+                Contact us at contact@mieladigital.com or fill out the form
+                below.
               </p>
             </div>
             <svg
@@ -229,7 +232,7 @@
                   d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
               </g>
             </svg>
-            <form class=" w-full space-y-2 text-sm">
+            <form class="w-full space-y-2 text-sm">
               <input
                 type="text"
                 name=""
@@ -246,7 +249,7 @@
                 class="w-full p-2.5 focus:outline-black text-sm md:text-base border border-custom-ash rounded-sm"
                 placeholder="Subject" />
               <textarea
-                class="w-full p-2.5 focus:outline-black text-sm md:text-base border border-custom-ash rounded-sm  md:h-[3em] lg:h-[4em]"
+                class="w-full p-2.5 focus:outline-black text-sm md:text-base border border-custom-ash rounded-sm md:h-[3em] lg:h-[4em]"
                 placeholder="Message ..."></textarea>
               <button
                 onclick="window.location.href='/src/pdf/CaseStudy.pdf'"
@@ -474,50 +477,51 @@
           THEY TRUSTED US
         </h2>
       </div>
-      <div
-        class="row"
-        data-aos="zoom-in"
-        data-aos-duration="1300"
-        data-aos-delay="100">
-        <div class="container">
-          <section class="logo-carousel slider" data-arrows="true">
-            <div class="slide">
-              <img src="/src/images/Logos/INTEL.png" />
-              <div class="inner-slide"></div>
-            </div>
-            <div class="slide">
-              <img src="/src/images/Logos/WARGAMING.png" />
-              <div class="inner-slide"></div>
-            </div>
-            <div class="slide">
-              <img src="/src/images/Logos/TENCENT.png" />
-              <div class="inner-slide"></div>
-            </div>
-            <div class="slide">
-              <img src="/src/images/Logos/GGBET.webp" />
-              <div class="inner-slide"></div>
-            </div>
-            <div class="slide">
-              <img src="/src/images/Logos/TROVO.png" />
-              <div class="inner-slide"></div>
-            </div>
-            <div class="slide">
-              <img src="/src/images/Logos/THERMALTAKE.png" />
-              <div class="inner-slide"></div>
-            </div>
-            <div class="slide">
-              <img src="/src/images/Logos/BETANO.png" />
-              <div class="inner-slide"></div>
-            </div>
-            <div class="slide">
-              <img src="/src/images/Logos/WESTERN.png" />
-              <div class="inner-slide"></div>
-            </div>
-            <div class="slide">
-              <img src="/src/images/Logos/TWITCH.png" />
-              <div class="inner-slide"></div>
-            </div>
-          </section>
+      <!-- Slider main container -->
+      <div class="swiper mySwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/INTEL.png" />
+            <div class="inner-slide"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/WARGAMING.png" />
+            <div class="inner-slide"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/TENCENT.png" />
+            <div class="inner-slide"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/GGBET.webp" />
+            <div class="inner-slide"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/TROVO.png" />
+            <div class="inner-slide"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/THERMALTAKE.png" />
+            <div class="inner-slide"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/BETANO.png" />
+            <div class="inner-slide my-10"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/WESTERN.png" />
+            <div class="inner-slide"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/TWITCH.png" />
+            <div class="inner-slide"></div>
+          </div>
+          <div class="swiper-slide ">
+            <img src="/src/images/Logos/TROVO.png" />
+            <div class="inner-slide"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -641,7 +645,7 @@
               class="font-helveticanue tracking-widest font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
               Main
             </h2>
-            <div class="font-bold text-base text-custom-white space-y-5">
+            <div class="font-normal text-base text-custom-white space-y-5">
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
                 Home
@@ -675,7 +679,7 @@
               class="font-helveticanue tracking-widest font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
               CONTACTS
             </h2>
-            <div class="text-base text-custom-white font-bold space-y-5">
+            <div class="text-base text-custom-white font-normal space-y-5">
               <p>
                 <a
                   href="mailto:contact@mieladigital.com"
@@ -757,7 +761,7 @@
         data-aos-anchor="#footer-anchor">
         <hr class="bg-[#303030] mt-8 md:mt-10 mb-4" />
         <p
-          class="text-custom-white font-normal text-base tracking-wider text-center -mt-2">
+          class="text-custom-white font-normal text-sm tracking-wider text-center -mt-2">
           ©2023 Miela Digital. All rights reserved.
         </p>
       </div>
@@ -765,6 +769,7 @@
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/src/script.js"></script>
     <script>
       AOS.init({ once: true });

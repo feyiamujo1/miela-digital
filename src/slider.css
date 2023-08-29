@@ -1,43 +1,22 @@
 /* Slider */
-.slick-slide {
+.swiper {
   margin: 0;
-  /* display: flex; */
-  /* justify-content: center;
-    align-items: center; */
-    /* padding: 10px 0; */
-}
-.container {
-  padding-left: 0px;
-  padding-right: 0px;
-  max-width: 100% !important;
-  padding: 10px 0;
-}
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-.logo-carousel {
-  overflow: inherit;
 }
 
-.slick-list{
-  overflow-y: visible;
-  overflow-x: hidden;
-}
-
-.slide {
+.swiper-slide {
   /* min-height: 180px !important; */
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
   border-radius: 100%;
-  min-height: 280px !important;
+  min-height: 295px;
   position: relative;
   justify-content: center;
   align-items: center;
+  margin: 10px 0;
 }
 
-.slide .inner-slide {
+.swiper-slide .inner-slide {
   /* width: 100% !important; */
   position: absolute;
   width: 110%;
@@ -46,75 +25,44 @@
   border: 1px solid rgb(163, 163, 163);
   border-radius: 100%;
 }
-.slide img {
+.swiper-slide img {
   width: 150px;
   height: fit-content;
 }
-
-.slick-track::before,
-.slick-track::after {
-  display: table;
-  content: "";
+.swiper-wrapper{
+  transition-timing-function : linear;
 }
 
-.slick-track::after {
-  clear: both;
-}
 
-.slick-track {
-  padding: 1rem 0;
-}
 
-.slick-loading .slick-track {
-  visibility: hidden;
+@media (max-width: 920px) {
+  .swiper-slide{
+    min-height: 320px;
+  }
 }
-
-.slick-slide.slick-loading img {
-  display: none;
-}
-
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-arrow {
-  position: absolute;
-  top: 50%;
-  background: white;
-  color: #fff;
-  filter: invert(77%) sepia(32%) saturate(1%) hue-rotate(344deg)
-    brightness(105%) contrast(103%);
-  border: none;
-  width: 2rem;
-  height: 1.5rem;
-  text-indent: -10000px;
-  margin-top: -16px;
-  z-index: 99;
-}
-
-.slick-arrow.slick-next {
-  right: -40px;
-  transform: rotate(180deg);
-}
-
-.slick-arrow.slick-prev {
-  left: -40px;
-  color: white;
-  background-color: #fff;
-}
-
-/* Media Queries */
 
 @media (max-width: 768px) {
-  .slide img {
+  .swiper-slide img {
     width: 72%;
     object-fit: contain;
   }
+  .swiper-slide{
+    min-height: 310px;
+  }
 }
+@media (max-width: 640px) {
+  .swiper-slide{
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 520px) {
+  .swiper-slide{
+    min-height: 300px;
+  }
+}
+
+
 
 .row {
   overflow: hidden;
