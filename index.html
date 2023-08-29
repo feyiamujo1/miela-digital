@@ -85,7 +85,10 @@
     class="w-full p-0 m-0 font-helvetica relative scroll-smooth"
     x-data="{ open: false }"
     :class="{'max-h-screen overflow-hidden': open,' h-max': !open }">
-    <nav class="w-full absolute z-30">
+    <nav
+      data-aos="fade-down"
+      data-aos-duration="1300"
+      class="w-full absolute z-30">
       <div
         class="w-11/12 mx-auto py-3 sm:py-5 flex justify-between items-center">
         <img
@@ -150,10 +153,12 @@
     <section
       @click.inside="open = false"
       id="home"
-      class="section w-full md:min-h-screen pt-20 md:pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-bottom relative">
+      class="section w-full md:min-h-screen pt-20 md:pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-bottom relative overflow-hidden">
       <div
         class="md:w-11/12 md:mx-auto h-full flex flex-col-reverse md:gap-5 md:flex-row md:justify-between md:items-center">
         <div
+          data-aos="fade-down"
+          data-aos-duration="1300"
           class="h-full w-full overflow md:w-fit flex flex-col py-6 -mt-4 bg-white-section bg-no-repeat bg-top md:bg-none md:py-0 gap-3 md:gap-7 md:justify-center md:-mt-6 z-10 md:mb-20">
           <h1
             class="font-helveticanue font-black w-11/12 mx-auto md:ml-0 text-4xl md:text-6xl md:w-full text-black">
@@ -168,6 +173,8 @@
           </p>
         </div>
         <div
+          data-aos="zoom-out-left"
+          data-aos-duration="1300"
           class="h-full w-11/12 md:w-fit md:-bottom-6 md:right-10 lg:right-20 flex flex-col justify-end items-center md:absolute">
           <img
             class="sm:h-[400px] md:h-[77%] lg:h-[83%] w-fit"
@@ -586,7 +593,9 @@
         </div>
       </div>
     </section> -->
-    <footer id="footer-anchor" class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden">
+    <footer
+      
+      class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 mx-auto space-y-6 md:space-y-8 lg:space-y-10">
         <div class="w-full flex flex-col md:flex-row justify-between gap-5">
           <div
@@ -665,6 +674,7 @@
             data-aos-delay="200"
             class="space-y-3 w-full md:w-fit md:block flex flex-col items-center">
             <h2
+            id="footer-anchor"
               class="font-helveticanue font-extrabold whitespace-nowrap text-white text-lg lg:text-xl w-full text-center md:text-left uppercase">
               FOLLOW US
             </h2>
@@ -707,16 +717,15 @@
         </div>
       </div>
       <div
-      data-aos="fade-up"
-      data-aos-duration="1300"
-      data-aos-delay="200"
-      data-aos-anchor="#footer-anchor"
-      >
+        data-aos="fade-up"
+        data-aos-duration="1300"
+        data-aos-delay="200"
+        data-aos-anchor="#footer-anchor">
         <hr class="bg-[#303030] mt-8 md:mt-10 mb-4" />
-      <p
-        class="text-custom-white font-normal text-base tracking-wider text-center -mt-2">
-        ©2023 Miela Digital. All rights reserved.
-      </p>
+        <p
+          class="text-custom-white font-normal text-base tracking-wider text-center -mt-2">
+          ©2023 Miela Digital. All rights reserved.
+        </p>
       </div>
     </footer>
     <script
