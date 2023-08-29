@@ -1,5 +1,6 @@
 const navigationItems = document.querySelectorAll(".nav_link");
 // const Items = document.querySelectorAll(".nav_link");
+window.addEventListener('load', AOS.refresh)
 
 navigationItems.forEach((item) => {
   item.addEventListener("click", () => {

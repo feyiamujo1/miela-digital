@@ -346,7 +346,7 @@
           </div>
           <div
             class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10"
-            data-aos="fade-right"
+            data-aos="fade-left"
             data-aos-duration="1500"
             data-aos-delay="100">
             <div
@@ -436,12 +436,14 @@
         </div>
       </div>
     </section>
-    <section class="section bg-section-image py-8 md:py-10 lg:py-14">
+    <section class="section bg-section-image py-8 md:py-10 lg:py-14 relative">
       <div
         class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 lg:gap-10">
         <div
-          class="bg-black p-6 md:p-6 lg:p-8 border-[#303030] border-[1.5px] rounded-3xl space-y-5"
-         >
+          data-aos="flip-left"
+          data-aos-duration="1300"
+          data-aos-delay="100"
+          class="bg-black p-6 md:p-6 lg:p-8 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
           <div
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
@@ -467,8 +469,10 @@
           </p>
         </div>
         <div
-          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5"
-          >
+          data-aos="flip-left"
+          data-aos-duration="1300"
+          data-aos-delay="250"
+          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
           <div
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
@@ -494,8 +498,10 @@
           </p>
         </div>
         <div
-          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5"
-         >
+          data-aos="flip-left"
+          data-aos-duration="1300"
+          data-aos-delay="350"
+          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
           <div
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
@@ -580,10 +586,13 @@
         </div>
       </div>
     </section> -->
-    <footer class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden">
+    <footer id="footer-anchor" class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 mx-auto space-y-6 md:space-y-8 lg:space-y-10">
         <div class="w-full flex flex-col md:flex-row justify-between gap-5">
           <div
+            data-aos="fade-up"
+            data-aos-duration="1300"
+            data-aos-delay="50"
             class="w-full md:w-fit flex flex-col items-center md:block space-y-5">
             <img
               src="/src/images/Logos/MIELA-LOGO-COLORED.png"
@@ -597,6 +606,9 @@
             </h2>
           </div>
           <div
+            data-aos="fade-up"
+            data-aos-duration="1300"
+            data-aos-delay="100"
             class="w-full flex flex-col items-center md:block md:w-fit space-y-3">
             <h2
               class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
@@ -616,19 +628,25 @@
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
                 Clients
               </p>
-              <p>
-                Case Study
-              </p>
+              <p>Case Study</p>
             </div>
           </div>
-          <h2 class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit mx-auto uppercase md:hidden block text-center">
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="1300"
+            data-aos-delay="150"
+            class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit mx-auto uppercase md:hidden block text-center">
             INTERESTED?
             <br />
             LET'S GET IN TOUCH!
           </h2>
           <div
+            data-aos="fade-up"
+            data-aos-duration="1300"
+            data-aos-delay="150"
             class="space-y-3 w-full md:w-fit flex flex-col items-center md:block">
-            <h2 class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
+            <h2
+              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
               CONTACTS
             </h2>
             <div class="text-base text-[#3d3d3d] font-bold space-y-5">
@@ -642,13 +660,15 @@
             </div>
           </div>
           <div
+            data-aos="fade-up"
+            data-aos-duration="1300"
+            data-aos-delay="200"
             class="space-y-3 w-full md:w-fit md:block flex flex-col items-center">
             <h2
               class="font-helveticanue font-extrabold whitespace-nowrap text-white text-lg lg:text-xl w-full text-center md:text-left uppercase">
               FOLLOW US
             </h2>
-            <div
-              class="text-base text-[#3d3d3d] font-bold space-y-5">
+            <div class="text-base text-[#3d3d3d] font-bold space-y-5">
               <a
                 href="https://www.linkedin.com/company/mieladigital"
                 target="_blank"
@@ -686,19 +706,25 @@
           </div>
         </div>
       </div>
-      <hr
-        class="bg-[#303030] mt-8 md:mt-10 mb-4" />
+      <div
+      data-aos="fade-up"
+      data-aos-duration="1300"
+      data-aos-delay="200"
+      data-aos-anchor="#footer-anchor"
+      >
+        <hr class="bg-[#303030] mt-8 md:mt-10 mb-4" />
       <p
         class="text-custom-white font-normal text-base tracking-wider text-center -mt-2">
         ©2023 Miela Digital. All rights reserved.
       </p>
+      </div>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer></script>
     <script src="/src/script.js"></script>
     <script>
-      AOS.init();
+      AOS.init({ once: true });
     </script>
   </body>
 </html>
