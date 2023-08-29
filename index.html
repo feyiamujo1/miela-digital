@@ -190,7 +190,7 @@
         :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
         <div
           class=" w-11/12 md:w-fit flex flex-row py-3 px-3 bg-white mx-auto gap-3 md:gap-5 relative rounded-lg transition-all duration-500 "
-          x-show.transition.scale.duration.800ms="showModal" x-transition.delay.50ms
+          x-show.transition.scale.duration.800ms="showModal" x-transition.delay.50ms @click.away="showModal = false"
           >
           <div class="bg-section-image hidden pr-2 md:flex md:h-full md:w-[250px] lg:w-[250px] overflow-hidden items-end justify-end">
             <img
