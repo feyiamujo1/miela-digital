@@ -197,7 +197,7 @@
         x-show.transition.opacity.duration.600ms="showModal"
         :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
         <div
-          class="w-11/12 md:w-fit p-4 bg-white-section bg-[150%] mx-auto gap-3 md:gap-5 relative rounded-lg transition-all duration-500"
+          class="w-11/12 md:w-fit p-6 bg-white-section bg-[150%] mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
           x-show.transition.scale.duration.800ms="showModal"
           x-transition.delay.50ms
           @click.away="showModal = false">
@@ -209,7 +209,7 @@
               </h2>
               <p
                 class="text-custom-black text-base tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight">
-                Contact us at contact@mieladigital.com or fill out the form
+                Contact us at <span class="no-underline">contact@mieladigital.com</span> or fill out the form
                 below.
               </p>
             </div>
@@ -219,7 +219,7 @@
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 460.775 460.775"
-              class="absolute w-2 md:w-4 right-5 top-5 hover:fill-custom-yellow active:fill-custom-yellow cursor-pointer"
+              class="absolute w-4 right-7 top-7 hover:fill-custom-yellow active:fill-custom-yellow cursor-pointer"
               @click="showModal = !showModal"
               xml:space="preserve">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -237,7 +237,7 @@
                 type="text"
                 name=""
                 class="w-full p-2.5 focus:outline-black text-sm md:text-base border border-custom-ash rounded-sm"
-                placeholder="Full Name/Organization" />
+                placeholder="Name/Organization" />
               <input
                 type="email"
                 name=""
@@ -254,7 +254,7 @@
               <button
                 onclick="window.location.href='/src/pdf/CaseStudy.pdf'"
                 @click="showModal = !showModal"
-                class="py-2 px-4 font-semibold text-sm md:text-base bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
+                class="py-2 px-4 font-semibold :text-base bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
                 Submit
                 <i class="fa-regular fa-paper-plane"></i>
               </button>
@@ -482,43 +482,43 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/INTEL.png" />
             <div class="inner-slide"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/WARGAMING.png" />
             <div class="inner-slide"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/TENCENT.png" />
             <div class="inner-slide"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/GGBET.webp" />
             <div class="inner-slide"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/TROVO.png" />
             <div class="inner-slide"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/THERMALTAKE.png" />
             <div class="inner-slide"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/BETANO.png" />
             <div class="inner-slide my-10"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/WESTERN.png" />
             <div class="inner-slide"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/TWITCH.png" />
             <div class="inner-slide"></div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <img src="/src/images/Logos/TROVO.png" />
             <div class="inner-slide"></div>
           </div>
