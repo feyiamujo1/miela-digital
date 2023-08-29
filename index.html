@@ -83,7 +83,7 @@
   </head>
   <body
     class="w-full p-0 m-0 font-helvetica relative scroll-smooth"
-    x-data="{ open: false }"
+    x-data="{ open: false, showModal: false }"
     :class="{'max-h-screen overflow-hidden': open,' h-max': !open }">
     <nav
       data-aos="fade-down"
@@ -97,31 +97,31 @@
           alt="logo" />
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
-            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 md:gap-5 lg:gap-9 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg md:rounded-full"
+            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 md:gap-4 lg:gap-7 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg lg:text-xl md:rounded-full"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
-              class="mt-24 md:mt-0 md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link active_link"
+              class="mt-24 md:mt-0 md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link active_link"
               @click.inside="open = false">
               Home
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
+              class="md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link"
               @click.inside="open = false">
               Our Services
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
+              class="md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link"
               @click.inside="open = false">
               Clients
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
+              class="md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link"
               @click.inside="open = false">
               Case Study
             </li>
             <li
-              class="md:py-3 md:px-2 cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow transition-all duration-75 md:duration-100 font-thin overflow-hidden nav_link inactive_link"
-              @click.inside="open = false">
+              class="md:py-3 md:px-2 cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link"
+              @click=" open = false, showModal = !showModal">
               Contact Us
             </li>
           </ul>
@@ -157,17 +157,17 @@
       <div
         class="md:w-11/12 md:mx-auto h-full flex flex-col-reverse md:gap-5 md:flex-row md:justify-between md:items-center">
         <div
-          class="h-full w-full overflow md:w-fit flex flex-col py-6 -mt-4 bg-white-section bg-no-repeat bg-top md:bg-none md:py-0 gap-3 md:gap-7 md:justify-center md:-mt-6 z-10 md:mb-20">
+          class="h-full w-full overflow-hidden md:w-fit flex flex-col py-6 -mt-4 bg-white-section bg-no-repeat bg-top md:bg-none md:py-0 gap-0 md:gap-6 md:justify-center md:-mt-6 z-10">
           <h1
             data-aos="fade-down"
             data-aos-duration="1300"
-            class="font-helveticanue font-black w-11/12 mx-auto md:ml-0 text-4xl md:text-6xl md:w-full text-black">
+            class="font-helveticanue text-center md:text-left md:tracking-wide font-medium md:font-black w-11/12 md:ml-0 text-4xl md:text-[76px] lg:text-[84px] md:w-fit text-black">
             MIELA DIGITAL
           </h1>
           <p
             data-aos="fade-down"
             data-aos-duration="1300"
-            class="text-custom-ash w-11/12 mx-auto font-thin text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[480px] lg:w-[525px] bg-blend-color-burn text-justify">
+            class="text-custom-ash w-11/12 mx-auto font-thin text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[475px] lg:w-[525px] bg-blend-color-burn text-justify">
             Miela Digital is an agency specialized in the Gaming and iGaming
             sectors. We are dedicated to generating activations focused on brand
             awareness and user acquisition. We differentiate ourselves by
@@ -184,7 +184,83 @@
             alt="charater" />
         </div>
       </div>
+      <div
+        class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
+        x-show.transition.opacity.duration.600ms="showModal"
+        :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
+        <div
+          class=" w-11/12 md:w-fit flex flex-row py-3 px-3 bg-white mx-auto gap-3 md:gap-5 relative rounded-lg transition-all duration-500 "
+          x-show.transition.scale.duration.800ms="showModal" x-transition.delay.50ms
+          >
+          <div class="bg-section-image hidden pr-2 md:flex md:h-full md:w-[250px] lg:w-[250px] overflow-hidden items-end justify-end">
+            <img
+              src="/src/images/People/hero-1.png"
+              class="w-full object-fill"
+              alt="" />
+          </div>
+          <div class="md:w-[350px] lg:w-[400px]">
+            <div class=" mb-3">
+              <h2
+                class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit text-custom-black uppercase">
+                Contact Us
+              </h2>
+              <p
+                class="text-custom-black text-base tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight ">
+                Contact us at contact@mieladigital.com
+                or fill out the form below.
+              </p>
+            </div>
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 460.775 460.775"
+              class="absolute w-2 md:w-4 right-5 top-5 hover:fill-custom-yellow active:fill-custom-yellow cursor-pointer"
+              @click="showModal = !showModal"
+              xml:space="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
+              </g>
+            </svg>
+            <form class=" w-full space-y-2 text-sm">
+              <input
+                type="text"
+                name=""
+                class="w-full p-2.5 focus:outline-black text-sm md:text-base border border-custom-ash rounded-sm"
+                placeholder="Full Name/Organization" />
+              <input
+                type="email"
+                name=""
+                class="w-full p-2.5 focus:outline-black text-sm md:text-base border border-custom-ash rounded-sm"
+                placeholder="Email" />
+              <input
+                type="text"
+                name=""
+                class="w-full p-2.5 focus:outline-black text-sm md:text-base border border-custom-ash rounded-sm"
+                placeholder="Subject" />
+              <textarea
+                class="w-full p-2.5 focus:outline-black text-sm md:text-base border border-custom-ash rounded-sm  md:h-[3em] lg:h-[4em]"
+                placeholder="Message ..."></textarea>
+              <button
+                onclick="window.location.href='/src/pdf/CaseStudy.pdf'"
+                @click="showModal = !showModal"
+                class="py-2 px-4 font-semibold text-sm md:text-base bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
+                Submit
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
+
     <section
       id="our-services"
       class="section bg-section-image py-8 md:py-10 lg:py-14 overflow-hidden">
@@ -221,7 +297,7 @@
                 managing both gaming and non-gaming influencers worldwide.
               </p>
             </div>
-            <div class="w-full md:max-w-[920px]">
+            <div class="w-full md:w-[920px]">
               <img
                 src="/src/images/People/IMG-01.png"
                 class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full lg:h-full lg:object-fill"
@@ -391,7 +467,7 @@
       class="section w-full py-8 md:py-10 lg:py-14 bg-white-section">
       <div class="w-11/12 mx-auto">
         <h2
-          class="font-helveticanue font-extrabold text-2xl lg:text-4xl w-fit uppercase md:mb-8"
+          class="font-helveticanue tracking-widest font-extrabold text-2xl lg:text-4xl w-fit uppercase md:mb-8"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -445,7 +521,7 @@
         </div>
       </div>
     </section>
-    <section class="section bg-section-image py-8 md:py-10 lg:py-14 relative">
+    <!-- <section class="section bg-section-image py-8 md:py-10 lg:py-14 relative">
       <div
         class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 lg:gap-10">
         <div
@@ -536,64 +612,6 @@
           </p>
         </div>
       </div>
-    </section>
-    <!-- <section id="contact-us" class="section bg-section-image py-8 md:py-10 lg:py-14">
-      <div class="w-11/12 mx-auto space-y-5 md:space-y-8">
-        <div>
-          <h2
-            class="font-extrabold text-3xl lg:text-4xl w-fit text-white relative before:w-2 before:h-6 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-2.5 md:before:bottom-3 before:-skew-x-12 ml-4 md:ml-6 selection:bg-custom-yellow selection:text-black">
-            Contact Us
-          </h2>
-          <p
-            class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight">
-            Interested in working with us? Let's get in touch!
-          </p>
-        </div>
-        <div class="flex flex-col md:flex-row gap-10">
-          <div class="w-full">
-            <p
-              class="text-custom-white font-thin text-lg md:text-xl lg:text-2xl tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight">
-              For inquires or questions contact us at
-              <a
-                href="mailto:"
-                class="text-custom-yellow hover:no-underline hover:text-black hover:bg-custom-yellow">
-                contact@mieladigital.com
-              </a>
-              or fill out the form below. You can also reach out to us through
-              our various media platforms.
-            </p>
-          </div>
-          <form class="w-full space-y-5">
-            <div class="flex flex-col md:flex-row gap-5 w-full">
-              <input
-                type="text"
-                name=""
-                class="md:w-1/2 p-2.5 focus:outline-custom-yellow"
-                placeholder="Full Name/Organization" />
-              <input
-                type="email"
-                name=""
-                class="md:w-1/2 p-2.5 focus:outline-custom-yellow"
-                placeholder="Email" />
-            </div>
-            <input
-              type="text"
-              name=""
-              class="w-full p-2.5 focus:outline-custom-yellow"
-              placeholder="Subject" />
-            <textarea
-              rows="5"
-              class="w-full p-2.5 focus:outline-custom-yellow"
-              placeholder="Message ..."></textarea>
-            <button
-              onclick="window.location.href='/src/pdf/CaseStudy.pdf'"
-              class="py-2.5 px-4 font-semibold text-lg md:text-xl bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none">
-              Submit
-              <i class="fa-regular fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </div>
     </section> -->
     <footer class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 mx-auto space-y-6 md:space-y-8 lg:space-y-10">
@@ -602,13 +620,13 @@
             data-aos="fade-up"
             data-aos-duration="1300"
             data-aos-delay="50"
-            class="w-full md:w-fit flex flex-col items-center md:block space-y-5">
+            class="w-full md:w-fit space-y-5">
             <img
               src="/src/images/Logos/MIELA-LOGO-COLORED.png"
               class="w-16 md:w-20 lg:w-24"
               alt="" />
             <h2
-              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase hidden md:block">
+              class="font-helveticanue tracking-widest font-extrabold text-white text-lg lg:text-xl w-fit uppercase hidden md:block">
               INTERESTED?
               <br />
               LET'S GET IN TOUCH!
@@ -618,13 +636,12 @@
             data-aos="fade-up"
             data-aos-duration="1300"
             data-aos-delay="100"
-            class="w-full flex flex-col items-center md:block md:w-fit space-y-3">
+            class="w-fit space-y-3">
             <h2
-              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
+              class="font-helveticanue tracking-widest font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
               Main
             </h2>
-            <div
-              class="font-bold text-base text-[#3d3d3d] space-y-5 w-full flex flex-col items-center md:block">
+            <div class="font-bold text-base text-custom-white space-y-5">
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
                 Home
@@ -644,7 +661,7 @@
             data-aos="fade-up"
             data-aos-duration="1300"
             data-aos-delay="150"
-            class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit mx-auto uppercase md:hidden block text-center">
+            class="font-helveticanue tracking-widest font-extrabold text-white text-lg lg:text-xl uppercase md:hidden block">
             INTERESTED?
             <br />
             LET'S GET IN TOUCH!
@@ -653,12 +670,12 @@
             data-aos="fade-up"
             data-aos-duration="1300"
             data-aos-delay="150"
-            class="space-y-3 w-full md:w-fit flex flex-col items-center md:block">
+            class="space-y-3 w-fit">
             <h2
-              class="font-helveticanue font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
+              class="font-helveticanue tracking-widest font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
               CONTACTS
             </h2>
-            <div class="text-base text-[#3d3d3d] font-bold space-y-5">
+            <div class="text-base text-custom-white font-bold space-y-5">
               <p>
                 <a
                   href="mailto:contact@mieladigital.com"
@@ -672,16 +689,18 @@
             data-aos="fade-up"
             data-aos-duration="1300"
             data-aos-delay="200"
-            class="space-y-3 w-full md:w-fit md:block flex flex-col items-center">
+            class="space-y-3 w-fit">
             <h2
               id="footer-anchor"
-              class="font-helveticanue font-extrabold whitespace-nowrap text-white text-lg lg:text-xl w-full text-center md:text-left uppercase">
+              class="font-helveticanue tracking-widest font-extrabold whitespace-nowrap text-white text-lg lg:text-xl w-full uppercase">
               FOLLOW US
             </h2>
-            <div class="text-base text-[#3d3d3d] font-bold space-y-5">
+            <div
+              class="text-base text-custom-white font-bold gap-3 flex flex-row items-center">
               <a
                 href="https://www.linkedin.com/company/mieladigital"
                 target="_blank"
+                class="h-fit"
                 rel="noopener noreferrer">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -690,7 +709,7 @@
                   id="Capa_1"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                  class="fill-white hover:fill-custom-yellow w-7 cursor-pointer"
+                  class="fill-white hover:fill-custom-yellow h-6 cursor-pointer"
                   viewBox="0 0 490.732 490.732"
                   xml:space="preserve">
                   <g>
@@ -710,6 +729,21 @@
                         c2.699,11.505,4.058,27.98,4.058,49.426V403.808L433.835,403.808z" />
                     </g>
                   </g>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/mieladigital/"
+                target="_blank"
+                class="h-fit"
+                rel="noopener noreferrer">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg
+                  viewBox="0 0 256 256"
+                  class="fill-white hover:fill-custom-yellow h-8 cursor-pointer"
+                  id="Flat"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M160,128a32,32,0,1,1-32-32A32.03667,32.03667,0,0,1,160,128Zm68-44v88a56.06353,56.06353,0,0,1-56,56H84a56.06353,56.06353,0,0,1-56-56V84A56.06353,56.06353,0,0,1,84,28h88A56.06353,56.06353,0,0,1,228,84Zm-52,44a48,48,0,1,0-48,48A48.05436,48.05436,0,0,0,176,128Zm16-52a12,12,0,1,0-12,12A12,12,0,0,0,192,76Z" />
                 </svg>
               </a>
             </div>

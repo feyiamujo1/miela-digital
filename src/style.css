@@ -8,17 +8,18 @@ body {
       0 0 7px #f1f1f1,
       0 0 50px #f6fad2;
 }
-.inactive_link:hover{
+/* .inactive_link:hover{
     color: #e9fc0c;
-    /* border-bottom: 1px solid #fff; */
+ border-bottom: 1px solid #fff;
 }
 .active_link{
     color: #e9fc0c;
-    /* border-bottom: 1.5px solid #e9fc0c; */
-}
+   border-bottom: 1.5px solid #e9fc0c;
+} */
 @media screen and (max-width: 768px) {
     .active_link{
         border-bottom: 1.5px solid #e9fc0c;
+        color: #e9fc0c;
         padding-bottom: 4px;
     }
     .inactive_link:hover{
@@ -55,10 +56,4 @@ body {
   font-style: bold;
 }
 
-/* @font-face {
-    font-family: "Helveticanue";
-    src: url("./fonts/Helvetica-Neue-Condensed-Bold.ttf");
-    font-weight: 800;
-    font-style: bold;
-  } */
 
