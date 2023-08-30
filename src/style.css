@@ -2,34 +2,27 @@ body {
   font-family: "Teko", sans-serif;
 }
 .neonText {
-    color: #fff;
-    text-shadow:
-      /* White glow */
-      0 0 7px #f1f1f1,
-      0 0 50px #f6fad2;
+  color: #fff;
+  text-shadow:
+      /* White glow */ 0 0 7px #f1f1f1, 0 0 50px #f6fad2;
 }
-/* .inactive_link:hover{
-    color: #e9fc0c;
- border-bottom: 1px solid #fff;
-}
-.active_link{
-    color: #e9fc0c;
-   border-bottom: 1.5px solid #e9fc0c;
-} */
-@media screen and (max-width: 768px) {
-    .active_link{
-        border-bottom: 1.5px solid #e9fc0c;
-        color: #e9fc0c;
-        padding-bottom: 4px;
-    }
-    .inactive_link:hover{
-      color: #e9fc0c;
-        border-bottom: 1.5x solid #fff;
-    }
+a,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* 0 0 24px #bfce0b,
-      0 0 500px #c5d80a; */
+@media screen and (max-width: 768px) {
+  .nav_link{
+    border-bottom: 1.5px solid transparent;
+  }
+  .nav_link:hover {
+    border-bottom: 1.5px solid #e9fc0c;
+    color: #e9fc0c;
+    padding-bottom: 4px;
+  }
+}
 
 @font-face {
   font-family: "Helvetica";
@@ -55,5 +48,3 @@ body {
   font-weight: 700;
   font-style: bold;
 }
-
-

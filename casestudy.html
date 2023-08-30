@@ -115,12 +115,20 @@
             <li
               class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[115px] lg:w-[125px]"
               @click.inside="open = false">
-              Our Services
+              <a
+                href="/#our-services"
+                class="no-underline hover:no-underline active:no-underline text-inherit">
+                Our Services
+              </a>
             </li>
             <li
               class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[64px] lg:w-[66px]"
               @click.inside="open = false">
-              Clients
+              <a
+                href="/#clients"
+                class="no-underline hover:no-underline active:no-underline text-inherit">
+                Clients
+              </a>
             </li>
             <li
               class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[103px] lg:w-[110px]"
@@ -259,6 +267,7 @@
                 Designer at BGG Temp
               </p>
               <button
+                id="downloadButton"
                 class="py-2.5 px-4 flex items-center gap-2 w-fit font-semibold text-lg bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none">
                 Download
                 <svg
@@ -447,13 +456,23 @@
               </p>
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
-                Our Services
+                <a
+                  href="/#our-services"
+                  class="no-underline hover:no-underline active:no-underline text-inherit">
+                  Our Services
+                </a>
               </p>
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
+                <a
+                  href="/#clients"
+                  class="no-underline hover:no-underline active:no-underline text-inherit">
+                  Clients
+                </a>
                 Clients
               </p>
-              <p class="cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
+              <p
+                class="cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
                 <a
                   class="no-underline hover:no-underline active:no-underline text-inherit"
                   href="/casestudy.html">

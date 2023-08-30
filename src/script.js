@@ -64,20 +64,20 @@ var swiper = new Swiper(".mySwiper", {
   breakpoints: {
     320: {
       slidesPerView: 2,
-      slidesPerGroup: 2,
+      slidesPerGroup: 2
     },
     648: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerGroup: 3
     },
     920: {
       slidesPerView: 4,
-      slidesPerGroup: 4,
+      slidesPerGroup: 4
     },
     1024: {
       slidesPerView: 5,
-      slidesPerGroup: 5,
-    },
+      slidesPerGroup: 5
+    }
   },
   // spaceBetween: 30,
   loop: true,
@@ -88,38 +88,15 @@ var swiper = new Swiper(".mySwiper", {
   freemode: true
 });
 
-$(document).ready(function () {
-  $(".logo-carousel").slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    // useTransform: false,
-    easing: "swing",
-    speed: 1800,
-    cssEase: "linear",
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 920,
-        settings: {
-          slidesToShow: 4
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 520,
-        settings: {
-          slidesToShow: 2
-        }
-      }
-    ]
+document
+  .getElementById("downloadButton")
+  .addEventListener("click", function () {
+    const pdfUrl = "/src/pdf/CaseStudy.pdf"; // Replace with the actual path to your PDF file
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    // link.target = "_blank";
+    link.download = "CaseStudy.pdf"; // Change the downloaded file name if needed
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
-});
