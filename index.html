@@ -197,7 +197,7 @@
         x-show.transition.opacity.duration.600ms="showModal"
         :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
         <div
-          class="w-11/12 md:w-fit p-6 bg-hero-image bg-[150%] mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
+          class="w-11/12 md:w-fit p-6 bg-white-section bg-cover mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
           x-show.transition.scale.duration.800ms="showModal"
           x-transition.delay.50ms
           @click.away="showModal = false">
@@ -209,7 +209,7 @@
               </h2>
               <p
                 class="text-custom-black text-base tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight">
-                Contact us at <span class="no-underline">contact@mieladigital.com</span> or fill out the form
+                Contact us at <span class="!no-underline">contact@mieladigital.com</span> or fill out the form
                 below.
               </p>
             </div>
@@ -254,7 +254,7 @@
               <button
                 onclick="window.location.href='/src/pdf/CaseStudy.pdf'"
                 @click="showModal = !showModal"
-                class="py-2 px-4 font-semibold :text-base bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
+                class="py-2 px-4 font-semibold text-lg bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
                 Submit
                 <i class="fa-regular fa-paper-plane"></i>
               </button>

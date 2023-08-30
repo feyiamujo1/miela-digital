@@ -160,36 +160,174 @@
     </nav>
     <section
       @click.inside="open = false"
-      id="home"
-      class="section w-full md:min-h-screen pt-20 md:pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-bottom relative overflow-hidden">
+      id="case study"
+      class="section w-full md:min-h-screen pt-28 md:pt-36 pb-8 md:pb-10 lg:pb-14 bg-white-section bg-cover bg-no-repeat bg-bottom relative overflow-hidden">
       <div
-        class="md:w-11/12 md:mx-auto h-full flex flex-col-reverse md:gap-5 md:flex-row md:justify-between md:items-center">
-        <div
-          class="h-full w-full overflow-hidden md:w-fit flex flex-col py-6 -mt-4 bg-white-section bg-no-repeat bg-top md:bg-none md:py-0 gap-0 md:gap-6 md:justify-center md:-mt-6 z-10">
-          <h1
-            data-aos="fade-down"
+        class="w-11/12 mx-auto h-full flex flex-col gap-5 md:gap-10 md:justify-between">
+        <div class="flex w-full justify-between items-center">
+          <div class="space-y-3">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1300"
+              class="font-helveticanue md:tracking-wide font-medium md:font-black w-11/12 md:ml-0 text-4xl sm:text-5xl md:text-6xl lg:text-[72px] md:w-fit text-black uppercase">
+              Our Case Study
+            </h1>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1300"
+              class="text-custom-ash font-thin text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[475px] lg:w-[525px] bg-blend-color-burn text-justify">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              Consectetur iusto reiciendis.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
             data-aos-duration="1300"
-            class="font-helveticanue text-center md:text-left md:tracking-wide font-medium md:font-black w-11/12 md:ml-0 text-4xl md:text-[76px] lg:text-[84px] md:w-fit text-black">
-            MIELA DIGITAL
-          </h1>
-          <p
-            data-aos="fade-down"
-            data-aos-duration="1300"
-            class="text-custom-ash w-11/12 mx-auto font-thin text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[475px] lg:w-[525px] bg-blend-color-burn text-justify">
-            Miela Digital is an agency specialized in the Gaming and iGaming
-            sectors. We are dedicated to generating activations focused on brand
-            awareness and user acquisition. We differentiate ourselves by
-            focusing on the narrow part of the funnel: conversion.
-          </p>
+            class="hidden md:flex gap-2">
+            <button class="bg-custom-white rounded-full p-2 active:border-none">
+              <svg
+                viewBox="0 0 24 24"
+                class="fill-custom-white w-6 md:w-8 cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z"
+                    fill="#0F0F0F"></path>
+                </g>
+              </svg>
+            </button>
+            <button class="bg-custom-white rounded-full p-2">
+              <svg
+                viewBox="0 0 24 24"
+                class="fill-custom-white w-6 md:w-8 cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M7.82054 20.7313C8.21107 21.1218 8.84423 21.1218 9.23476 20.7313L15.8792 14.0868C17.0505 12.9155 17.0508 11.0167 15.88 9.84497L9.3097 3.26958C8.91918 2.87905 8.28601 2.87905 7.89549 3.26958C7.50497 3.6601 7.50497 4.29327 7.89549 4.68379L14.4675 11.2558C14.8581 11.6464 14.8581 12.2795 14.4675 12.67L7.82054 19.317C7.43002 19.7076 7.43002 20.3407 7.82054 20.7313Z"
+                    fill="#0F0F0F"></path>
+                </g>
+              </svg>
+            </button>
+          </div>
         </div>
         <div
-          data-aos="zoom-out-left"
-          data-aos-duration="1300"
-          class="h-full w-11/12 md:w-fit md:-bottom-6 md:right-10 lg:right-20 flex flex-col justify-end items-center md:absolute">
-          <img
-            class="sm:h-[400px] md:h-[77%] lg:h-[83%] w-fit"
-            src="src/images/People/hero-2.png"
-            alt="charater" />
+          class="flex flex-col-reverse md:flex-row-reverse"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          id="casestudy-anchor"
+          data-aos-delay="500">
+          <div
+            class="w-full flex flex-col justify-center md:min-w-[370px] space-y-4 p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
+            <div class="space-y-3">
+              <h3
+                class="font-helveticanue font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
+                Influencer Management
+              </h3>
+              <p
+                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                We potentiate influencer's reach through dynamic graphics
+                management of gaming and non-gaming influencers across all
+                regions, ensuring the leveraging of their fanbase into the brand
+                conversion funnel.
+              </p>
+              <p
+                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+                We enhance the reach of influencers through creative graphics.
+              </p>
+            </div>
+            <div class="mt-3 md:mt-5">
+              <p
+                class="text-custom-yellow font-thin text-lg md:text-xl lg:leading-[26pt]">
+                John Carter
+              </p>
+              <p
+                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] mb-2">
+                Designer at BGG Temp
+              </p>
+              <button
+                class="py-2.5 px-4 flex items-center gap-2 w-fit font-semibold text-lg bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none">
+                Download
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-6 fill-none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M12 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5H9.58579C9.851 5 10.1054 5.10536 10.2929 5.29289L12 7H19C20.1046 7 21 7.89543 21 9V11"
+                      stroke="#000000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M18.5 14V20M18.5 20L16 17.5M18.5 20L21 17.5"
+                      stroke="#000000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="w-full md:h-full md:w-[920px]">
+            <img
+              src="/src/images/People/YASMINE.png"
+              class="rounded-3xl rounded-b-none md:rounded-tl-3xl md:rounded-none w-full h-[300px] object-cover sm:max-h-[350px] md:h-full object-center md:object-fill"
+              alt="influencers" />
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1300" 
+        data-aos-anchor="#casestudy-anchor" class="flex md:hidden gap-2 w-fit mx-auto">
+          <button
+            class="bg-custom-white rounded-full p-2 active:border-none">
+            <svg
+              viewBox="0 0 24 24"
+              class="fill-custom-white w-6 md:w-8 cursor-pointer"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z"
+                  fill="#0F0F0F"></path>
+              </g>
+            </svg>
+          </button>
+          <button class="bg-custom-white rounded-full p-2">
+            <svg
+              viewBox="0 0 24 24"
+              class="fill-custom-white w-6 md:w-8 cursor-pointer"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M7.82054 20.7313C8.21107 21.1218 8.84423 21.1218 9.23476 20.7313L15.8792 14.0868C17.0505 12.9155 17.0508 11.0167 15.88 9.84497L9.3097 3.26958C8.91918 2.87905 8.28601 2.87905 7.89549 3.26958C7.50497 3.6601 7.50497 4.29327 7.89549 4.68379L14.4675 11.2558C14.8581 11.6464 14.8581 12.2795 14.4675 12.67L7.82054 19.317C7.43002 19.7076 7.43002 20.3407 7.82054 20.7313Z"
+                  fill="#0F0F0F"></path>
+              </g>
+            </svg>
+          </button>
         </div>
       </div>
       <div
@@ -197,7 +335,7 @@
         x-show.transition.opacity.duration.600ms="showModal"
         :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
         <div
-          class="w-11/12 md:w-fit p-6 bg-hero-image bg-[150%] mx-auto gap-3 md:gap-5 relative rounded-lg transition-all duration-500"
+          class="w-11/12 md:w-fit p-6 bg-white-section bg-cover mx-auto gap-3 md:gap-5 relative rounded-lg transition-all duration-500"
           x-show.transition.scale.duration.800ms="showModal"
           x-transition.delay.50ms
           @click.away="showModal = false">
@@ -209,8 +347,9 @@
               </h2>
               <p
                 class="text-custom-black text-base tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight">
-                Contact us at <span class="no-underline">contact@mieladigital.com</span> or fill out the form
-                below.
+                Contact us at
+                <span class="!no-underline">contact@mieladigital.com</span>
+                or fill out the form below.
               </p>
             </div>
             <svg
@@ -254,7 +393,7 @@
               <button
                 onclick="window.location.href='/src/pdf/CaseStudy.pdf'"
                 @click="showModal = !showModal"
-                class="py-2 px-4 font-semibold text-base bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
+                class="py-2 px-4 font-semibold text-lg bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
                 Submit
                 <i class="fa-regular fa-paper-plane"></i>
               </button>
