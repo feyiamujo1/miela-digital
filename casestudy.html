@@ -107,7 +107,7 @@
               class="mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link active_link md:w-[54px] lg:w-[56px]"
               @click.inside="open = false">
               <a
-                href="/casestudy.html"
+                href="/"
                 class="w-full h-full no-underline hover:text-inherit hover:no-underline active:no-underline">
                 Home
               </a>
@@ -295,10 +295,12 @@
               alt="influencers" />
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1300" 
-        data-aos-anchor="#casestudy-anchor" class="flex md:hidden mt-3 gap-2 w-fit mx-auto">
-          <button
-            class="bg-custom-white rounded-full p-2 active:border-none">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1300"
+          data-aos-anchor="#casestudy-anchor"
+          class="flex md:hidden mt-3 gap-2 w-fit mx-auto">
+          <button class="bg-custom-white rounded-full p-2 active:border-none">
             <svg
               viewBox="0 0 24 24"
               class="fill-custom-white w-6 md:w-8 cursor-pointer"
@@ -437,7 +439,11 @@
             <div class="font-normal text-base text-custom-white space-y-5">
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
-                Home
+                <a
+                  class="no-underline hover:no-underline active:no-underline text-inherit"
+                  href="/">
+                  Home
+                </a>
               </p>
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
@@ -447,7 +453,13 @@
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
                 Clients
               </p>
-              <p>Case Study</p>
+              <p class="cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
+                <a
+                  class="no-underline hover:no-underline active:no-underline text-inherit"
+                  href="/casestudy.html">
+                  Case Study
+                </a>
+              </p>
             </div>
           </div>
           <h2
