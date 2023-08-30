@@ -88,6 +88,17 @@ var swiper = new Swiper(".mySwiper", {
   freemode: true
 });
 
+var swiper = new Swiper(".heroSwiper", {
+  slidesPerView: 1,
+  // spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 0 //add
+  },
+  speed: 7500,
+  freemode: true
+});
+
 document
   .getElementById("downloadButton")
   .addEventListener("click", function () {
