@@ -90,13 +90,27 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper = new Swiper(".heroSwiper", {
   slidesPerView: 1,
-  // spaceBetween: 30,
+  effect: "fade",
   loop: true,
   autoplay: {
-    delay: 0 //add
+    delay: 2000
   },
-  speed: 7500,
-  freemode: true
+  speed: 1000,
+  freemode: true,
+  on: {
+    slideChange: () => {
+      const slides = document.querySelectorAll('.hero-slide');
+      const activeIndex = swiper.activeIndex;
+
+      slides.forEach((slide, index) => {
+        if (index === activeIndex) {
+          slide.style.opacity = 1; // Set opacity to 1 for active slide
+        } else {
+          slide.style.opacity = 0; // Set opacity to 0 for inactive slides
+        }
+      });
+    }
+  }
 });
 
 document
@@ -111,3 +125,4 @@ document
     link.click();
     document.body.removeChild(link);
   });
+
