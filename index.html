@@ -16,7 +16,7 @@
     <!-- Logo -->
     <link
       rel="shortcut icon"
-      href="/src/images/Miela-Logo.png"
+      href="./src/images/Miela-Logo.png"
       type="image/x-icon" />
     <!-- Font Awesome Icon -->
     <script
@@ -45,8 +45,11 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
-    <!-- Slick Slider JS
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     <!-- Swiper slider -->
     <link
       rel="stylesheet"
@@ -69,9 +72,9 @@
               "custom-black": "rgb(0, 0, 0, 0.95)"
             },
             backgroundImage: {
-              "hero-image": 'url("../src/images/Backgrounds/BG-1.png")',
-              "section-image": 'url("../src/images/Backgrounds/BG-3.png")',
-              "white-section": 'url("../src/images/Backgrounds/BG-2.png")'
+              "hero-image": 'url("./src/images/Backgrounds/BG-1.png")',
+              "section-image": 'url("./src/images/Backgrounds/BG-3.png")',
+              "white-section": 'url("./src/images/Backgrounds/BG-2.png")'
             },
             fontFamily: {
               helvetica: ["Helvetica", "sans-serif"],
@@ -81,9 +84,15 @@
         }
       };
     </script>
-    <link rel="stylesheet" href="/src/slider.css" />
-    <link rel="stylesheet" href="/src/style.css" />
-    <title>Meila Digital - Marketing, ESports & Influencer Services</title>
+    <link rel="stylesheet" href="./src/slider.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Miela Digital - Home</title>
+    <meta
+      name="description"
+      content="Miela Digital is an agency specialized in the Gaming and iGaming
+    sectors. We are dedicated to generating activations focused on brand
+    awareness and user acquisition. We differentiate ourselves by
+    focusing on the narrow part of the funnel: conversion." />
   </head>
   <body
     class="w-full p-0 m-0 font-helvetica relative scroll-smooth"
@@ -122,7 +131,7 @@
               class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[103px]"
               @click.inside="open = false">
               <a
-                href="/casestudy.html"
+                href="./case-study/"
                 class="w-full h-full no-underline hover:text-inherit hover:no-underline active:no-underline">
                 Case Study
               </a>
@@ -183,22 +192,16 @@
           </p>
         </div>
         <div
-          class="swiper heroSwiper w-full mx-auto h-[380px] sm:h-[400px] sm:flex flex-col justify-end items-center md:justify-end md:items-end md:absolute md:h-[80%] lg:h-[83%] md:w-[650px] md:pl-[30px] md:-bottom-6 md:right-0 lg:right-20 "
           data-aos="fade-up"
           data-aos-duration="1300"
-          data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide hero-slide text-center">
-              <img
-                src="src/images/People/hero-2-large.png "
-                class="heroImage h-full w-fit sm:h-[400px] md:h-full lg:h-[100%] object-cover object-top md:object-cover md:object-right mx-auto" />
-            </div>
-            <div class="swiper-slide hero-slide flex flex-col items-center md:justify-end">
-              <img
-                src="src/images/People/hero-1.png"
-                class="h-full w-fit sm:h-[400px] md:h-full lg:h-full object-cover md:object-contain object-top" />
-            </div>
-          </div>
+          data-aos-delay="100"
+          class="fadeImg relative w-full h-[380px] sm:h-[400px] sm:flex flex-col justify-end items-center md:justify-end md:absolute md:w-[620px] md:-bottom-6 md:right-0 md:h-[80%] lg:h-[85%] lg:right-20 md:!overflow-visible">
+          <img
+            src="./src/images/People/hero-2-large.png"
+            class="h-full w-full sm:h-[400px] md:h-full object-contain object-top md:object-contain md:object-right mx-auto absolute bottom-0 top-0 left-0 right-0 fade-in-image" />
+          <img
+            src="./src/images/People/hero-1.png"
+            class="h-full w-full sm:h-[400px] md:h-full md:w-[350px] object-contain md:float-left object-top md:object-contain md:object-right absolute bottom-0 top-0 right-0 lg:left-0 lg:mx-auto fade-out-image" />
         </div>
       </div>
       <div
@@ -242,29 +245,37 @@
                   d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
               </g>
             </svg>
-            <form class="w-full space-y-2 text-base md:text-lg">
+            <form
+              id="homeContactForm"
+              onsubmit="SubmitContactForm(event)"
+              method="POST"
+              class="w-full space-y-2 text-base md:text-lg">
               <input
                 type="text"
-                name=""
+                name="author"
+                id="author"
                 class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
                 placeholder="Name/Organization" />
               <input
                 type="email"
-                name=""
+                id="email"
+                name="email"
                 class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
                 placeholder="Email" />
               <input
                 type="text"
-                name=""
+                id="subject"
+                name="subject"
                 class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
                 placeholder="Subject" />
               <textarea
+                id="message"
                 class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm md:h-[3em] lg:h-[4em]"
                 placeholder="Message ..."></textarea>
               <button
-                onclick="window.location.href='/src/pdf/CaseStudy.pdf'"
+                type="submit"
                 @click="showModal = !showModal"
-                class="py-2 px-4 text-base md:text-lg font-semibold rounded-2xl bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
+                class="py-2 px-4 font-semibold text-base md:text-lg rounded-2xl bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
                 Submit
                 <i class="fa-regular fa-paper-plane"></i>
               </button>
@@ -313,7 +324,7 @@
             </div>
             <div class="w-full md:w-[920px]">
               <img
-                src="/src/images/People/IMG-01.png"
+                src="./src/images/People/IMG-01.png"
                 class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full lg:h-full lg:object-fill"
                 alt="influencers" />
             </div>
@@ -346,7 +357,7 @@
             </div>
             <div class="w-full md:w-[920px]">
               <img
-                src="/src/images/People/IMG-02.jpg"
+                src="./src/images/People/IMG-02.jpg"
                 class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full md:min-h-[310px] object-fill"
                 alt="influencers" />
             </div>
@@ -378,7 +389,7 @@
             </div>
             <div class="w-full md:w-[920px]">
               <img
-                src="/src/images/People/IMG-03.jpg"
+                src="./src/images/People/IMG-03.jpg"
                 class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
@@ -411,7 +422,7 @@
             </div>
             <div class="w-full md:w-[920px]">
               <img
-                src="/src/images/People/IMG-04.png"
+                src="./src/images/People/IMG-04.png"
                 class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
@@ -443,7 +454,7 @@
             </div>
             <div class="w-full md:w-[920px]">
               <img
-                src="/src/images/People/IMG-05.png"
+                src="./src/images/People/IMG-05.png"
                 class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full md:min-h-[330px] object-fill"
                 alt="influencers" />
             </div>
@@ -475,7 +486,7 @@
             </div>
             <div class="w-full md:w-[920px]">
               <img
-                src="/src/images/People/IMG-06.png"
+                src="./src/images/People/IMG-06.png"
                 class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
                 alt="influencers" />
             </div>
@@ -505,43 +516,43 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <img src="/src/images/Logos/INTEL.png" />
+            <img src="./src/images/Logos/INTEL.png" />
             <div class="inner-slide"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/WARGAMING.png" />
+            <img src="./src/images/Logos/WARGAMING.png" />
             <div class="inner-slide"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/TENCENT.png" />
+            <img src="./src/images/Logos/TENCENT.png" />
             <div class="inner-slide"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/GGBET.webp" />
+            <img src="./src/images/Logos/GGBET.webp" />
             <div class="inner-slide"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/TROVO.png" />
+            <img src="./src/images/Logos/TROVO.png" />
             <div class="inner-slide"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/THERMALTAKE.png" />
+            <img src="./src/images/Logos/THERMALTAKE.png" />
             <div class="inner-slide"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/BETANO.png" />
+            <img src="./src/images/Logos/BETANO.png" />
             <div class="inner-slide my-10"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/WESTERN.png" />
+            <img src="./src/images/Logos/WESTERN.png" />
             <div class="inner-slide"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/TWITCH.png" />
+            <img src="./src/images/Logos/TWITCH.png" />
             <div class="inner-slide"></div>
           </div>
           <div class="swiper-slide">
-            <img src="/src/images/Logos/TROVO.png" />
+            <img src="./src/images/Logos/TROVO.png" />
             <div class="inner-slide"></div>
           </div>
         </div>
@@ -559,7 +570,7 @@
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
               class="w-full h-full rounded-full object-fill mx-auto scale-150"
-              src="/src/images/People/YASMINE.png"
+              src="./src/images/People/YASMINE.png"
               alt="client" />
           </div>
           <div class="">
@@ -588,7 +599,7 @@
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
               class="w-full h-full rounded-full object-fill mx-auto scale-150"
-              src="/src/images/People/BAUER.png"
+              src="./src/images/People/BAUER.png"
               alt="client" />
           </div>
           <div class="">
@@ -617,7 +628,7 @@
             class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
             <img
               class="w-full h-full rounded-full object-fill mx-auto scale-150"
-              src="/src/images/People/JANE.png"
+              src="./src/images/People/JANE.png"
               alt="client" />
           </div>
           <div class="">
@@ -648,7 +659,7 @@
             data-aos-delay="50"
             class="w-full md:w-fit space-y-5">
             <img
-              src="/src/images/Logos/MIELA-LOGO-COLORED.png"
+              src="./src/images/Logos/MIELA-LOGO-COLORED.png"
               class="w-16 md:w-20 lg:w-24"
               alt="" />
             <h2
@@ -670,34 +681,21 @@
             <div class="font-normal text-base text-custom-white space-y-5">
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
-                <a
-                  class="no-underline hover:no-underline active:no-underline text-inherit"
-                  href="/">
-                  Home
-                </a>
+                Home
               </p>
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
-                <a
-                  href="/#our-services"
-                  class="no-underline hover:no-underline active:no-underline text-inherit">
-                  Our Services
-                </a>
+                Our Services
               </p>
               <p
                 class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
-                <a
-                  href="/#clients"
-                  class="no-underline hover:no-underline active:no-underline text-inherit">
-                  Clients
-                </a>
                 Clients
               </p>
               <p
                 class="cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
                 <a
                   class="no-underline hover:no-underline active:no-underline text-inherit"
-                  href="/casestudy.html">
+                  href="./case-study/">
                   Case Study
                 </a>
               </p>
@@ -812,9 +810,24 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="/src/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/script.js"></script>
+    <script src="./src/form.js"></script>
     <script>
       AOS.init({ once: true });
+      document.addEventListener("DOMContentLoaded", function () {
+        const fadeImgDiv = document.querySelector(".fadeImg");
+        const images = fadeImgDiv.querySelectorAll("img");
+
+        function toggleImageOpacity() {
+          images.forEach(image => {
+            image.classList.toggle("fade-in-image");
+            image.classList.toggle("fade-out-image");
+          });
+        }
+
+        setInterval(toggleImageOpacity, 3000);
+      });
     </script>
   </body>
 </html>

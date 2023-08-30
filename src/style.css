@@ -48,3 +48,15 @@ a:active {
   font-weight: 700;
   font-style: bold;
 }
+
+.fade-in-image {
+  opacity: 1;
+  /* display: block; */
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-out-image {
+  opacity: 0;
+  /* display: none; */
+  transition: opacity 1s ease-in-out;
+}

@@ -113,16 +113,14 @@ var swiper = new Swiper(".heroSwiper", {
   }
 });
 
-document
-  .getElementById("downloadButton")
-  .addEventListener("click", function () {
-    const pdfUrl = "/src/pdf/CaseStudy.pdf"; // Replace with the actual path to your PDF file
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    // link.target = "_blank";
-    link.download = "CaseStudy.pdf"; // Change the downloaded file name if needed
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
+function downloadPdf() {
+  const pdfUrl = "./src/pdf/CaseStudy.pdf"; // Replace with the actual path to your PDF file
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.target = "_blank";
+  link.download = "CaseStudy.pdf"; // Change the downloaded file name if needed
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
