@@ -101,10 +101,10 @@
           alt="logo" />
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
-            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg lg:text-xl md:rounded-full box-border"
+            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg md:rounded-full box-border"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
-              class="mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link active_link md:w-[54px] lg:w-[56px]"
+              class="mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link active_link md:w-[54px]"
               @click.inside="open = false">
               <a
                 href="/"
@@ -113,7 +113,7 @@
               </a>
             </li>
             <li
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[115px] lg:w-[125px]"
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[115px]"
               @click.inside="open = false">
               <a
                 href="/#our-services"
@@ -122,7 +122,7 @@
               </a>
             </li>
             <li
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[64px] lg:w-[66px]"
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[64px]"
               @click.inside="open = false">
               <a
                 href="/#clients"
@@ -131,7 +131,7 @@
               </a>
             </li>
             <li
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[103px] lg:w-[110px]"
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[103px]"
               @click.inside="open = false">
               <a
                 href="/casestudy.html"
@@ -140,7 +140,7 @@
               </a>
             </li>
             <li
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[95px] lg:w-[107px]"
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[95px]"
               @click=" open = false, showModal = !showModal">
               Contact Us
             </li>
@@ -182,7 +182,7 @@
               data-aos="fade-up"
               data-aos-duration="1300"
               class="font-helveticanue md:tracking-wide font-medium md:font-black w-11/12 md:ml-0 text-4xl sm:text-5xl md:text-6xl lg:text-[72px] md:w-fit text-black uppercase">
-              Our Case Study
+              Case Study
             </h1>
             <p
               data-aos="fade-up"
@@ -232,74 +232,61 @@
           </div>
         </div>
         <div
-          class="flex flex-col-reverse md:flex-row-reverse"
-          data-aos="fade-right"
+          class="flex flex-col-reverse md:flex-row-reverse rounded-3xl overflow-hidden"
+          data-aos="fade-up"
           data-aos-duration="1500"
-          id="casestudy-anchor"
-          data-aos-delay="500">
+          data-aos-delay="100">
           <div
-            class="w-full flex flex-col justify-center md:min-w-[370px] space-y-4 p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
-            <div class="space-y-3">
-              <h3
-                class="font-helveticanue font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
-                Influencer Management
-              </h3>
-              <p
-                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We potentiate influencer's reach through dynamic graphics
-                management of gaming and non-gaming influencers across all
-                regions, ensuring the leveraging of their fanbase into the brand
-                conversion funnel.
-              </p>
-              <p
-                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We enhance the reach of influencers through creative graphics.
-              </p>
-            </div>
-            <div class="mt-3 md:mt-5">
-              <p
-                class="text-custom-yellow font-thin text-lg md:text-xl lg:leading-[26pt]">
-                John Carter
-              </p>
-              <p
-                class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] mb-2">
-                Designer at BGG Temp
-              </p>
-              <button
-                id="downloadButton"
-                class="py-2.5 px-4 flex items-center gap-2 w-fit font-semibold text-lg bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none">
-                Download
-                <svg
-                  viewBox="0 0 24 24"
-                  class="w-6 fill-none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M12 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5H9.58579C9.851 5 10.1054 5.10536 10.2929 5.29289L12 7H19C20.1046 7 21 7.89543 21 9V11"
-                      stroke="#000000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                    <path
-                      d="M18.5 14V20M18.5 20L16 17.5M18.5 20L21 17.5"
-                      stroke="#000000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </g>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="w-full md:h-full md:w-[920px]">
+            class="w-full md:min-w-[370px] flex flex-col justify-center space-y-4 border-[#303030] border-[1.5px] p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
             <img
-              src="/src/images/People/YASMINE.png"
-              class="rounded-3xl rounded-b-none md:rounded-tl-3xl md:rounded-none w-full h-[250px] object-cover sm:h-[300px] md:h-full object-center md:object-fill"
+              src="/src/images/Logos/ggbet-logo-white.png"
+              class="h-7 lg:h-9 w-fit"
+              alt="" />
+            <p
+              class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] mb-2 lg:mb-4 md:text-justify">
+              GGBet is a worldwide betting company, sponsoring large events,
+              influencers, and competitions.
+            </p>
+            <p
+              class="text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
+              GGBet is a dedicated esports betting bookmaker that covers all the
+              major games and markets. It was established in August 2016, when
+              they took their first esports bets, and remains a popular choice.
+            </p>
+            <button
+              id="downloadButton"
+              class="py-2.5 px-4 flex items-center gap-2 w-fit font-semibold text-lg bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none">
+              Download
+              <svg
+                viewBox="0 0 24 24"
+                class="w-6 fill-none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5H9.58579C9.851 5 10.1054 5.10536 10.2929 5.29289L12 7H19C20.1046 7 21 7.89543 21 9V11"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M18.5 14V20M18.5 20L16 17.5M18.5 20L21 17.5"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="w-full md:w-[920px]">
+            <img
+              src="/src/images/People/IMG-9653.PNG"
+              class="h-[250px] sm:h-[300px] w-full md:h-full object-cover"
               alt="influencers" />
           </div>
         </div>
