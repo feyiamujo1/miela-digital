@@ -114,7 +114,7 @@ var swiper = new Swiper(".heroSwiper", {
 });
 
 function downloadPdf() {
-  const pdfUrl = "./src/pdf/CaseStudy.pdf"; // Replace with the actual path to your PDF file
+  const pdfUrl = "../src/pdf/CaseStudy.pdf"; 
   const link = document.createElement("a");
   link.href = pdfUrl;
   link.target = "_blank";
