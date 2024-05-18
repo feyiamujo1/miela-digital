@@ -2,22 +2,30 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K398NKHHC"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3K398NKHHC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-3K398NKHHC');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3K398NKHHC");
     </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://db.onlinewebfonts.com/c/351fdf55554fd941e99c8ef08653c26b?family=Helvetica+Neue+LT+W02+87+Hv+Cn" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://db.onlinewebfonts.com/c/351fdf55554fd941e99c8ef08653c26b?family=Helvetica+Neue+LT+W02+87+Hv+Cn"
+      rel="stylesheet" />
     <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -79,15 +87,19 @@
         theme: {
           extend: {
             colors: {
-              "custom-ash": "#646881",
+              "custom-ash": "#bbbdcb",
               "custom-white": "#F7F4F3",
-              "custom-yellow": "#FDC600",
-              "custom-black": "#080708"
+              "custom-whitish": "#ececed",
+              "custom-yellow": "#ffc300",
+              "custom-black": "#080708",
+              "custom-deep-ash": "#54586e"
             },
             backgroundImage: {
-              "hero-image": 'url("./src/images/Backgrounds/BG-1.png")',
-              "section-image": 'url("./src/images/Backgrounds/BG-3.png")',
-              "white-section": 'url("./src/images/Backgrounds/BG-2.png")'
+              // "hero-image": 'url("./src/images/Backgrounds/Influencer_Management_1.png")',
+              "blacked-image":
+                "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5816920518207283) 69%, rgba(0,0,0,0.055081407563025264) 100%)",
+              "influencer-section": 'url("./src/images/Backgrounds/BG-1.png")',
+              "logo-section": 'url("./src/images/Backgrounds/BG-2.png")'
             },
             Family: {
               helvetica: ["Helvetica", "sans-serif"],
@@ -105,13 +117,13 @@
       content="Miela Digital is an agency specialized in the Gaming and iGaming sectors. We are dedicated to generating activations focused on brand awareness and user acquisition. We differentiate ourselves by focusing on the narrow part of the funnel: conversion." />
   </head>
   <body
-    class="w-full p-0 m-0 font-helvetica relative scroll-smooth"
+    class="w-full p-0 m-0 font-helvetica relative scroll-smooth bg-black"
     x-data="{ open: false, showModal: false }"
     :class="{'max-h-screen overflow-hidden': open,' h-max': !open }">
     <nav
       data-aos="fade-down"
       data-aos-duration="1300"
-      class="w-full absolute z-30">
+      class="w-full z-30 bg-black">
       <div
         class="w-11/12 mx-auto py-3 sm:py-5 flex justify-between items-center">
         <a href="./" class="">
@@ -122,37 +134,32 @@
         </a>
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
-            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row md:border md:border-[#b6b6b6] gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:backdrop-blur-0 md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-8 md:py-2 text-lg md:rounded-full box-border"
+            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
-              class="mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link active_link md:w-[54px]"
+              class="md:text-[15px] md:font-semibold mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover: active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-4 nav_link active_link"
               @click.inside="open = false">
               Home
             </li>
             <li
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[83px]"
+              class="md:text-[15px] md:font-semibold md:py-3 cursor-pointer hover:!cursor-pointer active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-4 nav_link inactive_link"
               @click.inside="open = false">
-              Services
+              Influencers
             </li>
             <li
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[64px]"
+              class="md:text-[15px] md:font-semibold md:py-3 cursor-pointer hover:!cursor-pointer active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-4 nav_link inactive_link"
               @click.inside="open = false">
-              Clients
+              Our Team
             </li>
-            <li
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[103px]"
+            <!-- <li
+              class="md:text-[15px] md:font-semibold md:py-3 cursor-pointer hover:!cursor-pointer active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-2 nav_link inactive_link"
               @click.inside="open = false">
               <a
                 href="./case-study/"
                 class="w-full h-full no-underline hover:text-inherit hover:no-underline active:no-underline">
                 Case Study
               </a>
-            </li>
-            <li
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover:font-black active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden nav_link inactive_link md:w-[100px]"
-              @click=" open = false, showModal = !showModal">
-              Contact Us
-            </li>
+            </li> -->
           </ul>
           <div class="md:hidden">
             <button
@@ -177,9 +184,14 @@
             </button>
           </div>
         </div>
+        <button
+          class="md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-75 md:duration-100 overflow-hidden w-fit px-4 py-2.5 bg-custom-yellow font-semibold !border-none !outline-none"
+          @click=" open = false, showModal = !showModal">
+          Contact Us
+        </button>
       </div>
     </nav>
-    <section
+    <!-- <section
       @click.inside="open = false"
       id="home"
       class="section w-full md:min-h-screen pt-20 md:pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-bottom relative overflow-hidden">
@@ -197,10 +209,10 @@
             data-aos="fade-down"
             data-aos-duration="1300"
             class="text-custom-ash w-11/12 mx-auto md:mx-0 md:ml-0 font-montserrat font-light text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[475px] lg:w-[525px] bg-blend-color-burn text-justify">
-            Miela Digital is an agency specialized in the Gaming Sector.
-            We are dedicated to generating activations focused on brand
-            awareness and user acquisition. We differentiate ourselves by
-            focusing on the narrow part of the funnel: conversion.
+            Miela Digital is an agency specialized in the Gaming Sector. We are
+            dedicated to generating activations focused on brand awareness and
+            user acquisition. We differentiate ourselves by focusing on the
+            narrow part of the funnel: conversion.
           </p>
         </div>
         <div
@@ -216,89 +228,189 @@
             class="h-full w-full sm:h-[400px] md:h-full md:w-[350px] object-contain md:float-left object-top md:object-contain md:object-right absolute bottom-0 top-0 right-0 lg:left-0 lg:mx-auto fade-out-image" />
         </div>
       </div>
+      
+    </section> -->
+    <div
+      class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
+      x-show.transition.opacity.duration.600ms="showModal"
+      :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
       <div
-        class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
-        x-show.transition.opacity.duration.600ms="showModal"
-        :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
-        <div
-          class="w-11/12 md:w-fit p-6 bg-white-section bg-cover mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
-          x-show.transition.scale.duration.800ms="showModal"
-          x-transition.delay.50ms
-          @click.away="showModal = false">
-          <div class="md:w-[400px] lg:w-[500px]">
-            <div class="mb-3">
-              <h2
-                class="font-montserrat font-extrabold text-2xl lg:text-4xl w-fit text-custom-black uppercase">
-                Contact Us
-              </h2>
-              <p
-                class="text-custom-black text-base tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight">
-                Contact us at
-                <span class="!no-underline">contact@mieladigital.com</span>
-                or fill out the form below.
-              </p>
-            </div>
-            <svg
-              version="1.1"
-              id="Capa_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 460.775 460.775"
-              class="absolute w-4 right-7 top-7 hover:fill-custom-yellow active:fill-custom-yellow cursor-pointer"
+        class="w-11/12 md:w-fit p-6 bg-[#ffffff] bg-cover mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
+        x-show.transition.scale.duration.800ms="showModal"
+        x-transition.delay.50ms
+        @click.away="showModal = false">
+        <div class="md:w-[400px] lg:w-[500px]">
+          <div class="mb-3">
+            <h2
+              class="font-montserrat font-extrabold text-2xl w-fit text-custom-black uppercase">
+              Contact Us
+            </h2>
+            <p
+              class="text-custom-black text-base tracking-wider selection:bg-custom-yellow selection:text-black selection:font-extralight">
+              Contact us at
+              <span class="!no-underline">contact@mieladigital.com</span>
+              or fill out the form below.
+            </p>
+          </div>
+          <svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 460.775 460.775"
+            class="absolute w-4 right-7 top-7 hover:fill-custom-yellow active:fill-custom-yellow cursor-pointer"
+            @click="showModal = !showModal"
+            xml:space="preserve">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
+            </g>
+          </svg>
+          <form
+            id="homeContactForm"
+            onsubmit="SubmitContactForm(event)"
+            method="POST"
+            class="w-full space-y-2.5 text-base md:text-lg">
+            <input
+              type="text"
+              name="author"
+              id="author"
+              class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
+              placeholder="Name/Organization" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
+              placeholder="Email" />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
+              placeholder="Subject" />
+            <textarea
+              id="message"
+              class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm md:h-[3em] lg:h-[4em]"
+              placeholder="Message ..."></textarea>
+            <button
+              type="submit"
               @click="showModal = !showModal"
-              xml:space="preserve">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
-              </g>
-            </svg>
-            <form
-              id="homeContactForm"
-              onsubmit="SubmitContactForm(event)"
-              method="POST"
-              class="w-full space-y-2 text-base md:text-lg">
-              <input
-                type="text"
-                name="author"
-                id="author"
-                class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
-                placeholder="Name/Organization" />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
-                placeholder="Email" />
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm"
-                placeholder="Subject" />
-              <textarea
-                id="message"
-                class="w-full p-2.5 focus:outline-black text-base md:text-lg border border-custom-ash rounded-sm md:h-[3em] lg:h-[4em]"
-                placeholder="Message ..."></textarea>
+              class="py-2 px-4 font-semibold text-base md:text-lg rounded-2xl bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
+              Submit
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section
+      @click.inside="open = false"
+      id="home"
+      class="section w-full md:h-[760px] bg-black bg-cover bg-no-repeat bg-bottom relative overflow-hidden flex">
+      <div class="w-[300px]">
+        <div
+          class="w-full bg-white aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-black font-semibold text-lg w-[125px]">
+            Influencer Management
+          </p>
+        </div>
+        <div
+          class="w-full aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-custom-ash font-semibold text-lg w-[125px]">
+            Community Management
+          </p>
+        </div>
+        <div
+          class="w-full aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-custom-ash font-semibold text-lg w-[125px]">
+            Virtual Influencers
+          </p>
+        </div>
+        <div
+          class="w-full aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-custom-ash font-semibold text-lg w-[125px]">
+            Consulting Services
+          </p>
+        </div>
+        <div
+          class="w-full aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-custom-ash font-semibold text-lg w-[125px]">
+            Video Marketing
+          </p>
+        </div>
+      </div>
+      <div class="h-full relative w-full">
+        <img
+          src="./src/images/Backgrounds/Influencer_Management_1.png"
+          class="object-cover object-left h-full relative z-0"
+          alt="" />
+        <div
+          class="absolute w-full p-5 z-10 bottom-0 left-0 right-0 mx-auto bg-blacked-image">
+          <div class="w-[90%] mx-auto">
+            <div class="flex w-full justify-between items-center">
               <button
-                type="submit"
-                @click="showModal = !showModal"
-                class="py-2 px-4 font-semibold text-base md:text-lg rounded-2xl bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
-                Submit
-                <i class="fa-regular fa-paper-plane"></i>
+                class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75">
+                <svg
+                  class="w-full fill-white"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 492 492"
+                  xml:space="preserve">
+                  <g>
+                    <g>
+                      <path
+                        d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124
+			c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844
+			L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412
+			c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008
+			c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788
+			C492,219.198,479.172,207.418,464.344,207.418z" />
+                    </g>
+                  </g>
+                </svg>
               </button>
-            </form>
+              <button
+                class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75">
+                <svg
+                  class="w-full fill-white"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 492.004 492.004"
+                  xml:space="preserve">
+                  <g>
+                    <g>
+                      <path
+                        d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136
+			c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002
+			v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864
+			c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872
+			l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z" />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <p class="max-w-[600px] mx-auto text-center text-custom-whitish">
+              We identify, engage, and collaborate with influencers within the
+              online gaming industry to promote your brand or services.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section
-      id="services"
+    <!-- <section
+      id="influencers"
       class="section bg-section-image py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 mx-auto space-y-5 md:space-y-8">
         <h2
@@ -307,7 +419,7 @@
           data-aos-duration="1300"
           data-aos-delay="100
            text-[#FDC600]">
-          Services
+          Influencers
         </h2>
         <div class="space-y-6 md:space-y-12">
           <div
@@ -504,7 +616,7 @@
                 alt="influencers" />
             </div>
           </div>
-            <div
+          <div
             class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10"
             data-aos="fade-right"
             data-aos-duration="1500"
@@ -517,11 +629,16 @@
               </h3>
               <p
                 class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We provide comprehensive consulting services that are meticulously tailored to meet the intricate demands of localization, regulatory compliance, and market entry strategy specifically designed for the dynamic and diverse landscape of the Latin American (LATAM) region.
+                We provide comprehensive consulting services that are
+                meticulously tailored to meet the intricate demands of
+                localization, regulatory compliance, and market entry strategy
+                specifically designed for the dynamic and diverse landscape of
+                the Latin American (LATAM) region.
               </p>
               <p
                 class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We offer consulting services specialized in localization, regulation, and market entry strategy for the LATAM region.
+                We offer consulting services specialized in localization,
+                regulation, and market entry strategy for the LATAM region.
               </p>
             </div>
             <div class="w-full md:w-[920px]">
@@ -533,8 +650,198 @@
           </div>
         </div>
       </div>
+    </section> -->
+    <section
+      id="influencers"
+      class="section bg-influencer-section py-8 md:py-10 lg:py-14 overflow-hidden">
+      <div class="w-11/12 mx-auto">
+        <h2
+          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black md:mb-8"
+          data-aos="fade-up"
+          data-aos-duration="1300"
+          data-aos-delay="100">
+          Influencers
+        </h2>
+        <div class="flex h-full justify-between gap-20 items-center">
+          <div class="w-[470px] box-border">
+            <img
+              src="./src/images/People/Streamer-Template.png"
+              alt=""
+              class="relative z-0 w-[400px] mx-auto" />
+            <div
+              class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+              <img
+                src="./src/images/Logos/Flag.png"
+                class="h-full w-[100px]"
+                alt="" />
+              <div
+                class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                <p class="text-white font-semibold w-fit mx-auto">
+                  MarkushatdieGansgestohlen
+                </p>
+                <div class="flex items-center gap-5 justify-center skew-x-4">
+                  <div
+                    class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                    <svg
+                      class="w-7 fill-black"
+                      viewBox="0 0 256 256"
+                      id="Flat"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+                    </svg>
+                  </div>
+                  <div
+                    class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                    <svg
+                      class="w-6"
+                      viewBox="-0.5 0 20 20"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <title>twitch [#182]</title>
+                      <desc>Created with Sketch.</desc>
+                      <defs></defs>
+                      <g
+                        id="Page-1"
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd">
+                        <g
+                          id="Dribbble-Light-Preview"
+                          transform="translate(-141.000000, -7399.000000)"
+                          fill="#000000">
+                          <g
+                            id="icons"
+                            transform="translate(56.000000, 160.000000)">
+                            <path
+                              d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                              id="twitch-[#182]"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+            <img
+              src="./src/images/Backgrounds/Video_Clip_Template.png"
+              class="w-full rounded-3xl relative z-0"
+              alt="" />
+            <button
+              class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
+              <svg
+                class="fill-white"
+                viewBox="0 0 24 24"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>ic_fluent_play_circle_24_regular</title>
+                <desc>Created with Sketch.</desc>
+                <g
+                  id="🔍-System-Icons"
+                  stroke="none"
+                  stroke-width="1"
+                  fill-rule="evenodd">
+                  <g id="ic_fluent_play_circle_24_regular" fill-rule="nonzero">
+                    <path
+                      d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
+                      id="🎨-Color"></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
     <section
+      id="influencers"
+      class="section bg-black py-8 md:py-10 lg:py-14 overflow-hidden h-[780px]">
+      <div class="w-11/12 mx-auto">
+        <h2
+          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black md:mb-8 text-white"
+          data-aos="fade-up"
+          data-aos-duration="1300"
+          data-aos-delay="100">
+          What We Believe
+        </h2>
+        <div>
+          <iframe
+            class="w-[75%] aspect-video mx-auto"
+            src="https://www.youtube.com/embed/noG_nXqSDyA?si=7B0IAQ_cEwauojQq"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <section
+      id="influencers"
+      class="section bg-logo-section bg-center bg-blend-darken bg-cover py-8 md:py-10 lg:py-14 overflow-hidden">
+      <div class="w-11/12 mx-auto">
+        <h2
+          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black md:mb-8"
+          data-aos="fade-up"
+          data-aos-duration="1300"
+          data-aos-delay="100">
+          Our Happy Customer
+        </h2>
+        <div class="grid grid-cols-7">
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Parimatch-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Betano-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Leetbit-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Thermalake-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Tencent_Games-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Trovo-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Tencent-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Jugabet-Logo.png" alt="" />
+          </div>
+
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/GGbet-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Wester_Digital-logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Intel-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Wargaming-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Twitch-Logo.png" alt="" />
+          </div>
+          <div class="w-[150px] border flex items-center">
+            <img src="./src/images/Logos/Floril-Logo.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section
       id="clients"
       class="section w-full py-8 md:py-10 lg:py-14 bg-white-section">
       <div class="w-11/12 mx-auto">
@@ -546,15 +853,12 @@
           THEY TRUSTED US
         </h2>
       </div>
-      <!-- Slider main container -->
       <div
         class="swiper mySwiper"
         data-aos="fade-up"
         data-aos-duration="1300"
         data-aos-delay="100">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
+        <div class="swiper-wrapper">=
           <div class="swiper-slide">
             <img src="./src/images/Logos/INTEL.png" />
             <div class="inner-slide"></div>
@@ -563,10 +867,10 @@
             <img src="./src/images/Logos/WARGAMING.png" />
             <div class="inner-slide"></div>
           </div>
-           <div class="swiper-slide">
+          <div class="swiper-slide">
             <img src="./src/images/Logos/Tencent_Games.png" />
             <div class="inner-slide"></div>
-           </div>
+          </div>
           <div class="swiper-slide">
             <img src="./src/images/Logos/BETANO.png" />
             <div class="inner-slide"></div>
@@ -603,17 +907,17 @@
             <img src="./src/images/Logos/Parimatch.png" />
             <div class="inner-slide"></div>
           </div>
-           <div class="swiper-slide">
+          <div class="swiper-slide">
             <img src="./src/images/Logos/leetbit.png" />
             <div class="inner-slide"></div>
           </div>
-           <div class="swiper-slide">
+          <div class="swiper-slide">
             <img src="./src/images/Logos/floril.png" />
             <div class="inner-slide"></div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- <section class="section bg-section-image py-8 md:py-10 lg:py-14 relative">
       <div
         class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 lg:gap-10">
@@ -718,6 +1022,15 @@
               src="./src/images/Logos/M_logo.png"
               class="w-16 md:w-20 lg:w-24"
               alt="" />
+            <p class="text-custom-ash max-w-[400px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore facilisis.
+            </p>
+            <button
+              class="md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-75 md:duration-100 overflow-hidden w-fit px-4 py-2.5 bg-custom-yellow font-semibold !border-none !outline-none"
+              @click=" open = false, showModal = !showModal">
+              Contact Us
+            </button>
           </div>
           <div
             data-aos="fade-up"
@@ -725,132 +1038,200 @@
             data-aos-delay="100"
             class="w-fit space-y-3">
             <h2
-              class="font-montserrat font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
-              Main
+              class="font-montserrat font-extrabold text-white w-fit uppercase">
+              Quick Links
             </h2>
             <div class="font-normal text-base text-custom-white space-y-5">
               <p
-                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
+                class="cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none text-custom-deep-ash">
                 Home
               </p>
               <p
-                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
-                Services
+                class="cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none custom-deep-ash text-custom-deep-ash">
+                Influencers
               </p>
               <p
-                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
-                Clients
+                class="cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none custom-deep-ash text-custom-deep-ash">
+                Our Team
               </p>
-              <p
-                class="cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none">
-                <a
-                  class="no-underline hover:no-underline active:no-underline text-inherit"
-                  href="./case-study/">
-                  Case Study
-                </a>
-              </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1300"
-            data-aos-delay="150"
-            class="space-y-3 w-fit">
-            <h2
-              class="font-montserrat font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
-              CONTACT
-            </h2>
-            <div class="text-base text-custom-white font-normal space-y-5">
-              <p>
-                <a
-                  href="mailto:contact@mieladigital.com"
-                  class="hover:no-underline hover:text-custom-yellow">
-                  contact@mieladigital.com
-                </a>
-              </p>
-            </div>
-            <h2
-              class="font-montserrat font-extrabold text-white text-lg lg:text-xl w-fit uppercase">
-              INTERESTED?
-              <br />
-              LET'S GET IN TOUCH!
-            </h2>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1300"
-            data-aos-delay="200"
-            class="space-y-3 w-fit">
-            <h2
-              id="footer-anchor"
-              class="font-montserrat font-extrabold whitespace-nowrap text-white text-lg lg:text-xl w-full uppercase">
-              FOLLOW US
-            </h2>
-            <div
-              class="text-base text-custom-white font-bold gap-3 flex flex-row items-center">
-              <a
-                href="https://www.linkedin.com/company/mieladigital"
-                target="_blank"
-                class="h-fit"
-                rel="noopener noreferrer">
-                <?xml version="1.0" encoding="utf-8"?>
-                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                <svg
-                  version="1.1"
-                  id="Capa_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  class="fill-white hover:fill-custom-yellow h-6 cursor-pointer"
-                  viewBox="0 0 490.732 490.732"
-                  xml:space="preserve">
-                  <g>
-                    <g>
-                      <path
-                        d="M472.366,0.003H18.36C8.219,0.003,0,8.222,0,18.363v454.005c0,10.143,8.219,18.361,18.36,18.361h454.012
-                        c10.142,0,18.36-8.219,18.36-18.361V18.363C490.727,8.222,482.507,0.003,472.366,0.003z M130.375,403.808
-                        c0,6.762-5.478,12.238-12.24,12.238H69.132c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.484-12.24,12.24-12.24h49.003
-                        c6.762,0,12.24,5.477,12.24,12.24V403.808z M130.375,127.482c0,6.763-5.478,12.24-12.24,12.24H69.132
-                        c-6.756,0-12.24-5.478-12.24-12.24V83.969c0-6.763,5.484-12.24,12.24-12.24h49.003c6.762,0,12.24,5.477,12.24,12.24V127.482z
-                        M433.835,403.808c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.763,0-12.24-5.477-12.24-12.238v-90.436
-                        c0-29.988-1.566-49.383-4.712-58.189c-3.14-8.807-8.237-15.649-15.3-20.526c-7.062-4.884-15.558-7.32-25.496-7.32
-                        c-12.729,0-24.149,3.488-34.26,10.459c-10.11,6.977-17.038,16.211-20.79,27.717c-3.745,11.506-5.618,32.779-5.618,63.807v74.488
-                        c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.483-12.24,12.24-12.24h43.771
-                        c6.763,0,12.24,5.477,12.24,12.24v16.316c0,6.763,3.312,7.852,7.858,2.852c22.864-25.123,50.753-37.687,83.673-37.687
-                        c16.212,0,31.028,2.919,44.455,8.758c13.422,5.838,23.58,13.292,30.466,22.356c6.885,9.063,11.683,19.351,14.382,30.857
-                        c2.699,11.505,4.058,27.98,4.058,49.426V403.808L433.835,403.808z" />
-                    </g>
-                  </g>
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/mieladigital/"
-                target="_blank"
-                class="h-fit"
-                rel="noopener noreferrer">
-                <?xml version="1.0" encoding="utf-8"?>
-                <svg
-                  viewBox="0 0 256 256"
-                  class="fill-white hover:fill-custom-yellow h-8 cursor-pointer"
-                  id="Flat"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M160,128a32,32,0,1,1-32-32A32.03667,32.03667,0,0,1,160,128Zm68-44v88a56.06353,56.06353,0,0,1-56,56H84a56.06353,56.06353,0,0,1-56-56V84A56.06353,56.06353,0,0,1,84,28h88A56.06353,56.06353,0,0,1,228,84Zm-52,44a48,48,0,1,0-48,48A48.05436,48.05436,0,0,0,176,128Zm16-52a12,12,0,1,0-12,12A12,12,0,0,0,192,76Z" />
-                </svg>
-              </a>
             </div>
           </div>
         </div>
       </div>
+      <hr class="bg-[#303030] mt-8 md:mt-10 mb-4" />
       <div
         data-aos="fade-up"
         data-aos-duration="1300"
         data-aos-delay="200"
-        data-aos-anchor="#footer-anchor">
-        <hr class="bg-[#303030] mt-8 md:mt-10 mb-4" />
+        data-aos-anchor="#footer-anchor"
+        class="flex items-center justify-between w-11/12 mx-auto">
+        <div class="flex gap-2">
+          <div
+            class="h-11 w-11 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+            <svg
+              class="w-8"
+              viewBox="0 0 1920 1920"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1016.47 903.048v710.738l185.902-185.9 79.962 79.849L960 1829.955l-322.334-322.22 79.962-79.85 185.901 185.901V903.048h112.942ZM960 56c221.816 0 408.847 143.661 478.08 342.212 10.052-.678 19.99-3.388 30.155-3.388 249.149 0 451.765 202.616 451.765 451.764s-202.616 451.765-451.765 451.765h-112.94v-112.941h112.94c186.805 0 338.824-152.02 338.824-338.824s-152.019-338.823-338.824-338.823c-1.92 0-3.727.564-5.647.677 2.146 18.523 5.647 36.706 5.647 55.793 0 44.16-5.76 88.094-16.94 130.673l-109.215-28.913c8.81-33.204 13.214-67.426 13.214-101.76 0-217.976-177.318-395.294-395.294-395.294-212.442 0-385.13 168.96-393.6 379.37 38.174 18.409 74.202 41.788 105.374 72.282l-78.946 80.753c-53.082-52.066-123.219-80.64-197.534-80.64-155.746 0-282.353 126.72-282.353 282.353 0 155.746 126.607 282.353 282.353 282.353h169.412v112.94H395.294C177.318 1298.353 0 1121.036 0 903.06c0-217.977 177.318-395.294 395.294-395.294 20.894 0 41.224 2.71 61.553 5.986C482.597 257.487 697.073 56 960 56Z"
+                fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold text-xl">Company's Desk</p>
+            <p class="text-custom-deep-ash">PDF, 3mb</p>
+          </div>
+        </div>
         <p
           class="text-custom-white font-normal text-sm tracking-wider text-center -mt-2">
-          ©2024 Miela Digital. All rights reserved.
+          © 2024 Miela Digital. All rights reserved.
         </p>
+        <div class="flex gap-3 items-center">
+          <div
+            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+            <svg
+              class="w-7 fill-black"
+              viewBox="0 0 256 256"
+              id="Flat"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+            </svg>
+          </div>
+          <div
+            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+            <svg
+              class="w-6"
+              viewBox="0 -9.31 56.223 56.223"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                id="email_unread"
+                data-name="email unread"
+                d="M798.377,169.859h.012a2.16,2.16,0,0,0,1.181-.346l.092-.059.063-.039,1.071-.887,25.563-21.094a.3.3,0,0,0-.239-.123H770.492a.291.291,0,0,0-.183.066l26.745,22.045A2.1,2.1,0,0,0,798.377,169.859ZM770.2,150.3v31.268l19.159-15.476Zm37.084,15.9,19.139,15.38V150.4Zm-6.085,5.021a4.559,4.559,0,0,1-5.619.005l-4.388-3.619L770.2,184.558v.053a.3.3,0,0,0,.3.3h55.625a.3.3,0,0,0,.3-.3v-.049l-20.974-16.852Z"
+                transform="translate(-770.195 -147.311)" />
+            </svg>
+          </div>
+          <div
+            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+            <svg
+              class="w-6"
+              viewBox="0 -3 20 20"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>youtube [#168]</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd">
+                <g
+                  id="Dribbble-Light-Preview"
+                  transform="translate(-300.000000, -7442.000000)"
+                  fill="#000000">
+                  <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path
+                      d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289"
+                      id="youtube-[#168]"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div
+            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+            <svg
+              class="w-6"
+              viewBox="-0.5 0 20 20"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>twitch [#182]</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd">
+                <g
+                  id="Dribbble-Light-Preview"
+                  transform="translate(-141.000000, -7399.000000)"
+                  fill="#000000">
+                  <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path
+                      d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                      id="twitch-[#182]"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div
+            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+            <svg
+              class="w-6"
+              viewBox="0 0 20 20"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>linkedin [#161]</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd">
+                <g
+                  id="Dribbble-Light-Preview"
+                  transform="translate(-180.000000, -7479.000000)"
+                  fill="#000000">
+                  <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path
+                      d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z"
+                      id="linkedin-[#161]"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div
+            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+            <svg
+              class="w-6"
+              viewBox="-0.5 0 20 20"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>twitch [#182]</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd">
+                <g
+                  id="Dribbble-Light-Preview"
+                  transform="translate(-141.000000, -7399.000000)"
+                  fill="#000000">
+                  <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path
+                      d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                      id="twitch-[#182]"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
       </div>
     </footer>
     <script

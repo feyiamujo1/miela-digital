@@ -13,13 +13,29 @@ a:active {
   text-decoration: none;
 }
 
+.active_link{
+  color: #ffffff;
+  border-color: #FDC600;
+}
+.active_link:hover{
+  border-color: #bbbdcb;
+}
+
+.inactive_link{
+  color: #bbbdcb;
+  border-color: transparent;
+}
+.inactive_link:hover{
+  border-color: #bbbdcb;
+}
+
 @media screen and (max-width: 768px) {
   .nav_link{
     border-bottom: 1.5px solid transparent;
   }
   .nav_link:hover {
-    border-bottom: 1.5px solid #e9fc0c;
-    color: #e9fc0c;
+    border-bottom: 1.5px solid #FDC600;
+    color: #FDC600;
     padding-bottom: 4px;
   }
 }
