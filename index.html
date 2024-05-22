@@ -149,7 +149,7 @@
         </a>
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
-            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border"
+            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border z-50"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
               class="md:text-[15px] md:font-semibold mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover: active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-4 nav_link active_link"
@@ -288,42 +288,46 @@
     <section
       @click.inside="open = false"
       id="home"
-      class="section 2xl:w-[1400px] mx-auto md:h-[760px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom relative overflow-hidden flex flex-col-reverse md:flex-row">
+      class="section 2xl:w-[1400px] mx-auto md:h-[740px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom relative overflow-hidden flex flex-col-reverse md:flex-row">
       <div class="w-[300px] flex flex-row md:!flex-col">
         <div
-          class="w-full h-fit bg-white aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          class="w-full h-fit bg-white aspect-video flex items-center justify-center border-b-2 border-custom-ash cursor-pointer group">
           <p
-            class="text-black text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
-            Influencer Management
+            class="text-black text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+            <span>Influencer</span>
+            <span>Management</span>
           </p>
         </div>
         <div
-          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash cursor-pointer group">
           <p
-            class="text-custom-ash text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
-            Community Management
+            class="text-custom-ash text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+            <span>Community</span>
+            <span>Management</span>
           </p>
         </div>
         <div
-          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash cursor-pointer group">
           <p
-            class="text-custom-ash text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
-            Virtual
-            Influencers
+            class="text-custom-ash text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+            <span>Virtual</span>
+            <span>Influencers</span>
           </p>
         </div>
         <div
-          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash cursor-pointer group">
           <p
-            class="text-custom-ash text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
-            Consulting Services
+            class="text-custom-ash text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+            <span>Consulting</span>
+            <span>Services</span>
           </p>
         </div>
         <div
-          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash cursor-pointer group">
           <p
-            class="text-custom-ash text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
-            Video Marketing
+            class="text-custom-ash text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+            <span>Video</span>
+            <span>Marketing</span>
           </p>
         </div>
       </div>
@@ -384,7 +388,10 @@
             </div>
             <p
               class="max-w-[600px] text-sm md:text-base mx-auto text-center text-custom-whitish">
-              Lorem ipsum dolorsitamet,consecteturadipiscingelit,seddoeiusmodtempor incididuntutlaboreetdoloremagnaaliqua.Quisipsum suspendiseultricesgravida.
+              Lorem ipsum
+              dolorsitamet,consecteturadipiscingelit,seddoeiusmodtempor
+              incididuntutlaboreetdoloremagnaaliqua.Quisipsum
+              suspendiseultricesgravida.
             </p>
           </div>
         </div>
@@ -413,7 +420,7 @@
           data-carousel="slide">
           <!-- Carousel wrapper -->
           <div
-            class="relative overflow-hidden rounded-lg h-[410px] sm:h-[480px] md:h-[650px]">
+            class="relative overflow-hidden rounded-lg h-[400px] sm:h-[480px] md:h-[650px]">
             <!-- Item 1 -->
             <div
               class="hidden duration-700 ease-in-out overflow-hidden"
@@ -433,7 +440,8 @@
                       alt="" />
                     <div
                       class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
-                      <p class="text-white font-semibold w-fit mx-auto">
+                      <p
+                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
@@ -538,7 +546,8 @@
                       alt="" />
                     <div
                       class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
-                      <p class="text-white font-semibold w-fit mx-auto">
+                      <p
+                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
@@ -643,7 +652,8 @@
                       alt="" />
                     <div
                       class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
-                      <p class="text-white font-semibold w-fit mx-auto">
+                      <p
+                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
@@ -748,7 +758,8 @@
                       alt="" />
                     <div
                       class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
-                      <p class="text-white font-semibold w-fit mx-auto">
+                      <p
+                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
@@ -853,7 +864,8 @@
                       alt="" />
                     <div
                       class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
-                      <p class="text-white font-semibold w-fit mx-auto">
+                      <p
+                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
@@ -958,7 +970,8 @@
                       alt="" />
                     <div
                       class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
-                      <p class="text-white font-semibold w-fit mx-auto">
+                      <p
+                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
