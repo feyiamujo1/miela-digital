@@ -288,35 +288,35 @@
     <section
       @click.inside="open = false"
       id="home"
-      class="section w-full md:h-[760px] bg-black bg-cover bg-no-repeat bg-bottom relative overflow-hidden flex">
-      <div class="w-[300px]">
+      class="section 2xl:w-[1400px] mx-auto md:h-[760px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom relative overflow-hidden flex flex-col-reverse md:flex-row">
+      <div class="w-[300px] flex flex-row md:!flex-col">
         <div
-          class="w-full bg-white aspect-video flex items-center justify-center border-b-2 border-custom-ash">
-          <p class="text-black font-semibold text-lg w-[125px]">
+          class="w-full h-fit bg-white aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-black text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
             Influencer Management
           </p>
         </div>
         <div
-          class="w-full aspect-video flex items-center justify-center border-b-2 border-custom-ash">
-          <p class="text-custom-ash font-semibold text-lg w-[125px]">
+          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-custom-ash text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
             Community Management
           </p>
         </div>
         <div
-          class="w-full aspect-video flex items-center justify-center border-b-2 border-custom-ash">
-          <p class="text-custom-ash font-semibold text-lg w-[125px]">
-            Virtual Influencers
+          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-custom-ash text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
+            Virtual <br> Influencers
           </p>
         </div>
         <div
-          class="w-full aspect-video flex items-center justify-center border-b-2 border-custom-ash">
-          <p class="text-custom-ash font-semibold text-lg w-[125px]">
+          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-custom-ash text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
             Consulting Services
           </p>
         </div>
         <div
-          class="w-full aspect-video flex items-center justify-center border-b-2 border-custom-ash">
-          <p class="text-custom-ash font-semibold text-lg w-[125px]">
+          class="w-full h-fit aspect-video flex items-center justify-center border-b-2 border-custom-ash">
+          <p class="text-custom-ash text-center md:text-left text-sm font-semibold md:text-lg w-[125px]">
             Video Marketing
           </p>
         </div>
@@ -327,13 +327,13 @@
           class="object-cover object-left h-full relative z-0"
           alt="" />
         <div
-          class="absolute w-full p-5 z-10 bottom-0 left-0 right-0 mx-auto bg-blacked-image">
-          <div class="w-[90%] mx-auto">
+          class="absolute w-full p-2.5 md:p-5 z-10 bottom-0 left-0 right-0 mx-auto bg-blacked-image">
+          <div class="md:w-[90%] mx-auto">
             <div class="flex w-full justify-between items-center">
               <button
-                class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75">
+                class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
                 <svg
-                  class="w-full fill-white"
+                  class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -354,9 +354,9 @@
                 </svg>
               </button>
               <button
-                class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75">
+                class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
                 <svg
-                  class="w-full fill-white"
+                  class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -390,7 +390,7 @@
       class="section bg-influencer-section py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black"
+          class="text-center text-2xl lg:text-4xl w-fit mb-10 md:mb-0 mx-auto font-black"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -404,25 +404,26 @@
           data-carousel="slide">
           <!-- Carousel wrapper -->
           <div
-            class="relative h-56 overflow-hidden rounded-lg md:h-[650px] border">
+            class="relative overflow-hidden rounded-lg h-[410px] sm:h-[480px] md:h-[650px]">
             <!-- Item 1 -->
             <div
               class="hidden duration-700 ease-in-out overflow-hidden"
               data-carousel-item>
-              <div class="flex h-full justify-between gap-20 items-center">
-                <div class="w-[470px] box-border">
+              <div
+                class="flex flex-col md:flex-row h-full md:justify-between gap-10 md:gap-20 items-center">
+                <div class="md:w-[450px] box-border">
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[400px] mx-auto" />
+                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
                   <div
-                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    class="w-[90%] mx-auto bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
                       src="./src/images/Logos/Flag.png"
-                      class="h-full w-[100px]"
+                      class="h-full w-[80px] md:w-[100px]"
                       alt="" />
                     <div
-                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p class="text-white font-semibold w-fit mx-auto">
                         MarkushatdieGansgestohlen
                       </p>
@@ -475,7 +476,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                <div
+                  class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -512,20 +514,21 @@
             <div
               class="hidden duration-700 ease-in-out overflow-hidden"
               data-carousel-item>
-              <div class="flex h-full justify-between gap-20 items-center">
-                <div class="w-[470px] box-border">
+              <div
+                class="flex flex-col md:flex-row h-full md:justify-between gap-10 md:gap-20 items-center">
+                <div class="md:w-[450px] box-border">
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[400px] mx-auto" />
+                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
                   <div
-                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    class="w-[90%] mx-auto bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
                       src="./src/images/Logos/Flag.png"
-                      class="h-full w-[100px]"
+                      class="h-full w-[80px] md:w-[100px]"
                       alt="" />
                     <div
-                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p class="text-white font-semibold w-fit mx-auto">
                         MarkushatdieGansgestohlen
                       </p>
@@ -578,7 +581,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                <div
+                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -615,20 +619,21 @@
             <div
               class="hidden duration-700 ease-in-out overflow-hidden"
               data-carousel-item>
-              <div class="flex h-full justify-between gap-20 items-center">
-                <div class="w-[470px] box-border">
+              <div
+                class="flex flex-col md:flex-row h-full md:justify-between gap-10 md:gap-20 items-center">
+                <div class="md:w-[450px] box-border">
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[400px] mx-auto" />
+                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
                   <div
-                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    class="w-[90%] mx-auto bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
                       src="./src/images/Logos/Flag.png"
-                      class="h-full w-[100px]"
+                      class="h-full w-[80px] md:w-[100px]"
                       alt="" />
                     <div
-                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p class="text-white font-semibold w-fit mx-auto">
                         MarkushatdieGansgestohlen
                       </p>
@@ -681,7 +686,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                <div
+                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -718,20 +724,21 @@
             <div
               class="hidden duration-700 ease-in-out overflow-hidden"
               data-carousel-item>
-              <div class="flex h-full justify-between gap-20 items-center">
-                <div class="w-[470px] box-border">
+              <div
+                class="flex flex-col md:flex-row h-full md:justify-between gap-10 md:gap-20 items-center">
+                <div class="md:w-[450px] box-border">
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[400px] mx-auto" />
+                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
                   <div
-                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    class="w-[90%] mx-auto bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
                       src="./src/images/Logos/Flag.png"
-                      class="h-full w-[100px]"
+                      class="h-full w-[80px] md:w-[100px]"
                       alt="" />
                     <div
-                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p class="text-white font-semibold w-fit mx-auto">
                         MarkushatdieGansgestohlen
                       </p>
@@ -784,7 +791,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                <div
+                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -821,20 +829,21 @@
             <div
               class="hidden duration-700 ease-in-out overflow-hidden"
               data-carousel-item>
-              <div class="flex h-full justify-between gap-20 items-center">
-                <div class="w-[470px] box-border">
+              <div
+                class="flex flex-col md:flex-row h-full md:justify-between gap-10 md:gap-20 items-center">
+                <div class="md:w-[450px] box-border">
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[400px] mx-auto" />
+                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
                   <div
-                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    class="w-[90%] mx-auto bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
                       src="./src/images/Logos/Flag.png"
-                      class="h-full w-[100px]"
+                      class="h-full w-[80px] md:w-[100px]"
                       alt="" />
                     <div
-                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p class="text-white font-semibold w-fit mx-auto">
                         MarkushatdieGansgestohlen
                       </p>
@@ -887,7 +896,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                <div
+                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -924,20 +934,21 @@
             <div
               class="hidden duration-700 ease-in-out overflow-hidden"
               data-carousel-item>
-              <div class="flex h-full justify-between gap-20 items-center">
-                <div class="w-[470px] box-border">
+              <div
+                class="flex flex-col md:flex-row h-full md:justify-between gap-10 md:gap-20 items-center">
+                <div class="md:w-[450px] box-border">
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[400px] mx-auto" />
+                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
                   <div
-                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    class="w-[90%] mx-auto bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
                       src="./src/images/Logos/Flag.png"
-                      class="h-full w-[100px]"
+                      class="h-full w-[80px] md:w-[100px]"
                       alt="" />
                     <div
-                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      class="skew-x-12 px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p class="text-white font-semibold w-fit mx-auto">
                         MarkushatdieGansgestohlen
                       </p>
@@ -990,7 +1001,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                <div
+                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -998,7 +1010,7 @@
                   <button
                     class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
                     <svg
-                      class="fill-white"
+                      class="fill-white group-hover:scale-90 transition-[scale] duration-300"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1067,10 +1079,10 @@
           <!-- Slider controls -->
           <button
             type="button"
-            class="absolute rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 left-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none"
+            class="absolute rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 hover:bg-opacity-75 transition-opacity duration-300 left-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none group"
             data-carousel-prev>
             <svg
-              class="w-full fill-white"
+              class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
               version="1.1"
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -1093,10 +1105,10 @@
           </button>
           <button
             type="button"
-            class="absolute rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 right-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none"
+            class="absolute rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 hover:bg-opacity-75 transition-opacity duration-300 right-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none group"
             data-carousel-next>
             <svg
-              class="w-full fill-white"
+              class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
               version="1.1"
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -1120,11 +1132,11 @@
       </div>
     </section>
     <section
-      id="influencers"
+      id="our-team"
       class="section bg-black py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black md:mb-8 text-white"
+          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black mb-8 md:mb-16 text-white"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -1147,7 +1159,7 @@
       class="section bg-logo-section bg-center bg-blend-darken bg-cover py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-extrabold mb-6 md:mb-12"
+          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-extrabold mb-8 md:mb-16"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
