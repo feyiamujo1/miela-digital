@@ -71,10 +71,10 @@
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
-    <!-- Swiper slider -->
+    <!-- Flowbite slider -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet" />
     <!-- AOS CSS CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- AOS JS CDN -->
@@ -92,7 +92,8 @@
               "custom-whitish": "#ececed",
               "custom-yellow": "#ffc300",
               "custom-black": "#080708",
-              "custom-deep-ash": "#54586e"
+              "custom-deep-ash": "#54586e",
+              "off-yellow": "#f3e694"
             },
             backgroundImage: {
               // "hero-image": 'url("./src/images/Backgrounds/Influencer_Management_1.png")',
@@ -104,6 +105,20 @@
             Family: {
               helvetica: ["Helvetica", "sans-serif"],
               helveticanue: ["HelveticaNeue-CondensedBlack", "sans-serif"]
+            },
+            animation: {
+              "infinite-scroll": "infinite-scroll 25s linear infinite",
+              "infinite-back": "infinite-back 25s linear infinite"
+            },
+            keyframes: {
+              "infinite-scroll": {
+                from: { transform: "translateX(0)" },
+                to: { transform: "translateX(-100%)" }
+              },
+              "infinite-back": {
+                from: { transform: "translateX(-100%)" },
+                to: { transform: "translateX(0)" }
+              }
             }
           }
         }
@@ -117,7 +132,7 @@
       content="Miela Digital is an agency specialized in the Gaming and iGaming sectors. We are dedicated to generating activations focused on brand awareness and user acquisition. We differentiate ourselves by focusing on the narrow part of the funnel: conversion." />
   </head>
   <body
-    class="w-full p-0 m-0 font-helvetica relative scroll-smooth bg-black"
+    class="w-full p-0 m-0 relative scroll-smooth bg-black"
     x-data="{ open: false, showModal: false }"
     :class="{'max-h-screen overflow-hidden': open,' h-max': !open }">
     <nav
@@ -125,7 +140,7 @@
       data-aos-duration="1300"
       class="w-full z-30 bg-black">
       <div
-        class="w-11/12 mx-auto py-3 sm:py-5 flex justify-between items-center">
+        class="w-11/12 2xl:w-[1400px] mx-auto py-3 sm:py-5 flex justify-between items-center">
         <a href="./" class="">
           <img
             class="w-[70px] md:w-[90px]"
@@ -191,51 +206,12 @@
         </button>
       </div>
     </nav>
-    <!-- <section
-      @click.inside="open = false"
-      id="home"
-      class="section w-full md:min-h-screen pt-20 md:pt-28 md:h-screen bg-hero-image bg-cover bg-no-repeat bg-bottom relative overflow-hidden">
-      <div
-        class="md:w-11/12 md:mx-auto h-full flex flex-col-reverse md:gap-5 md:flex-row md:justify-between md:items-center">
-        <div
-          class="h-full w-full overflow-hidden md:w-fit flex flex-col py-6 -mt-4 bg-white-section bg-no-repeat bg-top md:bg-none md:py-0 gap-0 md:gap-6 md:justify-center md:-mt-6 z-10">
-          <h1
-            data-aos="fade-down"
-            data-aos-duration="1300"
-            class="text-center md:text-left font-medium md:font-black w-11/12 md:ml-0 text-4xl md:text-[76px] lg:text-[84px] md:w-fit text-black">
-            MIELA DIGITAL
-          </h1>
-          <p
-            data-aos="fade-down"
-            data-aos-duration="1300"
-            class="text-custom-ash w-11/12 mx-auto md:mx-0 md:ml-0 font-montserrat font-light text-lg md:text-xl lg:text-[22px] lg:leading-[26pt] md:w-[475px] lg:w-[525px] bg-blend-color-burn text-justify">
-            Miela Digital is an agency specialized in the Gaming Sector. We are
-            dedicated to generating activations focused on brand awareness and
-            user acquisition. We differentiate ourselves by focusing on the
-            narrow part of the funnel: conversion.
-          </p>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1300"
-          data-aos-delay="100"
-          class="fadeImg relative w-full h-[380px] sm:h-[400px] sm:flex flex-col justify-end items-center md:justify-end md:absolute md:w-[620px] md:-bottom-6 md:right-0 md:h-[80%] lg:h-[85%] lg:right-20 md:!overflow-visible">
-          <img
-            src="./src/images/People/hero-2.png"
-            class="h-full w-full sm:h-[400px] md:h-full object-cover object-top md:object-contain md:object-right mx-auto absolute bottom-0 top-0 left-0 right-0 fade-in-image" />
-          <img
-            src="./src/images/People/hero-1.png"
-            class="h-full w-full sm:h-[400px] md:h-full md:w-[350px] object-contain md:float-left object-top md:object-contain md:object-right absolute bottom-0 top-0 right-0 lg:left-0 lg:mx-auto fade-out-image" />
-        </div>
-      </div>
-      
-    </section> -->
     <div
       class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
       x-show.transition.opacity.duration.600ms="showModal"
       :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
       <div
-        class="w-11/12 md:w-fit p-6 bg-[#ffffff] bg-cover mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
+        class="w-11/12 2xl:w-[1400px] md:w-fit p-6 bg-[#ffffff] bg-cover mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
         x-show.transition.scale.duration.800ms="showModal"
         x-transition.delay.50ms
         @click.away="showModal = false">
@@ -301,7 +277,7 @@
             <button
               type="submit"
               @click="showModal = !showModal"
-              class="py-2 px-4 font-semibold text-base md:text-lg rounded-2xl bg-custom-yellow hover:bg-[#f3e694] mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
+              class="py-2 px-4 font-semibold text-base md:text-lg rounded-2xl bg-custom-yellow hover:bg-off-yellow transition-all duration-300 mt-2 md:mt-4 text-black active:outline-none focus:outline-none float-right">
               Submit
               <i class="fa-regular fa-paper-plane"></i>
             </button>
@@ -409,360 +385,744 @@
       </div>
     </section>
 
-    <!-- <section
-      id="influencers"
-      class="section bg-section-image py-8 md:py-10 lg:py-14 overflow-hidden">
-      <div class="w-11/12 mx-auto space-y-5 md:space-y-8">
-        <h2
-          class="font-montserrat font-extrabold text-2xl lg:text-4xl w-fit text-white uppercase"
-          data-aos="fade-up"
-          data-aos-duration="1300"
-          data-aos-delay="100
-           text-[#FDC600]">
-          Influencers
-        </h2>
-        <div class="space-y-6 md:space-y-12">
-          <div
-            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10"
-            data-aos="fade-right"
-            data-aos-duration="1500"
-            data-aos-delay="500">
-            <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
-              <h3
-                class="font-montserrat font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
-                Influencer Management
-              </h3>
-              <p
-                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We harness the potential of influencers by enhancing their reach
-                through dynamic graphics. Our expertise lies in managing both
-                gaming and non-gaming influencers across various regions,
-                strategically leveraging their fanbase to drive conversions for
-                your brand.
-              </p>
-              <p
-                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We enhance the reach of influencers through creative graphics,
-                managing both gaming and non-gaming influencers worldwide.
-              </p>
-            </div>
-            <div class="w-full md:w-[920px]">
-              <img
-                src="./src/images/People/IMG-01.png"
-                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full lg:h-full lg:object-fill"
-                alt="influencers" />
-            </div>
-          </div>
-          <div
-            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10"
-            data-aos="fade-left"
-            data-aos-duration="1500"
-            data-aos-delay="100">
-            <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
-              <h3
-                class="font-montserrat font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
-                Esports Consulting
-              </h3>
-              <p
-                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                With an impressive track record spanning over a decade in the
-                esports industry, we take pride in our extensive expertise. Our
-                proficiency extends to securing lucrative sponsorship
-                agreements, fine-tuning marketing campaigns for optimal results,
-                and orchestrating engaging and successful tournaments.
-              </p>
-              <p
-                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We have experience in the esports industry, with mastery in
-                securing sponsorship deals, optimizing marketing campaigns, and
-                operating tournaments.
-              </p>
-            </div>
-            <div class="w-full md:w-[920px]">
-              <img
-                src="./src/images/People/IMG-02.jpg"
-                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full md:min-h-[310px] object-fill"
-                alt="influencers" />
-            </div>
-          </div>
-          <div
-            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10"
-            data-aos="fade-right"
-            data-aos-duration="1500"
-            data-aos-delay="100">
-            <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
-              <h3
-                class="font-montserrat font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
-                Live Events Production
-              </h3>
-              <p
-                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                Our event production not only captivates audiences but also
-                leaves behind enduring memories that resonate for years to come.
-                With meticulous attention to detail, and flawless execution, we
-                open the door for remarkable in-person interactions that create
-                truly unforgettable experiences.
-              </p>
-              <p
-                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                Our event production creates captivating experiences, leaving
-                lasting memories and fosters meaningful in-person interactions.
-              </p>
-            </div>
-            <div class="w-full md:w-[920px]">
-              <img
-                src="./src/images/People/IMG-03.jpg"
-                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
-                alt="influencers" />
-            </div>
-          </div>
-          <div
-            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10"
-            data-aos="fade-left"
-            data-aos-duration="1500"
-            data-aos-delay="100">
-            <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
-              <h3
-                class="font-montserrat font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
-                Social Media Management
-              </h3>
-              <p
-                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We develop a tailored social media strategy that aligns with
-                your brand’s values and target audience. By conducting in-depth
-                research on your industry, competitors, and audience
-                preferences, we identify the most effective platforms to focus
-                on and determine the type of content that will resonate with
-                your target market.
-              </p>
-              <p
-                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We select the right platforms and create engaging content to
-                connect with your target market effectively.
-              </p>
-            </div>
-            <div class="w-full md:w-[920px]">
-              <img
-                src="./src/images/People/IMG-04.png"
-                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
-                alt="influencers" />
-            </div>
-          </div>
-          <div
-            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10"
-            data-aos="fade-right"
-            data-aos-duration="1500"
-            data-aos-delay="100">
-            <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
-              <h3
-                class="font-montserrat font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
-                PAID MEDIA
-              </h3>
-              <p
-                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We specialize in pinpointing specific audiences to significantly
-                amplify brand awareness, fostering a surge of website traffic
-                that translates into high-quality leads. This strategic approach
-                culminates in a tangible boost in sales and revenue, propelling
-                your business toward greater success.
-              </p>
-              <p
-                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We increase brand awareness and drive traffic to their websites
-                to generate leads, and ultimately increase sales and revenue.
-              </p>
-            </div>
-            <div class="w-full md:w-[920px]">
-              <img
-                src="./src/images/People/IMG-05.png"
-                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full md:min-h-[330px] object-fill"
-                alt="influencers" />
-            </div>
-          </div>
-          <div
-            class="flex flex-col-reverse md:flex-row md:gap-6 lg:gap-10"
-            data-aos="fade-left"
-            data-aos-duration="1500"
-            data-aos-delay="100">
-            <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
-              <h3
-                class="font-montserrat font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
-                Online Events
-              </h3>
-              <p
-                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We harness a diverse range of technologies and platforms to
-                craft captivating and interactive experiences for attendees who
-                are participating in the event from remote locations. Our goal
-                is to provide participants an immersive and dynamic event
-                experiences regardless of their location.
-              </p>
-              <p
-                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We create engaging and interactive experiences for participants
-                who are attending the event remotely.
-              </p>
-            </div>
-            <div class="w-full md:w-[920px]">
-              <img
-                src="./src/images/People/IMG-06.png"
-                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full object-fill"
-                alt="influencers" />
-            </div>
-          </div>
-          <div
-            class="flex flex-col-reverse md:flex-row-reverse md:gap-6 lg:gap-10"
-            data-aos="fade-right"
-            data-aos-duration="1500"
-            data-aos-delay="100">
-            <div
-              class="w-full md:min-w-[370px] space-y-4 border-[#303030] border-[1.5px] rounded-3xl rounded-t-none md:rounded-t-3xl p-4 md:p-6 lg:p-10 bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#2c2c2c]">
-              <h3
-                class="font-montserrat font-extrabold text-white text-xl lg:text-3xl uppercase before:w-1 before:h-9 before:bg-custom-yellow before:absolute before:-left-6 md:before:-left-5 before:bottom-0 before:top-0 before:my-auto ml-4 md:ml-6 relative">
-                CONSULTING SERVICES
-              </h3>
-              <p
-                class="hidden sm:block text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We provide comprehensive consulting services that are
-                meticulously tailored to meet the intricate demands of
-                localization, regulatory compliance, and market entry strategy
-                specifically designed for the dynamic and diverse landscape of
-                the Latin American (LATAM) region.
-              </p>
-              <p
-                class="sm:hidden text-[#9f9f9f] font-thin text-lg md:text-xl lg:leading-[26pt] md:text-justify">
-                We offer consulting services specialized in localization,
-                regulation, and market entry strategy for the LATAM region.
-              </p>
-            </div>
-            <div class="w-full md:w-[920px]">
-              <img
-                src="./src/images/People/consulting_services.png"
-                class="rounded-3xl rounded-b-none md:rounded-b-3xl w-full h-full md:min-h-[330px] object-fill"
-                alt="influencers" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
     <section
       id="influencers"
       class="section bg-influencer-section py-8 md:py-10 lg:py-14 overflow-hidden">
-      <div class="w-11/12 mx-auto">
+      <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black md:mb-8"
+          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
           Influencers
         </h2>
-        <div class="flex h-full justify-between gap-20 items-center">
-          <div class="w-[470px] box-border">
-            <img
-              src="./src/images/People/Streamer-Template.png"
-              alt=""
-              class="relative z-0 w-[400px] mx-auto" />
+
+        <!-- Carousel -->
+        <div
+          id="default-carousel"
+          class="relative w-full"
+          data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div
+            class="relative h-56 overflow-hidden rounded-lg md:h-[650px] border">
+            <!-- Item 1 -->
             <div
-              class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
-              <img
-                src="./src/images/Logos/Flag.png"
-                class="h-full w-[100px]"
-                alt="" />
-              <div
-                class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
-                <p class="text-white font-semibold w-fit mx-auto">
-                  MarkushatdieGansgestohlen
-                </p>
-                <div class="flex items-center gap-5 justify-center skew-x-4">
+              class="hidden duration-700 ease-in-out overflow-hidden"
+              data-carousel-item>
+              <div class="flex h-full justify-between gap-20 items-center">
+                <div class="w-[470px] box-border">
+                  <img
+                    src="./src/images/People/Streamer-Template.png"
+                    alt=""
+                    class="relative z-0 w-[400px] mx-auto" />
                   <div
-                    class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
-                    <svg
-                      class="w-7 fill-black"
-                      viewBox="0 0 256 256"
-                      id="Flat"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
-                    </svg>
+                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    <img
+                      src="./src/images/Logos/Flag.png"
+                      class="h-full w-[100px]"
+                      alt="" />
+                    <div
+                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      <p class="text-white font-semibold w-fit mx-auto">
+                        MarkushatdieGansgestohlen
+                      </p>
+                      <div
+                        class="flex items-center gap-5 justify-center skew-x-4">
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          <svg
+                            class="w-7 fill-black"
+                            viewBox="0 0 256 256"
+                            id="Flat"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+                          </svg>
+                        </div>
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          <svg
+                            class="w-6"
+                            viewBox="-0.5 0 20 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>twitch [#182]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g
+                              id="Page-1"
+                              stroke="none"
+                              stroke-width="1"
+                              fill="none"
+                              fill-rule="evenodd">
+                              <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-141.000000, -7399.000000)"
+                                fill="#000000">
+                                <g
+                                  id="icons"
+                                  transform="translate(56.000000, 160.000000)">
+                                  <path
+                                    d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                                    id="twitch-[#182]"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div
-                    class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                </div>
+                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                  <img
+                    src="./src/images/Backgrounds/Video_Clip_Template.png"
+                    class="w-full rounded-3xl relative z-0"
+                    alt="" />
+                  <button
+                    class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
                     <svg
-                      class="w-6"
-                      viewBox="-0.5 0 20 20"
+                      class="fill-white"
+                      viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <title>twitch [#182]</title>
+                      <title>ic_fluent_play_circle_24_regular</title>
                       <desc>Created with Sketch.</desc>
-                      <defs></defs>
                       <g
-                        id="Page-1"
+                        id="🔍-System-Icons"
                         stroke="none"
                         stroke-width="1"
-                        fill="none"
                         fill-rule="evenodd">
                         <g
-                          id="Dribbble-Light-Preview"
-                          transform="translate(-141.000000, -7399.000000)"
-                          fill="#000000">
-                          <g
-                            id="icons"
-                            transform="translate(56.000000, 160.000000)">
-                            <path
-                              d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
-                              id="twitch-[#182]"></path>
-                          </g>
+                          id="ic_fluent_play_circle_24_regular"
+                          fill-rule="nonzero">
+                          <path
+                            d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
+                            id="🎨-Color"></path>
                         </g>
                       </g>
                     </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="hidden duration-700 ease-in-out overflow-hidden"
+              data-carousel-item>
+              <div class="flex h-full justify-between gap-20 items-center">
+                <div class="w-[470px] box-border">
+                  <img
+                    src="./src/images/People/Streamer-Template.png"
+                    alt=""
+                    class="relative z-0 w-[400px] mx-auto" />
+                  <div
+                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    <img
+                      src="./src/images/Logos/Flag.png"
+                      class="h-full w-[100px]"
+                      alt="" />
+                    <div
+                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      <p class="text-white font-semibold w-fit mx-auto">
+                        MarkushatdieGansgestohlen
+                      </p>
+                      <div
+                        class="flex items-center gap-5 justify-center skew-x-4">
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          <svg
+                            class="w-7 fill-black"
+                            viewBox="0 0 256 256"
+                            id="Flat"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+                          </svg>
+                        </div>
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          <svg
+                            class="w-6"
+                            viewBox="-0.5 0 20 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>twitch [#182]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g
+                              id="Page-1"
+                              stroke="none"
+                              stroke-width="1"
+                              fill="none"
+                              fill-rule="evenodd">
+                              <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-141.000000, -7399.000000)"
+                                fill="#000000">
+                                <g
+                                  id="icons"
+                                  transform="translate(56.000000, 160.000000)">
+                                  <path
+                                    d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                                    id="twitch-[#182]"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                  <img
+                    src="./src/images/Backgrounds/Video_Clip_Template.png"
+                    class="w-full rounded-3xl relative z-0"
+                    alt="" />
+                  <button
+                    class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
+                    <svg
+                      class="fill-white"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <title>ic_fluent_play_circle_24_regular</title>
+                      <desc>Created with Sketch.</desc>
+                      <g
+                        id="🔍-System-Icons"
+                        stroke="none"
+                        stroke-width="1"
+                        fill-rule="evenodd">
+                        <g
+                          id="ic_fluent_play_circle_24_regular"
+                          fill-rule="nonzero">
+                          <path
+                            d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
+                            id="🎨-Color"></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div
+              class="hidden duration-700 ease-in-out overflow-hidden"
+              data-carousel-item>
+              <div class="flex h-full justify-between gap-20 items-center">
+                <div class="w-[470px] box-border">
+                  <img
+                    src="./src/images/People/Streamer-Template.png"
+                    alt=""
+                    class="relative z-0 w-[400px] mx-auto" />
+                  <div
+                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    <img
+                      src="./src/images/Logos/Flag.png"
+                      class="h-full w-[100px]"
+                      alt="" />
+                    <div
+                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      <p class="text-white font-semibold w-fit mx-auto">
+                        MarkushatdieGansgestohlen
+                      </p>
+                      <div
+                        class="flex items-center gap-5 justify-center skew-x-4">
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          <svg
+                            class="w-7 fill-black"
+                            viewBox="0 0 256 256"
+                            id="Flat"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+                          </svg>
+                        </div>
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          <svg
+                            class="w-6"
+                            viewBox="-0.5 0 20 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>twitch [#182]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g
+                              id="Page-1"
+                              stroke="none"
+                              stroke-width="1"
+                              fill="none"
+                              fill-rule="evenodd">
+                              <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-141.000000, -7399.000000)"
+                                fill="#000000">
+                                <g
+                                  id="icons"
+                                  transform="translate(56.000000, 160.000000)">
+                                  <path
+                                    d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                                    id="twitch-[#182]"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                  <img
+                    src="./src/images/Backgrounds/Video_Clip_Template.png"
+                    class="w-full rounded-3xl relative z-0"
+                    alt="" />
+                  <button
+                    class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
+                    <svg
+                      class="fill-white"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <title>ic_fluent_play_circle_24_regular</title>
+                      <desc>Created with Sketch.</desc>
+                      <g
+                        id="🔍-System-Icons"
+                        stroke="none"
+                        stroke-width="1"
+                        fill-rule="evenodd">
+                        <g
+                          id="ic_fluent_play_circle_24_regular"
+                          fill-rule="nonzero">
+                          <path
+                            d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
+                            id="🎨-Color"></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div
+              class="hidden duration-700 ease-in-out overflow-hidden"
+              data-carousel-item>
+              <div class="flex h-full justify-between gap-20 items-center">
+                <div class="w-[470px] box-border">
+                  <img
+                    src="./src/images/People/Streamer-Template.png"
+                    alt=""
+                    class="relative z-0 w-[400px] mx-auto" />
+                  <div
+                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    <img
+                      src="./src/images/Logos/Flag.png"
+                      class="h-full w-[100px]"
+                      alt="" />
+                    <div
+                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      <p class="text-white font-semibold w-fit mx-auto">
+                        MarkushatdieGansgestohlen
+                      </p>
+                      <div
+                        class="flex items-center gap-5 justify-center skew-x-4">
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          <svg
+                            class="w-7 fill-black"
+                            viewBox="0 0 256 256"
+                            id="Flat"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+                          </svg>
+                        </div>
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          <svg
+                            class="w-6"
+                            viewBox="-0.5 0 20 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>twitch [#182]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g
+                              id="Page-1"
+                              stroke="none"
+                              stroke-width="1"
+                              fill="none"
+                              fill-rule="evenodd">
+                              <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-141.000000, -7399.000000)"
+                                fill="#000000">
+                                <g
+                                  id="icons"
+                                  transform="translate(56.000000, 160.000000)">
+                                  <path
+                                    d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                                    id="twitch-[#182]"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                  <img
+                    src="./src/images/Backgrounds/Video_Clip_Template.png"
+                    class="w-full rounded-3xl relative z-0"
+                    alt="" />
+                  <button
+                    class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
+                    <svg
+                      class="fill-white"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <title>ic_fluent_play_circle_24_regular</title>
+                      <desc>Created with Sketch.</desc>
+                      <g
+                        id="🔍-System-Icons"
+                        stroke="none"
+                        stroke-width="1"
+                        fill-rule="evenodd">
+                        <g
+                          id="ic_fluent_play_circle_24_regular"
+                          fill-rule="nonzero">
+                          <path
+                            d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
+                            id="🎨-Color"></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Item 5 -->
+            <div
+              class="hidden duration-700 ease-in-out overflow-hidden"
+              data-carousel-item>
+              <div class="flex h-full justify-between gap-20 items-center">
+                <div class="w-[470px] box-border">
+                  <img
+                    src="./src/images/People/Streamer-Template.png"
+                    alt=""
+                    class="relative z-0 w-[400px] mx-auto" />
+                  <div
+                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    <img
+                      src="./src/images/Logos/Flag.png"
+                      class="h-full w-[100px]"
+                      alt="" />
+                    <div
+                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      <p class="text-white font-semibold w-fit mx-auto">
+                        MarkushatdieGansgestohlen
+                      </p>
+                      <div
+                        class="flex items-center gap-5 justify-center skew-x-4">
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          <svg
+                            class="w-7 fill-black"
+                            viewBox="0 0 256 256"
+                            id="Flat"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+                          </svg>
+                        </div>
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          <svg
+                            class="w-6"
+                            viewBox="-0.5 0 20 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>twitch [#182]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g
+                              id="Page-1"
+                              stroke="none"
+                              stroke-width="1"
+                              fill="none"
+                              fill-rule="evenodd">
+                              <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-141.000000, -7399.000000)"
+                                fill="#000000">
+                                <g
+                                  id="icons"
+                                  transform="translate(56.000000, 160.000000)">
+                                  <path
+                                    d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                                    id="twitch-[#182]"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                  <img
+                    src="./src/images/Backgrounds/Video_Clip_Template.png"
+                    class="w-full rounded-3xl relative z-0"
+                    alt="" />
+                  <button
+                    class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
+                    <svg
+                      class="fill-white"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <title>ic_fluent_play_circle_24_regular</title>
+                      <desc>Created with Sketch.</desc>
+                      <g
+                        id="🔍-System-Icons"
+                        stroke="none"
+                        stroke-width="1"
+                        fill-rule="evenodd">
+                        <g
+                          id="ic_fluent_play_circle_24_regular"
+                          fill-rule="nonzero">
+                          <path
+                            d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
+                            id="🎨-Color"></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Item 6 -->
+            <div
+              class="hidden duration-700 ease-in-out overflow-hidden"
+              data-carousel-item>
+              <div class="flex h-full justify-between gap-20 items-center">
+                <div class="w-[470px] box-border">
+                  <img
+                    src="./src/images/People/Streamer-Template.png"
+                    alt=""
+                    class="relative z-0 w-[400px] mx-auto" />
+                  <div
+                    class="w-full bg-black h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                    <img
+                      src="./src/images/Logos/Flag.png"
+                      class="h-full w-[100px]"
+                      alt="" />
+                    <div
+                      class="skew-x-12 px-1 py-3 w-full flex flex-col justify-between">
+                      <p class="text-white font-semibold w-fit mx-auto">
+                        MarkushatdieGansgestohlen
+                      </p>
+                      <div
+                        class="flex items-center gap-5 justify-center skew-x-4">
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          <svg
+                            class="w-7 fill-black"
+                            viewBox="0 0 256 256"
+                            id="Flat"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+                          </svg>
+                        </div>
+                        <div
+                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          <svg
+                            class="w-6"
+                            viewBox="-0.5 0 20 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>twitch [#182]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g
+                              id="Page-1"
+                              stroke="none"
+                              stroke-width="1"
+                              fill="none"
+                              fill-rule="evenodd">
+                              <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-141.000000, -7399.000000)"
+                                fill="#000000">
+                                <g
+                                  id="icons"
+                                  transform="translate(56.000000, 160.000000)">
+                                  <path
+                                    d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                                    id="twitch-[#182]"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
+                  <img
+                    src="./src/images/Backgrounds/Video_Clip_Template.png"
+                    class="w-full rounded-3xl relative z-0"
+                    alt="" />
+                  <button
+                    class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
+                    <svg
+                      class="fill-white"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <title>ic_fluent_play_circle_24_regular</title>
+                      <desc>Created with Sketch.</desc>
+                      <g
+                        id="🔍-System-Icons"
+                        stroke="none"
+                        stroke-width="1"
+                        fill-rule="evenodd">
+                        <g
+                          id="ic_fluent_play_circle_24_regular"
+                          fill-rule="nonzero">
+                          <path
+                            d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
+                            id="🎨-Color"></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="max-w-[700px] rounded-3xl overflow-hidden relative">
-            <img
-              src="./src/images/Backgrounds/Video_Clip_Template.png"
-              class="w-full rounded-3xl relative z-0"
-              alt="" />
+          <!-- Slider indicators -->
+          <div
+            class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
             <button
-              class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
-              <svg
-                class="fill-white"
-                viewBox="0 0 24 24"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>ic_fluent_play_circle_24_regular</title>
-                <desc>Created with Sketch.</desc>
-                <g
-                  id="🔍-System-Icons"
-                  stroke="none"
-                  stroke-width="1"
-                  fill-rule="evenodd">
-                  <g id="ic_fluent_play_circle_24_regular" fill-rule="nonzero">
-                    <path
-                      d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
-                      id="🎨-Color"></path>
-                  </g>
-                </g>
-              </svg>
-            </button>
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="true"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 4"
+              data-carousel-slide-to="3"></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 5"
+              data-carousel-slide-to="4"></button>
+            <button
+              type="button"
+              class="w-3 h-3 rounded-full"
+              aria-current="false"
+              aria-label="Slide 6"
+              data-carousel-slide-to="5"></button>
           </div>
+          <!-- Slider controls -->
+          <button
+            type="button"
+            class="absolute rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 left-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none"
+            data-carousel-prev>
+            <svg
+              class="w-full fill-white"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 492 492"
+              xml:space="preserve">
+              <g>
+                <g>
+                  <path
+                    d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124
+			c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844
+			L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412
+			c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008
+			c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788
+			C492,219.198,479.172,207.418,464.344,207.418z" />
+                </g>
+              </g>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button
+            type="button"
+            class="absolute rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 right-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none"
+            data-carousel-next>
+            <svg
+              class="w-full fill-white"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 492.004 492.004"
+              xml:space="preserve">
+              <g>
+                <g>
+                  <path
+                    d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136
+			c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002
+			v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864
+			c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872
+			l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z" />
+                </g>
+              </g>
+            </svg>
+            <span class="sr-only">Next</span>
+          </button>
         </div>
       </div>
     </section>
     <section
       id="influencers"
       class="section bg-black py-8 md:py-10 lg:py-14 overflow-hidden h-[780px]">
-      <div class="w-11/12 mx-auto">
+      <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
           class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black md:mb-8 text-white"
           data-aos="fade-up"
@@ -783,246 +1143,176 @@
       </div>
     </section>
     <section
-      id="influencers"
+      id="customers"
       class="section bg-logo-section bg-center bg-blend-darken bg-cover py-8 md:py-10 lg:py-14 overflow-hidden">
-      <div class="w-11/12 mx-auto">
+      <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-black md:mb-8"
+          class="text-center text-2xl lg:text-4xl w-fit mx-auto font-extrabold mb-6 md:mb-12"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
           Our Happy Customer
         </h2>
-        <div class="grid grid-cols-7">
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Parimatch-Logo.png" alt="" />
+        <!-- Image Grid -->
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-y-5 md:gap-y-10 gap-x-5">
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Parimatch-Logo.png" alt="" class="w-[100%] md:w-[80%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Betano-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Betano-Logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Leetbit-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Leetbit-Logo.png" alt="" class="w-[60%] md:w-[60%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Thermalake-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Thermalake-Logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Tencent_Games-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Tencent_Games-Logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Trovo-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Trovo-Logo.png" alt="" class="w-[60%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Tencent-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Tencent-Logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Jugabet-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Jugabet-Logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
-
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/GGbet-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/GGbet-Logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Wester_Digital-logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Wester_Digital-logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Intel-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Intel-Logo.png" alt="" class="w-[60%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Wargaming-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Wargaming-Logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Twitch-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Twitch-Logo.png" alt="" class="w-[80%] md:w-[60%] mx-auto" />
           </div>
-          <div class="w-[150px] border flex items-center">
-            <img src="./src/images/Logos/Floril-Logo.png" alt="" />
+          <div class="flex items-center">
+            <img src="./src/images/Logos/Floril-Logo.png" alt="" class="w-[95%] md:w-[80%] mx-auto" />
           </div>
         </div>
+        <!-- Logo Carousel animation -->
+        <div
+          x-data="{}"
+          x-init="$nextTick(() => {
+            let ul = $refs.logos;
+            ul.insertAdjacentHTML('afterend', ul.outerHTML);
+            ul.nextSibling.setAttribute('aria-hidden', 'true');
+        })"
+          class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] hidden">
+          <ul
+            x-ref="logos"
+            class="flex items-center justify-center md:justify-start [&_li]:mx-6 [&_img]:max-w-none md:animate-infinite-scroll">
+            <li>
+              <img
+                src="./src/images/Logos/Parimatch-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Betano-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Leetbit-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Thermalake-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Tencent_Games-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Trovo-Logo.png"
+                class="h-12"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Tencent-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Jugabet-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/GGbet-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Wester_Digital-logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Intel-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Wargaming-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Twitch-Logo.png"
+                class="h-12"
+                alt="" />
+            </li>
+            <li>
+              <img
+                src="./src/images/Logos/Floril-Logo.png"
+                class="h-14"
+                alt="" />
+            </li>
+          </ul>
+        </div>
+        <!-- End: Logo Carousel animation -->
       </div>
     </section>
 
-    <!-- <section
-      id="clients"
-      class="section w-full py-8 md:py-10 lg:py-14 bg-white-section">
-      <div class="w-11/12 mx-auto">
-        <h2
-          class="font-montserrat font-extrabold text-2xl lg:text-4xl w-fit uppercase md:mb-8"
-          data-aos="fade-up"
-          data-aos-duration="1300"
-          data-aos-delay="100">
-          THEY TRUSTED US
-        </h2>
-      </div>
-      <div
-        class="swiper mySwiper"
-        data-aos="fade-up"
-        data-aos-duration="1300"
-        data-aos-delay="100">
-        <div class="swiper-wrapper">=
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/INTEL.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/WARGAMING.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/Tencent_Games.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/BETANO.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/GGBET.webp" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/THERMALTAKE.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/WESTERN.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/TWITCH.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/TENCENT.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/TROVO.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/Jugabet.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/Parimatch.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/leetbit.png" />
-            <div class="inner-slide"></div>
-          </div>
-          <div class="swiper-slide">
-            <img src="./src/images/Logos/floril.png" />
-            <div class="inner-slide"></div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="section bg-section-image py-8 md:py-10 lg:py-14 relative">
-      <div
-        class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 lg:gap-10">
-        <div
-          data-aos="flip-left"
-          data-aos-duration="1300"
-          data-aos-delay="100"
-          class="bg-black p-6 md:p-6 lg:p-8 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
-          <div
-            class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
-            <img
-              class="w-full h-full rounded-full object-fill mx-auto scale-150"
-              src="./src/images/People/YASMINE.png"
-              alt="client" />
-          </div>
-          <div class="">
-            <p
-              class="text-center font-montserrat font-extrabold text-white uppercase text-lg md:text-xl">
-              Yasmine
-            </p>
-            <p
-              class="text-center font-montserrat font-extrabold text-custom-yellow">
-              GGBET
-            </p>
-          </div>
-          <p class="w-full text-justify text-sm text-[#bebebe]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis.
-          </p>
-        </div>
-        <div
-          data-aos="flip-left"
-          data-aos-duration="1300"
-          data-aos-delay="250"
-          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
-          <div
-            class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
-            <img
-              class="w-full h-full rounded-full object-fill mx-auto scale-150"
-              src="./src/images/People/BAUER.png"
-              alt="client" />
-          </div>
-          <div class="">
-            <p
-              class="text-center text-white font-montserrat font-extrabold uppercase text-lg md:text-xl">
-              BAUER
-            </p>
-            <p
-              class="text-center font-montserrat font-extrabold text-custom-yellow">
-              INTEL
-            </p>
-          </div>
-          <p class="w-full text-justify text-sm text-[#bebebe]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis.
-          </p>
-        </div>
-        <div
-          data-aos="flip-left"
-          data-aos-duration="1300"
-          data-aos-delay="350"
-          class="bg-black p-6 md:p-6 lg:p-10 border-[#303030] border-[1.5px] rounded-3xl space-y-5">
-          <div
-            class="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mx-auto">
-            <img
-              class="w-full h-full rounded-full object-fill mx-auto scale-150"
-              src="./src/images/People/JANE.png"
-              alt="client" />
-          </div>
-          <div class="">
-            <p
-              class="text-center text-white font-montserrat font-extrabold uppercase text-lg md:text-xl">
-              JANE
-            </p>
-            <p
-              class="text-center text-custom-yellow font-montserrat font-extrabold">
-              BETANO
-            </p>
-          </div>
-          <p class="w-full text-justify text-sm text-[#bebebe]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis.
-          </p>
-        </div>
-      </div>
-    </section> -->
     <footer class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden">
-      <div class="w-11/12 mx-auto space-y-6 md:space-y-8 lg:space-y-10">
+      <div class="w-11/12 2xl:w-[1400px] mx-auto space-y-6 md:space-y-8 lg:space-y-10">
         <div class="w-full flex flex-col md:flex-row justify-between gap-5">
           <div
             data-aos="fade-up"
             data-aos-duration="1300"
             data-aos-delay="50"
-            class="w-full md:w-fit space-y-5">
+            class="w-full md:w-fit space-y-5 text-center md:!text-left">
             <img
               src="./src/images/Logos/M_logo.png"
-              class="w-16 md:w-20 lg:w-24"
+              class="w-16 md:w-20 lg:w-24 mx-auto md:!mx-0"
               alt="" />
-            <p class="text-custom-ash max-w-[400px]">
+            <p class="text-white max-w-[650px] md:max-w-[400px] mx-auto md:!ml-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore facilisis.
             </p>
@@ -1036,7 +1326,7 @@
             data-aos="fade-up"
             data-aos-duration="1300"
             data-aos-delay="100"
-            class="w-fit space-y-3">
+            class="w-fit space-y-3 text-center md:!text-left mx-auto md:!mx-0">
             <h2
               class="font-montserrat font-extrabold text-white w-fit uppercase">
               Quick Links
@@ -1064,8 +1354,8 @@
         data-aos-duration="1300"
         data-aos-delay="200"
         data-aos-anchor="#footer-anchor"
-        class="flex items-center justify-between w-11/12 mx-auto">
-        <div class="flex gap-2">
+        class="flex flex-col md:flex-row gap-5 items-center justify-between w-11/12 2xl:w-[1400px] mx-auto">
+        <div class="flex items-center gap-2">
           <div
             class="h-11 w-11 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
             <svg
@@ -1078,17 +1368,19 @@
             </svg>
           </div>
           <div>
-            <p class="text-white font-semibold text-xl">Company's Desk</p>
-            <p class="text-custom-deep-ash">PDF, 3mb</p>
+            <p class="text-white tracking-wider font-semibold text-lg md:text-xl text-nowrap">
+              Company Deck
+            </p>
+            <p class="text-sm md:text-base text-custom-deep-ash">PDF, 3mb</p>
           </div>
         </div>
         <p
-          class="text-custom-white font-normal text-sm tracking-wider text-center -mt-2">
+          class="text-custom-white font-normal text-sm  text-center -mt-2">
           © 2024 Miela Digital. All rights reserved.
         </p>
         <div class="flex gap-3 items-center">
-          <div
-            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+          <a target="_blank" href="https://www.instagram.com/mieladigital/"
+            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2 overflow-hidden">
             <svg
               class="w-7 fill-black"
               viewBox="0 0 256 256"
@@ -1097,9 +1389,9 @@
               <path
                 d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
             </svg>
-          </div>
-          <div
-            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+          </a>
+          <a target="_blank" href="mailto:contact@mieladigital.com"
+            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
             <svg
               class="w-6"
               viewBox="0 -9.31 56.223 56.223"
@@ -1110,9 +1402,9 @@
                 d="M798.377,169.859h.012a2.16,2.16,0,0,0,1.181-.346l.092-.059.063-.039,1.071-.887,25.563-21.094a.3.3,0,0,0-.239-.123H770.492a.291.291,0,0,0-.183.066l26.745,22.045A2.1,2.1,0,0,0,798.377,169.859ZM770.2,150.3v31.268l19.159-15.476Zm37.084,15.9,19.139,15.38V150.4Zm-6.085,5.021a4.559,4.559,0,0,1-5.619.005l-4.388-3.619L770.2,184.558v.053a.3.3,0,0,0,.3.3h55.625a.3.3,0,0,0,.3-.3v-.049l-20.974-16.852Z"
                 transform="translate(-770.195 -147.311)" />
             </svg>
-          </div>
-          <div
-            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+          </a>
+          <a  target="_blank" href="https://www.youtube.com/channel/UCa8yH5uqn2f3ih1eeB-lzZQ"
+            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
             <svg
               class="w-6"
               viewBox="0 -3 20 20"
@@ -1140,9 +1432,9 @@
                 </g>
               </g>
             </svg>
-          </div>
-          <div
-            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+          </a>
+          <a  target="_blank" href="https://www.twitch.tv/team/miela"
+            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
             <svg
               class="w-6"
               viewBox="-0.5 0 20 20"
@@ -1170,9 +1462,9 @@
                 </g>
               </g>
             </svg>
-          </div>
-          <div
-            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+          </a>
+          <a  target="_blank" href="https://www.linkedin.com/company/mieladigital"
+            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
             <svg
               class="w-6"
               viewBox="0 0 20 20"
@@ -1200,44 +1492,31 @@
                 </g>
               </g>
             </svg>
-          </div>
-          <div
-            class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+          </a>
+          <a target="_blank" href="https://twitter.com/MielaDigital"
+            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
             <svg
-              class="w-6"
-              viewBox="-0.5 0 20 20"
-              version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>twitch [#182]</title>
-              <desc>Created with Sketch.</desc>
-              <defs></defs>
-              <g
-                id="Page-1"
-                stroke="none"
-                stroke-width="1"
-                fill="none"
-                fill-rule="evenodd">
-                <g
-                  id="Dribbble-Light-Preview"
-                  transform="translate(-141.000000, -7399.000000)"
-                  fill="#000000">
-                  <g id="icons" transform="translate(56.000000, 160.000000)">
-                    <path
-                      d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
-                      id="twitch-[#182]"></path>
-                  </g>
+              enable-background="new 0 0 72 72"
+              viewBox="0 0 72 72"
+              id="twitter-x"
+              class="w-6">
+              <switch>
+                <g>
+                  <path
+                    d="M42.5,31.2L66,6h-6L39.8,27.6L24,6H4l24.6,33.6L4,66
+              h6l21.3-22.8L48,66h20L42.5,31.2z M12.9,10h8l38.1,52h-8L12.9,10z"></path>
                 </g>
-              </g>
+              </switch>
             </svg>
-          </div>
+          </a>
         </div>
       </div>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/script.js"></script>
     <script src="./src/form.js"></script>

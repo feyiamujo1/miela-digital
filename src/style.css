@@ -46,12 +46,12 @@ a:active {
   font-weight: 100;
   font-style: thin;
 }
-/* @font-face {
+@font-face {
   font-family: "Helvetica";
   src: url("./fonts/helvetica-light-587ebe5a59211.ttf");
   font-weight: 300;
   font-style: light;
-} */
+}
 @font-face {
   font-family: "Helvetica";
   src: url("./fonts/Helvetica.ttf");
@@ -75,4 +75,8 @@ a:active {
   opacity: 0;
   /* display: none; */
   transition: opacity 1s ease-in-out;
+}
+
+body{
+  font-family: Helvetica;
 }
