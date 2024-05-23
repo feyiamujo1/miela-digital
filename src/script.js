@@ -54,73 +54,10 @@ const observer = new IntersectionObserver(entries => {
   });
 }, observerOptions);
 
-sections.forEach(section => {
-  console.log(section);
-  observer.observe(section);
-});
+// sections.forEach(section => {
+//   console.log(section);
+//   observer.observe(section);
+// });
 
-var swiper = new Swiper(".mySwiper", {
-  // slidesPerView: 5,
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      slidesPerGroup: 2
-    },
-    648: {
-      slidesPerView: 3,
-      slidesPerGroup: 3
-    },
-    920: {
-      slidesPerView: 4,
-      slidesPerGroup: 4
-    },
-    1024: {
-      slidesPerView: 5,
-      slidesPerGroup: 5
-    }
-  },
-  // spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 0 //add
-  },
-  speed: 7500,
-  freemode: true
-});
 
-var swiper = new Swiper(".heroSwiper", {
-  slidesPerView: 1,
-  effect: "fade",
-  loop: true,
-  autoplay: {
-    delay: 2000
-  },
-  speed: 1000,
-  freemode: true,
-  on: {
-    slideChange: () => {
-      const slides = document.querySelectorAll('.hero-slide');
-      const activeIndex = swiper.activeIndex;
-
-      slides.forEach((slide, index) => {
-        if (index === activeIndex) {
-          slide.style.opacity = 1; // Set opacity to 1 for active slide
-        } else {
-          slide.style.opacity = 0; // Set opacity to 0 for inactive slides
-        }
-      });
-    }
-  }
-});
-
-// function downloadPdf() {
-//   const pdfUrl = "../src/pdf/CaseStudy.pdf"; 
-//   const link = document.createElement("a");
-//   link.href = pdfUrl;
-//   link.target = "_blank";
-//   link.download = "CaseStudy.pdf"; // Change the downloaded file name if needed
-//   document.body.appendChild(link);
-//   link.click();
-//   document.body.removeChild(link);
-// }
 

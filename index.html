@@ -134,18 +134,18 @@
     <nav
       data-aos="fade-down"
       data-aos-duration="1300"
-      class="w-full z-30 bg-black">
+      class="w-full z-50 absolute md:relative bg-black">
       <div
         class="w-11/12 2xl:w-[1400px] mx-auto py-3 sm:py-5 flex justify-between items-center">
         <a href="./" class="">
           <img
-            class="w-[55px] md:w-[65px]"
+            class="w-[55px] md:w-[65px] py-1"
             src="./src/images/Logos/M_logo_copy.png"
             alt="logo" />
         </a>
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
-            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border z-50 font-montserrat"
+            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border z-[60] font-montserrat"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
               class="md:text-[15px] md:font-semibold mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover: active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-4 nav_link active_link"
@@ -174,7 +174,7 @@
           </ul>
           <div class="md:hidden">
             <button
-              class="w-10 h-10 relative focus:outline-none bg-black md:hidden"
+              class="w-10 h-10 relative focus:outline-none bg-black md:hidden z-[70]"
               @click="open = !open">
               <span class="sr-only">Open main menu</span>
               <div
@@ -284,7 +284,7 @@
     <section
       @click.inside="open = false"
       id="home"
-      class="section 2xl:w-[1400px] mx-auto md:h-[740px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom relative overflow-hidden flex flex-col-reverse md:flex-row">
+      class="section 2xl:w-[1400px] pt-[96px] md:pt-0 relative z-10 mx-auto md:h-[740px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom overflow-hidden flex flex-col-reverse md:flex-row">
       <div class="w-[300px] h-full flex flex-row md:!flex-col font-montserrat">
         <div
           class="w-full h-full bg-white aspect-video flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group">
@@ -394,8 +394,9 @@
     </section>
 
     <section
+      @click.inside="open = false"
       id="influencers"
-      class="section bg-influencer-section bg-center bg-cover py-8 md:py-10 lg:py-14 overflow-hidden">
+      class="section bg-influencer-section bg-center bg-cover py-8 md:py-10 lg:py-14 overflow-hidden z-10">
       <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
           class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit mb-10 md:mb-0 md:mx-auto font-helveticaneue-condensedblack"
@@ -1614,25 +1615,14 @@
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/script.js"></script>
     <script src="./src/form.js"></script>
     <script>
       AOS.init({ once: true });
-      document.addEventListener("DOMContentLoaded", function () {
-        const fadeImgDiv = document.querySelector(".fadeImg");
-        const images = fadeImgDiv.querySelectorAll("img");
-
-        function toggleImageOpacity() {
-          images.forEach(image => {
-            image.classList.toggle("fade-in-image");
-            image.classList.toggle("fade-out-image");
-          });
-        }
-
-        setInterval(toggleImageOpacity, 3000);
-      });
     </script>
   </body>
 </html>
