@@ -23,14 +23,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
       rel="stylesheet" />
-    <link
-      href="https://db.onlinewebfonts.com/c/351fdf55554fd941e99c8ef08653c26b?family=Helvetica+Neue+LT+W02+87+Hv+Cn"
-      rel="stylesheet" />
-    <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet" /> -->
+    <!-- helveticaneue-condensedblack font -->
     <link
       href="https://db.onlinewebfonts.com/c/db43803fb4a7ccad71c4b2c69d32922f?family=HelveticaNeue-CondensedBlack"
       rel="stylesheet" />
@@ -102,9 +95,12 @@
               "influencer-section": 'url("./src/images/Backgrounds/BG-1.png")',
               "logo-section": 'url("./src/images/Backgrounds/BG-2.png")'
             },
-            Family: {
-              helvetica: ["Helvetica", "sans-serif"],
-              helveticanue: ["HelveticaNeue-CondensedBlack", "sans-serif"]
+            fontFamily: {
+              "helveticaneue-condensedblack": [
+                "HelveticaNeue-CondensedBlack",
+                "sans-serif"
+              ],
+              montserrat: ["montserrat", "sans-serif"]
             },
             animation: {
               "infinite-scroll": "infinite-scroll 25s linear infinite",
@@ -149,7 +145,7 @@
         </a>
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
-            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border z-50"
+            class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border z-50 font-montserrat"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
             <li
               class="md:text-[15px] md:font-semibold mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover: active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-4 nav_link active_link"
@@ -200,7 +196,7 @@
           </div>
         </div>
         <button
-          class="md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-4 py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none hidden md:block"
+          class="md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-4 py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none hidden md:block font-montserrat"
           @click=" open = false, showModal = !showModal">
           Contact Us
         </button>
@@ -289,7 +285,7 @@
       @click.inside="open = false"
       id="home"
       class="section 2xl:w-[1400px] mx-auto md:h-[740px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom relative overflow-hidden flex flex-col-reverse md:flex-row">
-      <div class="w-[300px] h-full flex flex-row md:!flex-col">
+      <div class="w-[300px] h-full flex flex-row md:!flex-col font-montserrat">
         <div
           class="w-full h-full bg-white aspect-video flex items-center justify-center border-b border-custom-ash cursor-pointer group">
           <p
@@ -387,7 +383,7 @@
               </button>
             </div>
             <p
-              class="max-w-[600px] text-sm md:text-base mx-auto text-center text-custom-whitish">
+              class="max-w-[600px] text-sm md:text-base mx-auto text-center text-custom-whitish font-montserrat">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
               enim commodi quaerat consectetur, repudiandae illo id! Doloribus,
               nisi.
@@ -402,7 +398,7 @@
       class="section bg-influencer-section bg-center bg-cover py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="md:text-center text-2xl lg:text-4xl w-fit mb-10 md:mb-0 md:mx-auto font-black"
+          class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit mb-10 md:mb-0 md:mx-auto font-extrabold font-helveticaneue-condensedblack"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -415,7 +411,7 @@
           data-aos-duration="1300"
           data-aos-delay="100"
           id="default-carousel"
-          class="relative w-full"
+          class="relative w-full font-montserrat"
           data-carousel="slide">
           <!-- Carousel wrapper -->
           <div
@@ -1157,7 +1153,7 @@
       class="section bg-black py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="md:text-center text-2xl lg:text-4xl w-fit md:mx-auto font-black mb-8 md:mb-16 text-white"
+          class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit md:mx-auto font-black mb-8 md:mb-16 text-white font-helveticaneue-condensedblack"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -1180,7 +1176,7 @@
       class="section bg-logo-section bg-center bg-blend-darken bg-cover py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="md:text-center text-2xl lg:text-4xl w-fit md:mx-auto font-extrabold mb-8 md:mb-16"
+          class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit md:mx-auto mb-8 md:mb-16 font-helveticaneue-condensedblack"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -1379,7 +1375,8 @@
       </div>
     </section>
 
-    <footer class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden">
+    <footer
+      class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden font-montserrat">
       <div
         class="w-11/12 2xl:w-[1400px] mx-auto space-y-6 md:space-y-8 lg:space-y-10">
         <div class="w-full flex flex-col md:flex-row justify-between gap-5">
@@ -1410,7 +1407,7 @@
             data-aos-delay="100"
             class="w-fit space-y-3">
             <h2
-              class="font-montserrat font-extrabold text-white w-fit uppercase">
+              class="font-montserrat font-bold tracking-wider text-white w-fit uppercase">
               Quick Links
             </h2>
             <div class="font-normal text-base text-custom-white space-y-5">
@@ -1437,7 +1434,8 @@
         data-aos-delay="200"
         data-aos-anchor="#footer-anchor"
         class="flex flex-col md:flex-row gap-5 md:items-center justify-between w-11/12 2xl:w-[1400px] mx-auto mb-2 md:mb-0">
-        <div class="flex items-center gap-2 group cursor-pointer">
+        <div
+          class="flex items-center gap-2 group cursor-pointer font-montserrat">
           <div
             class="h-11 w-11 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden group-hover:bg-off-yellow">
             <svg
@@ -1451,16 +1449,16 @@
           </div>
           <div>
             <p
-              class="text-white tracking-wider font-semibold text-lg md:text-xl text-nowrap group-hover:text-custom-yellow duration-300 transition-colors">
+              class="text-white tracking-wider font-semibold text-lg md:text-xl text-nowrap group-hover:!text-custom-ash duration-300">
               Company Deck
             </p>
             <p
-              class="text-sm md:text-base text-custom-deep-ash group-hover:text-custom-ash duration-300 transition-colors">
+              class="text-sm md:text-sm text-custom-deep-ash group-hover:text-custom-ash duration-300 transition-colors">
               PDF, 3MB
             </p>
           </div>
         </div>
-        <p class="text-custom-white font-normal text-sm -mt-2">
+        <p class="text-custom-white font-normal text-sm -mt-2 font-montserrat">
           © 2024 Miela Digital. All rights reserved.
         </p>
         <div class="flex gap-3 items-center">
