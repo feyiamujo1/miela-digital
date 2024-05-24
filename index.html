@@ -146,7 +146,7 @@
         <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
             class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border z-[60] font-montserrat"
-            :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 md:w-fit md:opacity-100': !open}">
+            :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 hidden md:flex md:w-fit md:opacity-100': !open}">
             <li
               class="md:text-[15px] md:font-semibold mt-24 md:mt-0 md:py-3 cursor-pointer hover:!cursor-pointer active:font-black md:hover: active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-4 nav_link active_link"
               @click.inside="open = false">
@@ -281,7 +281,7 @@
         </div>
       </div>
     </div>
-    <section
+    <!-- <section
       @click.inside="open = false"
       id="home"
       class="section 2xl:w-[1400px] pt-[96px] md:pt-0 relative z-10 mx-auto md:h-[740px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom overflow-hidden flex flex-col-reverse md:flex-row">
@@ -337,6 +337,8 @@
           <div class="md:w-[90%] mx-auto">
             <div class="flex w-full justify-between items-center">
               <button
+              type="button"
+              data-carousel-prev
                 class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
                 <svg
                   class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
@@ -360,6 +362,8 @@
                 </svg>
               </button>
               <button
+              type="button"
+              data-carousel-prev
                 class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
                 <svg
                   class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
@@ -391,6 +395,220 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <section
+      @click.inside="open = false"
+      id="home"
+      class="section 2xl:w-[1400px] pt-[96px] md:pt-0 relative z-10 mx-auto md:h-[740px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom overflow-hidden">
+      <!-- Carousel -->
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1300"
+        data-aos-delay="100"
+        id="default-carousel"
+        class="relative w-full font-montserrat flex flex-col-reverse md:flex-row-reverse aspect-video md:aspect-auto"
+        data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden rounded-lg">
+          <!--  -->
+          <!-- This is to help set the height of the container -->
+          <div
+            class="h-full relative w-full aspect-video md:aspect-auto invisible">
+            <img
+              src="./src/images/Backgrounds/Influencer_Management_1.png"
+              class="object-cover object-left h-full relative z-0"
+              alt="" />
+          </div>
+          <!--  -->
+          <!--  -->
+
+          <!-- Carousel Items -->
+          <!-- Carousel Item 1 -->
+          <div
+            class="hidden duration-700 ease-in-out overflow-hidden"
+            data-carousel-item>
+            <div class="h-full relative w-full aspect-video md:aspect-auto">
+              <img
+                src="./src/images/Backgrounds/Influencer_Management_1.png"
+                class="object-cover object-left h-full relative z-0"
+                alt="" />
+            </div>
+          </div>
+          <!-- Carousel Item 2 -->
+          <div
+            class="hidden duration-700 ease-in-out overflow-hidden"
+            data-carousel-item>
+            <div class="h-full relative w-full aspect-video md:aspect-auto">
+              <img
+                src="./src/images/Backgrounds/Influencer_Management_1.png"
+                class="object-cover object-left h-full relative z-0"
+                alt="" />
+            </div>
+          </div>
+          <!-- Carousel Item 3 -->
+          <div
+            class="hidden duration-700 ease-in-out overflow-hidden"
+            data-carousel-item>
+            <div class="h-full relative w-full aspect-video md:aspect-auto">
+              <img
+                src="./src/images/Backgrounds/Influencer_Management_1.png"
+                class="object-cover object-left h-full relative z-0"
+                alt="" />
+            </div>
+          </div>
+          <!-- Carousel Item 4 -->
+          <div
+            class="hidden duration-700 ease-in-out overflow-hidden"
+            data-carousel-item>
+            <div class="h-full relative w-full aspect-video md:aspect-auto">
+              <img
+                src="./src/images/Backgrounds/Influencer_Management_1.png"
+                class="object-cover object-left h-full relative z-0"
+                alt="" />
+            </div>
+          </div>
+          <!-- Carousel Item 5 -->
+          <div
+            class="hidden duration-700 ease-in-out overflow-hidden"
+            data-carousel-item>
+            <div class="h-full relative w-full aspect-video md:aspect-auto">
+              <img
+                src="./src/images/Backgrounds/Influencer_Management_1.png"
+                class="object-cover object-left h-full relative z-0"
+                alt="" />
+            </div>
+          </div>
+          <!-- Carousel Controller buttons and text -->
+          <div
+            class="absolute w-full p-2.5 md:p-5 z-50 bottom-0 left-0 right-0 mx-auto bg-blacked-image">
+            <div class="md:w-[90%] mx-auto">
+              <div class="flex w-full justify-between items-center">
+                <button
+                  type="button"
+                  data-carousel-prev
+                  class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
+                  <svg
+                    class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 492 492"
+                    xml:space="preserve">
+                    <g>
+                      <g>
+                        <path
+                          d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124
+			c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844
+			L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412
+			c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008
+			c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788
+			C492,219.198,479.172,207.418,464.344,207.418z" />
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  data-carousel-next
+                  class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
+                  <svg
+                    class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 492.004 492.004"
+                    xml:space="preserve">
+                    <g>
+                      <g>
+                        <path
+                          d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136
+			c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002
+			v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864
+			c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872
+			l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z" />
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <p
+                class="max-w-[600px] text-sm md:text-base mx-auto text-center text-custom-whitish font-montserrat">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia enim commodi quaerat consectetur, repudiandae illo id!
+                Doloribus, nisi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider indicators -->
+        <div
+          class="services hidden w-[300px] md:h-[740px] 2xl:h-[800px] md:flex flex-row md:!flex-col font-montserrat z-30">
+          <button
+            type="button"
+            class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0">
+            <p
+              class="text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+              <span>Influencer</span>
+              <span>Management</span>
+            </p>
+          </button>
+          <button
+            type="button"
+            class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1">
+            <p
+              class="text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+              <span>Community</span>
+              <span>Management</span>
+            </p>
+          </button>
+          <button
+            type="button"
+            class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2">
+            <p
+              class="text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+              <span>Virtual</span>
+              <span>Influencers</span>
+            </p>
+          </button>
+          <button
+            type="button"
+            class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group"
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3">
+            <p
+              class="text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+              <span>Consulting</span>
+              <span>Services</span>
+            </p>
+          </button>
+          <button
+            type="button"
+            class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center cursor-pointer group"
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4">
+            <p
+              class="text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+              <span>Video</span>
+              <span>Marketing</span>
+            </p>
+          </button>
+        </div>
+      </div>
     </section>
 
     <section
@@ -399,7 +617,7 @@
       class="section bg-influencer-section bg-center bg-cover py-8 md:py-10 lg:py-14 overflow-hidden z-10">
       <div class="w-11/12 2xl:w-[1400px] mx-auto">
         <h2
-          class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit mb-10 md:mb-0 md:mx-auto font-helveticaneue-condensedblack"
+          class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit md:mx-auto font-helveticaneue-condensedblack mb-8 md:!mb-0"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -408,15 +626,121 @@
 
         <!-- Carousel -->
         <div
-          data-aos="fade-up"
+          data-aos="zoom-in"
           data-aos-duration="1300"
           data-aos-delay="100"
           id="default-carousel"
-          class="relative w-full font-montserrat"
+          class="relative w-full font-montserrat "
           data-carousel="slide">
           <!-- Carousel wrapper -->
           <div
-            class="relative overflow-hidden rounded-lg h-[400px] sm:h-[480px] md:h-[650px]">
+            class="relative overflow-hidden rounded-lg py-8 md:py-20">
+            <!-- Template image to set the backgound width and height n all -->
+            <div
+              class="flex flex-col md:flex-row h-full md:justify-between gap-10 md:gap-20 items-center invisible">
+              <div class="md:w-[450px] box-border">
+                <img
+                  src="./src/images/People/Streamer-Template.png"
+                  alt=""
+                  class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
+                <div
+                  class="w-[90%] mx-auto bg-black h-20 md:h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
+                  <img
+                    src="./src/images/Logos/Flag.png"
+                    class="h-full w-[75px] md:w-[100px]"
+                    alt="" />
+                  <div
+                    class="skew-x-[20deg] px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
+                    <p
+                      class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
+                      MarkushatdieGansgestohlen
+                    </p>
+                    <div
+                      class="flex items-center gap-5 justify-center skew-x-0">
+                      <div
+                        class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                        <svg
+                          class="w-7 fill-black"
+                          viewBox="0 0 256 256"
+                          id="Flat"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M128,82a46,46,0,1,0,46,46A46.05239,46.05239,0,0,0,128,82Zm0,68a22,22,0,1,1,22-22A22.02489,22.02489,0,0,1,128,150ZM176,20H80A60.06812,60.06812,0,0,0,20,80v96a60.06812,60.06812,0,0,0,60,60h96a60.06812,60.06812,0,0,0,60-60V80A60.06812,60.06812,0,0,0,176,20Zm36,156a36.04061,36.04061,0,0,1-36,36H80a36.04061,36.04061,0,0,1-36-36V80A36.04061,36.04061,0,0,1,80,44h96a36.04061,36.04061,0,0,1,36,36ZM196,76a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,196,76Z" />
+                        </svg>
+                      </div>
+                      <div
+                        class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                        <svg
+                          class="w-6"
+                          viewBox="-0.5 0 20 20"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>twitch [#182]</title>
+                          <desc>Created with Sketch.</desc>
+                          <defs></defs>
+                          <g
+                            id="Page-1"
+                            stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd">
+                            <g
+                              id="Dribbble-Light-Preview"
+                              transform="translate(-141.000000, -7399.000000)"
+                              fill="#000000">
+                              <g
+                                id="icons"
+                                transform="translate(56.000000, 160.000000)">
+                                <path
+                                  d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z"
+                                  id="twitch-[#182]"></path>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
+                <img
+                  src="./src/images/Backgrounds/Video_Clip_Template.png"
+                  class="w-full rounded-3xl relative z-0"
+                  alt="" />
+                <button
+                  class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
+                  <svg
+                    class="fill-white"
+                    viewBox="0 0 24 24"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>ic_fluent_play_circle_24_regular</title>
+                    <desc>Created with Sketch.</desc>
+                    <g
+                      id="🔍-System-Icons"
+                      stroke="none"
+                      stroke-width="1"
+                      fill-rule="evenodd">
+                      <g
+                        id="ic_fluent_play_circle_24_regular"
+                        fill-rule="nonzero">
+                        <path
+                          d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M12,3.5 C7.30557963,3.5 3.5,7.30557963 3.5,12 C3.5,16.6944204 7.30557963,20.5 12,20.5 C16.6944204,20.5 20.5,16.6944204 20.5,12 C20.5,7.30557963 16.6944204,3.5 12,3.5 Z M9.0527864,8.5854102 C9.1625594,8.3658642 9.41205933,8.26236922 9.63961698,8.328815 L9.7236068,8.3618034 L16.1055728,11.5527864 C16.2023365,11.6011683 16.2807978,11.6796295 16.3291796,11.7763932 C16.4389526,11.9959392 16.3720486,12.2576361 16.1823574,12.3998148 L16.1055728,12.4472136 L9.7236068,15.6381966 C9.65417908,15.6729105 9.57762255,15.690983 9.5,15.690983 C9.25454011,15.690983 9.05039163,15.5141078 9.00805567,15.2808586 L9,15.190983 L9,8.80901699 C9,8.73139445 9.01807255,8.65483791 9.0527864,8.5854102 Z"
+                          id="🎨-Color"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <!--  -->
+
+            <!-- -->
+            <!-- Carousel Items -->
             <!-- Item 1 -->
             <div
               class="hidden duration-700 ease-in-out overflow-hidden"
