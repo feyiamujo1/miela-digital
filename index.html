@@ -136,14 +136,15 @@
       data-aos-duration="1300"
       class="w-full z-50 absolute md:relative bg-black">
       <div
-        class="w-11/12 2xl:w-[1400px] mx-auto py-3 sm:py-5 flex justify-between items-center">
+        class="w-[85%] 2xl:w-[1400px] mx-auto py-3 sm:py-5 flex justify-between items-center">
         <a href="./" class="">
           <img
-            class="w-[55px] md:w-[65px] py-1"
+            class="w-[53px] md:w-[65px] py-1"
             src="./src/images/Logos/M_logo_copy.png"
             alt="logo" />
         </a>
-        <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
+        <div
+          class="hidden md:flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
             class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border z-[60] font-montserrat"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 hidden md:flex md:w-fit md:opacity-100': !open}">
@@ -162,17 +163,8 @@
               @click.inside="open = false">
               Our Team
             </li>
-            <!-- <li
-              class="md:text-[15px] md:font-semibold md:py-3 cursor-pointer hover:!cursor-pointer active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b nav_link inactive_link"
-              @click.inside="open = false">
-              <a
-                href="./case-study/"
-                class="w-full h-full no-underline hover:text-inherit hover:no-underline active:no-underline">
-                Case Study
-              </a>
-            </li> -->
           </ul>
-          <div class="md:hidden">
+          <div class="hidden">
             <button
               class="w-10 h-10 relative focus:outline-none bg-black md:hidden z-[70]"
               @click="open = !open">
@@ -196,7 +188,7 @@
           </div>
         </div>
         <button
-          class="md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-4 py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none hidden md:block font-montserrat"
+          class="md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat"
           @click=" open = false, showModal = !showModal">
           Contact Us
         </button>
@@ -207,7 +199,7 @@
       x-show.transition.opacity.duration.600ms="showModal"
       :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
       <div
-        class="w-11/12 2xl:w-[1400px] md:w-fit p-6 bg-[#ffffff] bg-cover mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
+        class="w-[85%] 2xl:w-[1400px] md:w-fit p-6 bg-[#ffffff] bg-cover mx-auto gap-3 md:gap-5 relative rounded-3xl transition-all duration-500"
         x-show.transition.scale.duration.800ms="showModal"
         x-transition.delay.50ms
         @click.away="showModal = false">
@@ -281,122 +273,11 @@
         </div>
       </div>
     </div>
-    <!-- <section
-      @click.inside="open = false"
-      id="home"
-      class="section 2xl:w-[1400px] pt-[96px] md:pt-0 relative z-10 mx-auto md:h-[740px] 2xl:h-[800px] bg-black bg-cover bg-no-repeat bg-bottom overflow-hidden flex flex-col-reverse md:flex-row">
-      <div class="w-[300px] h-full flex flex-row md:!flex-col font-montserrat">
-        <div
-          class="w-full h-full bg-white aspect-video flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group">
-          <p
-            class="text-black text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
-            <span>Influencer</span>
-            <span>Management</span>
-          </p>
-        </div>
-        <div
-          class="w-full h-full aspect-video flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group">
-          <p
-            class="text-custom-ash text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
-            <span>Community</span>
-            <span>Management</span>
-          </p>
-        </div>
-        <div
-          class="w-full h-full aspect-video flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group">
-          <p
-            class="text-custom-ash text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
-            <span>Virtual</span>
-            <span>Influencers</span>
-          </p>
-        </div>
-        <div
-          class="w-full h-full aspect-video flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group">
-          <p
-            class="text-custom-ash text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
-            <span>Consulting</span>
-            <span>Services</span>
-          </p>
-        </div>
-        <div
-          class="w-full h-full aspect-video flex items-center justify-center cursor-pointer group">
-          <p
-            class="text-custom-ash text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
-            <span>Video</span>
-            <span>Marketing</span>
-          </p>
-        </div>
-      </div>
-      <div class="h-full relative w-full aspect-video md:aspect-auto">
-        <img
-          src="./src/images/Backgrounds/Influencer_Management_1.png"
-          class="object-cover object-left h-full relative z-0"
-          alt="" />
-        <div
-          class="absolute w-full p-2.5 md:p-5 z-10 bottom-0 left-0 right-0 mx-auto bg-blacked-image">
-          <div class="md:w-[90%] mx-auto">
-            <div class="flex w-full justify-between items-center">
-              <button
-              type="button"
-              data-carousel-prev
-                class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
-                <svg
-                  class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 492 492"
-                  xml:space="preserve">
-                  <g>
-                    <g>
-                      <path
-                        d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124
-			c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844
-			L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412
-			c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008
-			c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788
-			C492,219.198,479.172,207.418,464.344,207.418z" />
-                    </g>
-                  </g>
-                </svg>
-              </button>
-              <button
-              type="button"
-              data-carousel-prev
-                class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
-                <svg
-                  class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 492.004 492.004"
-                  xml:space="preserve">
-                  <g>
-                    <g>
-                      <path
-                        d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136
-			c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002
-			v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864
-			c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872
-			l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z" />
-                    </g>
-                  </g>
-                </svg>
-              </button>
-            </div>
-            <p
-              class="max-w-[600px] text-sm md:text-base mx-auto text-center text-custom-whitish font-montserrat">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-              enim commodi quaerat consectetur, repudiandae illo id! Doloribus,
-              nisi.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
+    <button
+      class="fixed -right-[37px] bottom-[10%] -rotate-90 z-40 md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat"
+      @click=" open = false, showModal = !showModal">
+      Contact Us
+    </button>
     <section
       @click.inside="open = false"
       id="home"
@@ -487,7 +368,7 @@
                 <button
                   type="button"
                   data-carousel-prev
-                  class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
+                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
                   <svg
                     class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
                     version="1.1"
@@ -512,7 +393,7 @@
                 <button
                   type="button"
                   data-carousel-next
-                  class="rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
+                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
                   <svg
                     class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
                     version="1.1"
@@ -615,9 +496,9 @@
       @click.inside="open = false"
       id="influencers"
       class="section bg-influencer-section bg-center bg-cover py-8 md:py-10 lg:py-14 overflow-hidden z-10">
-      <div class="w-11/12 2xl:w-[1400px] mx-auto">
+      <div class="w-[85%] 2xl:w-[1400px] mx-auto">
         <h2
-          class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit md:mx-auto font-helveticaneue-condensedblack mb-8 md:!mb-0"
+          class="md:text-center text-3xl md:text-4xl lg:text-5xl w-fit md:mx-auto font-helveticaneue-condensedblack mb-8 md:!mb-0"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -641,7 +522,7 @@
                 <img
                   src="./src/images/People/Streamer-Template.png"
                   alt=""
-                  class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
+                  class="relative z-0 w-[63%] md:w-[380px] mx-auto" />
                 <div
                   class="w-[90%] mx-auto bg-black h-20 md:h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                   <img
@@ -651,15 +532,15 @@
                   <div
                     class="skew-x-[20deg] px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                     <p
-                      class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
+                      class="text-white font-semibold w-fit mx-auto text-[13px] md:text-base">
                       MarkushatdieGansgestohlen
                     </p>
                     <div
                       class="flex items-center gap-5 justify-center skew-x-0">
                       <div
-                        class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                        class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2 overflow-hidden">
                         <svg
-                          class="w-7 fill-black"
+                          class="w-5 md:w-7 fill-black"
                           viewBox="0 0 256 256"
                           id="Flat"
                           xmlns="http://www.w3.org/2000/svg">
@@ -668,7 +549,7 @@
                         </svg>
                       </div>
                       <div
-                        class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                        class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
                         <svg
                           class="w-6"
                           viewBox="-0.5 0 20 20"
@@ -702,6 +583,10 @@
                     </div>
                   </div>
                 </div>
+                <button
+                  class="mt-3 md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat md:hidden mx-auto">
+                  Stream Video
+                </button>
               </div>
               <div
                 class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
@@ -750,7 +635,7 @@
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
+                    class="relative z-0 w-[65%] md:w-[380px] mx-auto" />
                   <div
                     class="w-[90%] mx-auto bg-black h-20 md:h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
@@ -760,15 +645,15 @@
                     <div
                       class="skew-x-[20deg] px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p
-                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
+                        class="text-white font-semibold w-fit mx-auto text-[13px] md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
                         class="flex items-center gap-5 justify-center skew-x-0">
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2 overflow-hidden">
                           <svg
-                            class="w-7 fill-black"
+                            class="w-5 md:w-7 fill-black"
                             viewBox="0 0 256 256"
                             id="Flat"
                             xmlns="http://www.w3.org/2000/svg">
@@ -777,9 +662,9 @@
                           </svg>
                         </div>
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2">
                           <svg
-                            class="w-6"
+                            class="w-4 md:w-6"
                             viewBox="-0.5 0 20 20"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -811,6 +696,10 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="mt-3 md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat md:hidden mx-auto">
+                    Stream Video
+                  </button>
                 </div>
                 <div
                   class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
@@ -856,7 +745,7 @@
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
+                    class="relative z-0 w-[65%] md:w-[380px] mx-auto" />
                   <div
                     class="w-[90%] mx-auto bg-black h-20 md:h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
@@ -866,15 +755,15 @@
                     <div
                       class="skew-x-[20deg] px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p
-                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
+                        class="text-white font-semibold w-fit mx-auto text-[13px] md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
                         class="flex items-center gap-5 justify-center skew-x-0">
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2 overflow-hidden">
                           <svg
-                            class="w-7 fill-black"
+                            class="w-5 md:w-7 fill-black"
                             viewBox="0 0 256 256"
                             id="Flat"
                             xmlns="http://www.w3.org/2000/svg">
@@ -883,9 +772,9 @@
                           </svg>
                         </div>
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2">
                           <svg
-                            class="w-6"
+                            class="w-4 md:w-6"
                             viewBox="-0.5 0 20 20"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -917,9 +806,13 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="mt-3 md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat md:hidden mx-auto">
+                    Stream Video
+                  </button>
                 </div>
                 <div
-                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
+                  class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -962,7 +855,7 @@
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
+                    class="relative z-0 w-[65%] md:w-[380px] mx-auto" />
                   <div
                     class="w-[90%] mx-auto bg-black h-20 md:h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
@@ -972,15 +865,15 @@
                     <div
                       class="skew-x-[20deg] px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p
-                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
+                        class="text-white font-semibold w-fit mx-auto text-[13px] md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
                         class="flex items-center gap-5 justify-center skew-x-0">
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2 overflow-hidden">
                           <svg
-                            class="w-7 fill-black"
+                            class="w-5 md:w-7 fill-black"
                             viewBox="0 0 256 256"
                             id="Flat"
                             xmlns="http://www.w3.org/2000/svg">
@@ -989,9 +882,9 @@
                           </svg>
                         </div>
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2">
                           <svg
-                            class="w-6"
+                            class="w-4 md:w-6"
                             viewBox="-0.5 0 20 20"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -1023,9 +916,13 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="mt-3 md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat md:hidden mx-auto">
+                    Stream Video
+                  </button>
                 </div>
                 <div
-                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
+                  class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -1068,7 +965,7 @@
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
+                    class="relative z-0 w-[65%] md:w-[380px] mx-auto" />
                   <div
                     class="w-[90%] mx-auto bg-black h-20 md:h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
@@ -1078,15 +975,15 @@
                     <div
                       class="skew-x-[20deg] px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p
-                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
+                        class="text-white font-semibold w-fit mx-auto text-[13px] md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
                         class="flex items-center gap-5 justify-center skew-x-0">
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2 overflow-hidden">
                           <svg
-                            class="w-7 fill-black"
+                            class="w-5 md:w-7 fill-black"
                             viewBox="0 0 256 256"
                             id="Flat"
                             xmlns="http://www.w3.org/2000/svg">
@@ -1095,9 +992,9 @@
                           </svg>
                         </div>
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2">
                           <svg
-                            class="w-6"
+                            class="w-4 md:w-6"
                             viewBox="-0.5 0 20 20"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -1129,9 +1026,13 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="mt-3 md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat md:hidden mx-auto">
+                    Stream Video
+                  </button>
                 </div>
                 <div
-                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
+                  class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -1174,7 +1075,7 @@
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
+                    class="relative z-0 w-[65%] md:w-[380px] mx-auto" />
                   <div
                     class="w-[90%] mx-auto bg-black h-20 md:h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
@@ -1184,15 +1085,15 @@
                     <div
                       class="skew-x-[20deg] px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p
-                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
+                        class="text-white font-semibold w-fit mx-auto text-[13px] md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
                         class="flex items-center gap-5 justify-center skew-x-0">
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2 overflow-hidden">
                           <svg
-                            class="w-7 fill-black"
+                            class="w-5 md:w-7 fill-black"
                             viewBox="0 0 256 256"
                             id="Flat"
                             xmlns="http://www.w3.org/2000/svg">
@@ -1201,9 +1102,9 @@
                           </svg>
                         </div>
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2">
                           <svg
-                            class="w-6"
+                            class="w-4 md:w-6"
                             viewBox="-0.5 0 20 20"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -1235,9 +1136,13 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="mt-3 md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat md:hidden mx-auto">
+                    Stream Video
+                  </button>
                 </div>
                 <div
-                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
+                  class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -1280,7 +1185,7 @@
                   <img
                     src="./src/images/People/Streamer-Template.png"
                     alt=""
-                    class="relative z-0 w-[70%] md:w-[380px] mx-auto" />
+                    class="relative z-0 w-[65%] md:w-[380px] mx-auto" />
                   <div
                     class="w-[90%] mx-auto bg-black h-20 md:h-24 -mt-20 relative z-10 -skew-x-[20deg] flex">
                     <img
@@ -1290,15 +1195,15 @@
                     <div
                       class="skew-x-[20deg] px-1 py-1.5 md:py-3 w-full flex flex-col justify-center gap-2">
                       <p
-                        class="text-white font-semibold w-fit mx-auto text-sm md:text-base">
+                        class="text-white font-semibold w-fit mx-auto text-[13px] md:text-base">
                         MarkushatdieGansgestohlen
                       </p>
                       <div
                         class="flex items-center gap-5 justify-center skew-x-0">
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2 overflow-hidden">
                           <svg
-                            class="w-7 fill-black"
+                            class="w-5 md:w-7 fill-black"
                             viewBox="0 0 256 256"
                             id="Flat"
                             xmlns="http://www.w3.org/2000/svg">
@@ -1307,9 +1212,9 @@
                           </svg>
                         </div>
                         <div
-                          class="h-9 w-9 rounded-full bg-custom-yellow flex justify-center items-center p-2">
+                          class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2">
                           <svg
-                            class="w-6"
+                            class="w-4 md:w-6"
                             viewBox="-0.5 0 20 20"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -1341,9 +1246,13 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="mt-3 md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat md:hidden mx-auto">
+                    Stream Video
+                  </button>
                 </div>
                 <div
-                  class="hidden md:block w-full md:max-w-[700px] rounded-3xl overflow-hidden relative">
+                  class="hidden md:block w-full max-w-[700px] rounded-3xl overflow-hidden relative">
                   <img
                     src="./src/images/Backgrounds/Video_Clip_Template.png"
                     class="w-full rounded-3xl relative z-0"
@@ -1351,7 +1260,7 @@
                   <button
                     class="h-20 w-20 absolute z-10 top-0 bottom-0 left-0 right-0 m-auto">
                     <svg
-                      class="fill-white group-hover:scale-90 transition-[scale] duration-300"
+                      class="fill-white"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1382,37 +1291,37 @@
             class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
             <button
               type="button"
-              class="w-3 h-3 rounded-full"
+              class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full"
               aria-current="true"
               aria-label="Slide 1"
               data-carousel-slide-to="0"></button>
             <button
               type="button"
-              class="w-3 h-3 rounded-full"
+              class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full"
               aria-current="false"
               aria-label="Slide 2"
               data-carousel-slide-to="1"></button>
             <button
               type="button"
-              class="w-3 h-3 rounded-full"
+              class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full"
               aria-current="false"
               aria-label="Slide 3"
               data-carousel-slide-to="2"></button>
             <button
               type="button"
-              class="w-3 h-3 rounded-full"
+              class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full"
               aria-current="false"
               aria-label="Slide 4"
               data-carousel-slide-to="3"></button>
             <button
               type="button"
-              class="w-3 h-3 rounded-full"
+              class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full"
               aria-current="false"
               aria-label="Slide 5"
               data-carousel-slide-to="4"></button>
             <button
               type="button"
-              class="w-3 h-3 rounded-full"
+              class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full"
               aria-current="false"
               aria-label="Slide 6"
               data-carousel-slide-to="5"></button>
@@ -1420,7 +1329,7 @@
           <!-- Slider controls -->
           <button
             type="button"
-            class="absolute rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 hover:bg-opacity-75 transition-opacity duration-300 left-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none group"
+            class="absolute rounded-full w-8 h-8 sm:w-10 sm:h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 hover:bg-opacity-75 transition-opacity duration-300 left-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none group"
             data-carousel-prev>
             <svg
               class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
@@ -1446,7 +1355,7 @@
           </button>
           <button
             type="button"
-            class="absolute rounded-full w-10 h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 hover:bg-opacity-75 transition-opacity duration-300 right-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none group"
+            class="absolute rounded-full w-8 h-8 sm:w-10 sm:h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-25 hover:bg-opacity-75 transition-opacity duration-300 right-4 top-0 bottom-0 my-auto z-30 cursor-pointer group focus:outline-none active:outline-none group"
             data-carousel-next>
             <svg
               class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
@@ -1475,9 +1384,9 @@
     <section
       id="our-team"
       class="section bg-black py-8 md:py-10 lg:py-14 overflow-hidden">
-      <div class="w-11/12 2xl:w-[1400px] mx-auto">
+      <div class="w-[85%] 2xl:w-[1400px] mx-auto">
         <h2
-          class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit md:mx-auto font-black mb-8 md:mb-16 text-white font-helveticaneue-condensedblack"
+          class="md:text-center text-3xl md:text-4xl lg:text-5xl w-fit md:mx-auto font-black mb-8 md:mb-16 text-[#f3f3f3] font-helveticaneue-condensedblack"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -1498,9 +1407,9 @@
     <section
       id="customers"
       class="section bg-logo-section bg-center bg-blend-darken bg-cover py-8 md:py-10 lg:py-14 overflow-hidden">
-      <div class="w-11/12 2xl:w-[1400px] mx-auto">
+      <div class="w-[85%] 2xl:w-[1400px] mx-auto">
         <h2
-          class="md:text-center text-2xl md:text-4xl lg:text-5xl w-fit md:mx-auto mb-8 md:mb-16 font-helveticaneue-condensedblack"
+          class="md:text-center text-3xl md:text-4xl lg:text-5xl w-fit md:mx-auto mb-8 md:mb-16 font-helveticaneue-condensedblack"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
@@ -1522,180 +1431,81 @@
             <img
               src="./src/images/Logos/Betano-Logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[90%] md:w-[80%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Leetbit-Logo.png"
               alt=""
-              class="w-[60%] md:w-[60%] mx-auto" />
+              class="w-[55%] md:w-[60%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Thermalake-Logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[90%] md:w-[80%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Tencent_Games-Logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[90%] md:w-[80%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Trovo-Logo.png"
               alt=""
-              class="w-[60%] mx-auto" />
+              class="w-[55%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Tencent-Logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[%] md:w-[80%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Jugabet-Logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[85%] md:w-[80%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/GGbet-Logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[85%] md:w-[80%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Wester_Digital-logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[85%] md:w-[80%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Intel-Logo.png"
               alt=""
-              class="w-[60%] mx-auto" />
+              class="w-[50%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Wargaming-Logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[85%] md:w-[80%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Twitch-Logo.png"
               alt=""
-              class="w-[80%] md:w-[60%] mx-auto" />
+              class="w-[70%] md:w-[60%] mx-auto" />
           </div>
           <div class="flex items-center">
             <img
               src="./src/images/Logos/Floril-Logo.png"
               alt=""
-              class="w-[95%] md:w-[80%] mx-auto" />
+              class="w-[85%] md:w-[80%] mx-auto" />
           </div>
         </div>
-        <!-- Logo Carousel animation -->
-        <!-- <div
-          x-data="{}"
-          x-init="$nextTick(() => {
-            let ul = $refs.logos;
-            ul.insertAdjacentHTML('afterend', ul.outerHTML);
-            ul.nextSibling.setAttribute('aria-hidden', 'true');
-        })"
-          class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] hidden">
-          <ul
-            x-ref="logos"
-            class="flex items-center justify-center md:justify-start [&_li]:mx-6 [&_img]:max-w-none md:animate-infinite-scroll">
-            <li>
-              <img
-                src="./src/images/Logos/Parimatch-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Betano-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Leetbit-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Thermalake-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Tencent_Games-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Trovo-Logo.png"
-                class="h-12"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Tencent-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Jugabet-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/GGbet-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Wester_Digital-logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Intel-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Wargaming-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Twitch-Logo.png"
-                class="h-12"
-                alt="" />
-            </li>
-            <li>
-              <img
-                src="./src/images/Logos/Floril-Logo.png"
-                class="h-14"
-                alt="" />
-            </li>
-          </ul>
-        </div> -->
-        <!-- End: Logo Carousel animation -->
       </div>
     </section>
 
@@ -1703,7 +1513,7 @@
       id="footer-anchor"
       class="bg-black pb-3 pt-8 md:py-10 lg:py-14 overflow-hidden font-montserrat">
       <div
-        class="w-11/12 2xl:w-[1400px] mx-auto space-y-6 md:space-y-8 lg:space-y-10">
+        class="w-[85%] 2xl:w-[1400px] mx-auto space-y-6 md:space-y-8 lg:space-y-10">
         <div class="w-full flex flex-col md:flex-row justify-between gap-5">
           <div
             data-aos="fade-up"
@@ -1715,12 +1525,12 @@
               class="w-12 lg:w-16"
               alt="" />
             <p
-              class="text-white max-w-[650px] md:max-w-[400px] mx-auto md:!ml-0">
+              class="text-white text-sm md:text-base max-w-[650px] md:max-w-[400px] mx-auto md:!ml-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore facilisis.
             </p>
             <button
-              class="md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-4 py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none"
+              class="md:py-3 cursor-pointer text-sm md:text-base hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-4 py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none"
               @click=" open = false, showModal = !showModal">
               Contact Us
             </button>
@@ -1731,20 +1541,21 @@
             data-aos-delay="100"
             class="w-fit space-y-3">
             <h2
-              class="font-montserrat font-bold tracking-wider text-white w-fit uppercase">
+              class="font-montserrat text-base font-bold tracking-wider text-white w-fit uppercase">
               Quick Links
             </h2>
-            <div class="font-normal text-base text-custom-white space-y-5">
+            <div
+              class="font-normal text-sm md:text-base text-custom-white space-y-5">
               <p
-                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none text-custom-deep-ash">
+                class="nav_link text-sm md:text-base cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none text-custom-deep-ash">
                 Home
               </p>
               <p
-                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none custom-deep-ash text-custom-deep-ash">
+                class="nav_link text-sm md:text-base cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none custom-deep-ash text-custom-deep-ash">
                 Influencers
               </p>
               <p
-                class="nav_link cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none custom-deep-ash text-custom-deep-ash">
+                class="nav_link text-sm md:text-base cursor-pointer active:text-custom-yellow md:hover:text-custom-yellow !border-none custom-deep-ash text-custom-deep-ash">
                 Our Team
               </p>
             </div>
@@ -1757,16 +1568,16 @@
         data-aos-duration="1300"
         data-aos-delay="200"
         data-aos-anchor="#footer-anchor"
-        class="flex flex-col md:flex-row gap-5 md:items-center justify-between w-11/12 2xl:w-[1400px] mx-auto mb-2 md:mb-0">
+        class="flex flex-col md:flex-row gap-5 md:items-center justify-between w-[85%] 2xl:w-[1400px] mx-auto mb-2 md:mb-0">
         <a
           href="./src/pdf/Miela Company Deck.pdf"
           attributes-list
           download
           class="flex items-center gap-2 group cursor-pointer font-montserrat">
           <div
-            class="h-11 w-11 rounded-full bg-custom-yellow flex justify-center items-center p-2 overflow-hidden group-hover:bg-off-yellow">
+            class="h-8 w-8 md:h-11 md:w-11 rounded-full bg-custom-yellow flex justify-center items-center p-1.5 md:p-2 overflow-hidden group-hover:bg-off-yellow">
             <svg
-              class="w-8"
+              class="w-6 md:w-8"
               viewBox="0 0 1920 1920"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -1776,11 +1587,11 @@
           </div>
           <div>
             <p
-              class="text-white tracking-wider font-semibold text-lg md:text-xl text-nowrap group-hover:!text-custom-ash duration-300">
+              class="text-white tracking-wider font-semibold text-base md:text-xl text-nowrap group-hover:!text-custom-ash duration-300">
               Company Deck
             </p>
             <p
-              class="text-sm md:text-sm text-custom-deep-ash group-hover:text-custom-ash duration-300 transition-colors">
+              class="text-[13px] md:text-sm text-custom-deep-ash group-hover:text-custom-ash duration-300 transition-colors">
               PDF, 3MB
             </p>
           </div>
@@ -1792,9 +1603,9 @@
           <a
             target="_blank"
             href="https://www.instagram.com/mieladigital/"
-            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2 overflow-hidden">
+            class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-1.5 md:p-2 overflow-hidden">
             <svg
-              class="w-7 fill-black"
+              class="w-5 md:w-7 fill-black"
               viewBox="0 0 256 256"
               id="Flat"
               xmlns="http://www.w3.org/2000/svg">
@@ -1805,9 +1616,9 @@
           <a
             target="_blank"
             href="mailto:contact@mieladigital.com"
-            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
+            class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-1.5 md:p-2">
             <svg
-              class="w-6"
+              class="w-4 sm:w-6"
               viewBox="0 -9.31 56.223 56.223"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -1820,9 +1631,9 @@
           <a
             target="_blank"
             href="https://www.youtube.com/channel/UCa8yH5uqn2f3ih1eeB-lzZQ"
-            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
+            class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-1.5 md:p-2">
             <svg
-              class="w-6"
+              class="w-4 md:w-6"
               viewBox="0 -3 20 20"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -1852,9 +1663,9 @@
           <a
             target="_blank"
             href="https://www.twitch.tv/team/miela"
-            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
+            class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-1.5 md:p-2">
             <svg
-              class="w-6"
+              class="w-4 md:w-6"
               viewBox="-0.5 0 20 20"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -1884,9 +1695,9 @@
           <a
             target="_blank"
             href="https://www.linkedin.com/company/mieladigital"
-            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
+            class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-1.5 md:p-2">
             <svg
-              class="w-6"
+              class="w-4 md:w-6"
               viewBox="0 0 20 20"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -1916,13 +1727,13 @@
           <a
             target="_blank"
             href="https://twitter.com/MielaDigital"
-            class="h-9 w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-2">
+            class="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-custom-yellow hover:bg-off-yellow transition-all duration-300 flex justify-center items-center p-1.5 md:p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               enable-background="new 0 0 72 72"
               viewBox="0 0 72 72"
               id="twitter-x"
-              class="w-6">
+              class="w-4 md:w-6">
               <switch>
                 <g>
                   <path
