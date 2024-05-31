@@ -199,14 +199,14 @@
       x-show.transition.opacity.duration.600ms="showModal"
       :class="{' block opacity-100': showModal, ' hidden scale-75': !showModal}">
       <div
-        class="w-11/12 2xl:w-[1400px] md:w-fit p-6 bg-[#ffffff] bg-cover mx-auto gap-3 md:gap-5 relative rounded-sm transition-all duration-500"
+        class="w-11/12 md:w-fit p-6 bg-[#ffffff] bg-cover mx-auto gap-3 md:gap-5 relative rounded-sm transition-all duration-500"
         x-show.transition.scale.duration.800ms="showModal"
         x-transition.delay.50ms
         @click.away="showModal = false">
         <div class="md:w-[400px] lg:w-[500px]">
           <div class="mb-3">
             <h2
-              class="text-3xl md:text-4xl 2xl:text-5xl mb-1 font-helveticaneue-condensedblack font-extrabold text-custom-black">
+              class="text-3xl md:text-4xl mb-1 font-helveticaneue-condensedblack font-extrabold text-custom-black">
               Contact Us
             </h2>
             <p
