@@ -443,7 +443,9 @@
                 autoplay
                 loop
                 muted
-                class="carouselVideo w-full h-full object-cover"></video>
+                onSuspend="handlePlayVideo()"
+                onLoadedMetadata="handlePlayVideo()"
+                class="inlinevideo carouselVideo w-full h-full object-cover"></video>
             </div>
             <!--Item 2 -->
             <div
@@ -1532,6 +1534,17 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <script>
+      //PLAYS VIDEO IN LOW POWER MODE
+      $("body").on("click touchstart scroll", function () {
+        var videoElement = document.getElementsByClassName("inlinevideo");
+        if (videoElement.playing) {
+        } else {
+          $(".inlinevideo").trigger("play");
+        }
+      });
+    </script>
+
     <!-- Initialize Swiper -->
     <script>
       // Service slider
@@ -1570,25 +1583,25 @@
                 if (index === activeIndex && serviceCarouselVideo.paused) {
                   // console.log("Video info is coming ");
                   // console.log("Video is paused", serviceCarouselVideo.play());
-                  // serviceCarouselVideo.play();
-                  var promise = serviceCarouselVideo.play();
+                  serviceCarouselVideo.play();
+                  // var promise = serviceCarouselVideo.play();
 
-                  if (promise !== undefined) {
-                    promise
-                      .catch(error => {
-                        // Auto-play was prevented
-                        // Show a UI element to let the user manually start playback
-                        if (error.name === "NotAllowedError") {
-                          console.log("Low Power Mode Active");
-                          videoElement.remove();
-                          videoElementFallback.style.display = "block";
-                        }
-                      })
-                      .then(() => {
-                        // if there is no error, then we play the video
-                        serviceCarouselVideo.play();
-                      });
-                  }
+                  // if (promise !== undefined) {
+                  //   promise
+                  //     .catch(error => {
+                  //       // Auto-play was prevented
+                  //       // Show a UI element to let the user manually start playback
+                  //       if (error.name === "NotAllowedError") {
+                  //         console.log("Low Power Mode Active");
+                  //         serviceCarouselVideo.remove();
+                  //         videoElementFallback.style.display = "block";
+                  //       }
+                  //     })
+                  //     .then(() => {
+                  //       // if there is no error, then we play the video
+                  //       serviceCarouselVideo.play();
+                  //     });
+                  // }
                 }
               });
             }
@@ -1781,6 +1794,12 @@
           );
         }
       });
+
+      // const handlePlayVideo = e => {
+      //   if (e.currentTarget.readyState >= 0) {
+      //     e.currentTarget.play(); // this returns a promise and thus is awaitable if need be
+      //   }
+      // };
     </script>
   </body>
 </html>
