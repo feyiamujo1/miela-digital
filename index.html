@@ -1568,9 +1568,27 @@
               });
               serviceCarouselVideos.forEach((serviceCarouselVideo, index) => {
                 if (index === activeIndex && serviceCarouselVideo.paused) {
-                  console.log("Video info is coming ");
-                  console.log("Video is paused", serviceCarouselVideo.play())
-                  serviceCarouselVideo.play();
+                  // console.log("Video info is coming ");
+                  // console.log("Video is paused", serviceCarouselVideo.play());
+                  // serviceCarouselVideo.play();
+                  var promise = serviceCarouselVideo.play();
+
+                  if (promise !== undefined) {
+                    promise
+                      .catch(error => {
+                        // Auto-play was prevented
+                        // Show a UI element to let the user manually start playback
+                        if (error.name === "NotAllowedError") {
+                          console.log("Low Power Mode Active");
+                          videoElement.remove();
+                          videoElementFallback.style.display = "block";
+                        }
+                      })
+                      .then(() => {
+                        // if there is no error, then we play the video
+                        serviceCarouselVideo.play();
+                      });
+                  }
                 }
               });
             }
