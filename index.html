@@ -366,7 +366,7 @@
         <!-- Carousel Items -->
         <div class="swiper serviceSwiper md:h-[740px] 2xl:h-[800px] relative">
           <div
-            class="hidden md:block w-full h-full absolute top-0 bottom-0 left-0 right-0 bg-blacked-image z-10 border-red-500">
+            class="w-full h-full absolute top-0 bottom-0 left-0 right-0 bg-blacked-image z-10 border-red-500">
             <div class="swiper serviceWordSwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -1551,8 +1551,11 @@
         on: {
           slideChange: () => {
             const serviceButton = document.querySelectorAll(".serviceButton");
+            const serviceCarouselVideos =
+              document.querySelectorAll(".carouselVideo");
             if (serviceSwiper) {
               const activeIndex = serviceSwiper.realIndex;
+              // serviceCarouselVideo.play();
 
               serviceButton.forEach((serviceButton, index) => {
                 if (index === activeIndex) {
@@ -1563,24 +1566,33 @@
                   serviceButton.classList.add("unactive-service-button");
                 }
               });
+              serviceCarouselVideos.forEach((serviceCarouselVideo, index) => {
+                if (index === activeIndex && serviceCarouselVideo.paused) {
+                  console.log("Video info is coming ");
+                  console.log("Video is paused", serviceCarouselVideo.play())
+                  serviceCarouselVideo.play();
+                }
+              });
             }
 
-            // const serviceCarouselVideo = document.querySelectorAll(".carouselVideo");
+            // const serviceCarouselVideo =
+            //   document.querySelectorAll(".carouselVideo");
+
+            //   console.log(serviceCarouselVideo);
+
+            // if (serviceCarouselVideo) {
+            // const activeIndex = serviceSwiper.realIndex;
+
+            // serviceButton.forEach((serviceButton, index) => {
+            //   if (index === activeIndex) {
+            //     serviceButton.classList.add("active-service-button");
+            //     serviceButton.classList.remove("unactive-service-button");
+            //   } else {
+            //     serviceButton.classList.remove("active-service-button");
+            //     serviceButton.classList.add("unactive-service-button");
+            //   }
+            // });
             // serviceCarouselVideo.play();
-
-            // if (serviceCarouselVideo.pause()) {
-            //   // const activeIndex = serviceSwiper.realIndex;
-
-            //   // serviceButton.forEach((serviceButton, index) => {
-            //   //   if (index === activeIndex) {
-            //   //     serviceButton.classList.add("active-service-button");
-            //   //     serviceButton.classList.remove("unactive-service-button");
-            //   //   } else {
-            //   //     serviceButton.classList.remove("active-service-button");
-            //   //     serviceButton.classList.add("unactive-service-button");
-            //   //   }
-            //   // });
-            //   serviceCarouselVideo.play();
             // }
           }
         },
