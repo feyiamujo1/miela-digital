@@ -470,7 +470,7 @@
                 src="./src/videos/Infuencer_Management.mp4"
                 autoplay
                 loop
-                muted
+                muted playsinline
                 class="inlinevideo carouselVideo w-full h-full md:h-fit"></video>
             </div>
             <!--Item 2 -->
@@ -481,7 +481,7 @@
                 src="./src/videos/CommunityManagment.mp4"
                 autoplay
                 loop
-                muted
+                muted playsinline
                 class="carouselVideo w-full h-full md:h-fit"></video>
             </div>
             <!--Item 3 -->
@@ -492,7 +492,7 @@
                 src="./src/videos/Virtual_Influencers.MP4"
                 autoplay
                 loop
-                muted
+                muted playsinline
                 class="carouselVideo w-full h-full md:h-fit"></video>
             </div>
             <!--Item 4 -->
@@ -503,7 +503,7 @@
                 src="./src/videos/EventoBetano.mp4"
                 autoplay
                 loop
-                muted
+                muted playsinline
                 class="carouselVideo w-full h-full md:h-fit"></video>
             </div>
             <!--Item 5 -->
@@ -514,7 +514,7 @@
                 src="./src/videos/Guion_1_FINAL.mp4"
                 autoplay
                 loop
-                muted
+                muted playsinline
                 class="carouselVideo w-full h-full md:h-fit"></video>
             </div>
           </div>
@@ -2173,7 +2173,7 @@
     </section>
 
     <!-- Video Popup -->
-    <div
+    <!-- <div
       class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
       x-show.transition.opacity.duration.600ms="showVideo"
       :class="{' block opacity-100': showVideo, ' hidden scale-75': !showVideo}">
@@ -2182,7 +2182,6 @@
         x-show.transition.scale.duration.800ms="showVideo"
         x-transition.delay.50ms
         @click.away="showVideo = false">
-        <!-- Popup video here -->
         <div class="">
           <video
             class="video-player"
@@ -2214,7 +2213,7 @@
           </svg>
         </button>
       </div>
-    </div>
+    </div> -->
 
     <section
       id="our-team"
@@ -2790,90 +2789,90 @@
       });
 
       // Influencer Slider
-      var influencerSwiper = new Swiper(".influencerSwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-          delay: 4000,
-          // pauseOnMouseEnter: true,
-          reverseDirection: true,
-          disableOnInteraction: true
-        },
-        speed: 1500,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        },
-        navigation: {
-          nextEl: ".carousel-next-button",
-          prevEl: ".carousel-prev-button"
-        }
-      });
+      // var influencerSwiper = new Swiper(".influencerSwiper", {
+      //   spaceBetween: 30,
+      //   centeredSlides: true,
+      //   loop: true,
+      //   autoplay: {
+      //     delay: 4000,
+      //     // pauseOnMouseEnter: true,
+      //     reverseDirection: true,
+      //     disableOnInteraction: true
+      //   },
+      //   speed: 1500,
+      //   pagination: {
+      //     el: ".swiper-pagination",
+      //     clickable: true
+      //   },
+      //   navigation: {
+      //     nextEl: ".carousel-next-button",
+      //     prevEl: ".carousel-prev-button"
+      //   }
+      // });
 
       // set event listeners for prev and next buttons
-      const prevButton = document.getElementById("carousel-prev-button");
-      const nextButton = document.getElementById("carousel-next-button");
+      // const prevButton = document.getElementById("carousel-prev-button");
+      // const nextButton = document.getElementById("carousel-next-button");
 
-      prevButton.addEventListener("click", function () {
-        influencerSwiper.slidePrev(); // Go to the previous slide
-      });
+      // prevButton.addEventListener("click", function () {
+      //   influencerSwiper.slidePrev(); // Go to the previous slide
+      // });
 
-      nextButton.addEventListener("click", function () {
-        influencerSwiper.slideNext(); // Go to the next slide
-      });
+      // nextButton.addEventListener("click", function () {
+      //   influencerSwiper.slideNext(); // Go to the next slide
+      // });
 
-      // Functions to handle influencers slider pause and play
-      const playInfluencerSwiper = () => {
-        influencerSwiper.autoplay.start();
-      };
-      const pauseInfluencerSwiper = () => {
-        influencerSwiper.autoplay.stop();
-      };
+      // // Functions to handle influencers slider pause and play
+      // const playInfluencerSwiper = () => {
+      //   influencerSwiper.autoplay.start();
+      // };
+      // const pauseInfluencerSwiper = () => {
+      //   influencerSwiper.autoplay.stop();
+      // };
 
-      // Get all the buttons
-      const VideoButtons = document.querySelectorAll(".video-button");
+      // // Get all the buttons
+      // const VideoButtons = document.querySelectorAll(".video-button");
 
-      const availableVideos = [
-        "./src/videos/MarkushatdieGansgestohlen.mp4",
-        "./src/videos/pandaahhhhh.mp4",
-        "./src/videos/Idyiom.mp4",
-        "./src/videos/GoofGuy.mp4"
-      ];
-      // Function to change video source
-      function changeVideo(index) {
-        const videoSource = document.getElementById("video-player");
-        videoSource.src = availableVideos[index];
-        videoPlayer.load(); // Reload the video to apply the new source
-      }
+      // const availableVideos = [
+      //   "./src/videos/MarkushatdieGansgestohlen.mp4",
+      //   "./src/videos/pandaahhhhh.mp4",
+      //   "./src/videos/Idyiom.mp4",
+      //   "./src/videos/GoofGuy.mp4"
+      // ];
+      // // Function to change video source
+      // function changeVideo(index) {
+      //   const videoSource = document.getElementById("video-player");
+      //   videoSource.src = availableVideos[index];
+      //   videoPlayer.load(); // Reload the video to apply the new source
+      // }
 
-      // Add event listeners to each button
-      VideoButtons.forEach(button => {
-        button.addEventListener("click", () => {
-          const index = button.getAttribute("data-index");
-          changeVideo(index);
-        });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        const video = document.getElementById("video-player");
+      // // Add event listeners to each button
+      // VideoButtons.forEach(button => {
+      //   button.addEventListener("click", () => {
+      //     const index = button.getAttribute("data-index");
+      //     changeVideo(index);
+      //   });
+      // });
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const video = document.getElementById("video-player");
 
-        if ("IntersectionObserver" in window) {
-          const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-              if (!entry.isIntersecting) {
-                video.pause();
-              }
-            });
-          });
+      //   if ("IntersectionObserver" in window) {
+      //     const observer = new IntersectionObserver(entries => {
+      //       entries.forEach(entry => {
+      //         if (!entry.isIntersecting) {
+      //           video.pause();
+      //         }
+      //       });
+      //     });
 
-          observer.observe(video);
-        } else {
-          // Fallback if Intersection Observer is not supported
-          console.log(
-            "Intersection Observer is not supported in your browser."
-          );
-        }
-      });
+      //     observer.observe(video);
+      //   } else {
+      //     // Fallback if Intersection Observer is not supported
+      //     console.log(
+      //       "Intersection Observer is not supported in your browser."
+      //     );
+      //   }
+      // });
     </script>
   </body>
 </html>
