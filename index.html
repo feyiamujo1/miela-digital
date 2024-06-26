@@ -2620,7 +2620,6 @@
       $("body").on("click touchstart", function () {
         if (window.innerWidth > 768) {
           var videoElement = document.getElementsByClassName("inlinevideo");
-          console.log(videoElement);
           if (videoElement.playing) {
           } else {
             $(".inlinevideo").trigger("play");
@@ -2628,7 +2627,6 @@
         } else {
           var videoElement =
             document.getElementsByClassName("mobileServiceVideo");
-          console.log(videoElement);
           if (videoElement.playing) {
           } else {
             $(".mobileServiceVideo").trigger("play");
@@ -2637,31 +2635,6 @@
       });
     </script>
     <script>
-      console.log("Here");
-      if (window.innerWidth > 768) {
-        var videoElement = document.getElementsByClassName("inlinevideo");
-        console.log(videoElement[0]);
-        setTimeout(() => {
-          videoElement[0].play();
-          console.log("Video is playing - ",!videoElement[0].paused)
-        }, 0);
-      } else {
-        
-        var videoElement =
-          document.getElementsByClassName("mobileServiceVideo");
-          console.log(videoElement[0]);
-        setTimeout(() => {
-          videoElement[0].play();
-          console.log("Video is playing - ", !videoElement[0].paused)
-        }, 0);
-
-      }
-
-      const mediaControlsContainer= document.getElementsByClassName('media-controls-container');
-      console.log("Control Container is here -", mediaControlsContainer);
-    </script>
-
-    <script>
       const mobileUnmuteButton = document.getElementById("mobileUnmuteButton");
       const mobileMuteButton = document.getElementById("mobileMuteButton");
       const mobileServiceVideo =
@@ -2669,7 +2642,6 @@
 
       if (mobileUnmuteButton) {
         mobileUnmuteButton.addEventListener("click", () => {
-          console.log(mobileServiceVideo[0].muted);
           if (mobileServiceVideo[0].muted) {
             mobileServiceVideo[0].muted = false;
             mobileUnmuteButton.classList.add("hidden");
@@ -2679,7 +2651,6 @@
       }
       if (mobileMuteButton) {
         mobileMuteButton.addEventListener("click", () => {
-          console.log("Mute");
           if (!mobileServiceVideo[0].muted) {
             mobileServiceVideo[0].muted = true;
             mobileMuteButton.classList.add("hidden");
@@ -2687,8 +2658,6 @@
           }
         });
       }
-
-
     </script>
 
     <!-- Initialize Swiper -->
@@ -2771,7 +2740,6 @@
       if (unmuteButton) {
         unmuteButton.addEventListener("click", () => {
           const activeIndex = serviceSwiper.realIndex;
-          console.log(activeIndex);
           if (serviceCarouselVideos[activeIndex].muted) {
             serviceCarouselVideos[activeIndex].muted = false;
             unmuteButton.classList.add("hidden");
@@ -2782,7 +2750,6 @@
       if (muteButton) {
         muteButton.addEventListener("click", () => {
           const activeIndex = serviceSwiper.realIndex;
-          console.log(activeIndex);
           if (!serviceCarouselVideos[activeIndex].muted) {
             serviceCarouselVideos[activeIndex].muted = true;
             muteButton.classList.add("hidden");
