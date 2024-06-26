@@ -366,6 +366,16 @@
           </button>
           <button
             type="button"
+            id="video-marketing-button"
+            class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center cursor-pointer group serviceButton">
+            <p
+              class="text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
+              <span>Video</span>
+              <span>Marketing</span>
+            </p>
+          </button>
+          <button
+            type="button"
             id="Community-management-button"
             class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group serviceButton">
             <p
@@ -392,16 +402,6 @@
               class="text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
               <span>Offline</span>
               <span>Events</span>
-            </p>
-          </button>
-          <button
-            type="button"
-            id="video-marketing-button"
-            class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center cursor-pointer group serviceButton">
-            <p
-              class="text-center md:!text-left text-sm font-semibold md:text-lg w-[125px] flex flex-col">
-              <span>Video</span>
-              <span>Marketing</span>
             </p>
           </button>
         </div>
@@ -451,6 +451,18 @@
                     INFLUENCER SERVICES
                   </p>
                 </div>
+                <div class="swiper-slide" data-swiper-autoplay="28000">
+                  <p
+                    class="hidden md:block w-11/12 md:w-9/12 absolute bottom-12 2xl:bottom-14 font-medium left-0 right-0 text-white mx-auto z-50 text-center text-lg">
+                    We create assets that can be used in marketing strategies
+                    across a variety of channels and formats to help reach and
+                    engage audiences.
+                  </p>
+                  <p
+                    class="md:hidden w-11/12 md:w-9/12 absolute bottom-8 font-semibold left-0 right-0 text-white mx-auto z-50 text-center text-base">
+                    VIDEO MARKETING
+                  </p>
+                </div>
                 <div class="swiper-slide" data-swiper-autoplay="20000">
                   <p
                     class="hidden md:block w-11/12 md:w-9/12 absolute bottom-12 2xl:bottom-14 font-medium left-0 right-0 text-white mx-auto z-50 text-center text-lg">
@@ -485,18 +497,6 @@
                     OFFLINE EVENTS
                   </p>
                 </div>
-                <div class="swiper-slide" data-swiper-autoplay="28000">
-                  <p
-                    class="hidden md:block w-11/12 md:w-9/12 absolute bottom-12 2xl:bottom-14 font-medium left-0 right-0 text-white mx-auto z-50 text-center text-lg">
-                    We create assets that can be used in marketing strategies
-                    across a variety of channels and formats to help reach and
-                    engage audiences.
-                  </p>
-                  <p
-                    class="md:hidden w-11/12 md:w-9/12 absolute bottom-8 font-semibold left-0 right-0 text-white mx-auto z-50 text-center text-base">
-                    VIDEO MARKETING
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -516,6 +516,18 @@
                 muted
                 playsinline
                 class="inlinevideo carouselVideo w-full"></video>
+            </div>
+            <!--Item 5 -->
+            <div
+              class="swiper-slide h-full relative w-full aspect-video md:aspect-auto"
+              data-swiper-autoplay="28000">
+              <video
+                src="./src/videos/Guion_1_FINAL.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                class="carouselVideo w-full"></video>
             </div>
             <!--Item 2 -->
             <div
@@ -547,18 +559,6 @@
               data-swiper-autoplay="33000">
               <video
                 src="./src/videos/EventoBetano.mp4"
-                autoplay
-                loop
-                muted
-                playsinline
-                class="carouselVideo w-full"></video>
-            </div>
-            <!--Item 5 -->
-            <div
-              class="swiper-slide h-full relative w-full aspect-video md:aspect-auto"
-              data-swiper-autoplay="28000">
-              <video
-                src="./src/videos/Guion_1_FINAL.mp4"
                 autoplay
                 loop
                 muted
@@ -1685,7 +1685,7 @@
                 class="opacity-0 group-hover:opacity-100 bg-influencer-image transition-opacity duration-700 absolute top-0 bottom-0 right-0 left-0 p-4 flex flex-col justify-between gap-2">
                 <p
                   class="text-custom-yellow font-semibold py-2 text-base xl:text-lg">
-                  ddooya
+                  ddooyaa
                 </p>
                 <div class="flex flex-wrap pl-1.5 gap-3 justify-end">
                   <a
@@ -1744,7 +1744,7 @@
                 class="h-[20px] object-cover object-center"
                 alt="" />
               <p class="font-semibold text-sm md:text-base xl:text-lg">
-                Ddooya
+                Ddooyaa
               </p>
             </div>
           </div>
@@ -2781,6 +2781,9 @@
       const influencerMangementButton = document.getElementById(
         "influencer-management-button"
       );
+      const videoMarketingButton = document.getElementById(
+        "video-marketing-button"
+      );
       const communityManagementButton = document.getElementById(
         "Community-management-button"
       );
@@ -2790,9 +2793,7 @@
       const offlineEventsButton = document.getElementById(
         "offline-events-button"
       );
-      const videoMarketingButton = document.getElementById(
-        "video-marketing-button"
-      );
+      
 
       // const soundButtons = document.querySelectorAll(".soundButton");
       // VideoButtons.forEach(button => {
@@ -2807,19 +2808,19 @@
         serviceSwiper.slideTo(1);
         serviceWordSwiper.slideTo(1);
       });
-      communityManagementButton.addEventListener("click", function () {
+      videoMarketingButton.addEventListener("click", function () {
         serviceSwiper.slideTo(2);
         serviceWordSwiper.slideTo(2);
       });
-      virtualInfluencersButton.addEventListener("click", function () {
+      communityManagementButton.addEventListener("click", function () {
         serviceSwiper.slideTo(3);
         serviceWordSwiper.slideTo(3);
       });
-      offlineEventsButton.addEventListener("click", function () {
+      virtualInfluencersButton.addEventListener("click", function () {
         serviceSwiper.slideTo(4);
         serviceWordSwiper.slideTo(4);
       });
-      videoMarketingButton.addEventListener("click", function () {
+      offlineEventsButton.addEventListener("click", function () {
         serviceSwiper.slideTo(0);
         serviceWordSwiper.slideTo(0);
       });
