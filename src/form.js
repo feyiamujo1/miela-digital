@@ -11,7 +11,7 @@ const SubmitContactForm = (e) =>{
     // error_response_indicator.style.display="none";
     // correct_response_indicator.style.display="none";
     axios.defaults.headers.post['Content-Type'] = 'application/json';
-    axios.post('https://formsubmit.co/feyisayoamujoyegbe@gmail.com', {
+    axios.post('https://formsubmit.co/contact@mieladigital.com', {
     _subject: "Contact Form Questions/Inquiries",
     name: author.value,
     Email: email.value,
