@@ -25,3 +25,19 @@ const SubmitContactForm = (e) =>{
     .catch(error => (console.log(error)));
     contact_us_form.reset();
 }
+
+
+    selectType.addEventListener('change', function() {
+      if (this.value === "") {
+        this.classList.remove('selected');
+      } else {
+        this.classList.add('selected');
+      }
+    });
+
+    // To ensure the correct color is set on page load based on the initial selection
+    window.addEventListener('DOMContentLoaded', (event) => {
+      if (selectType.value !== "") {
+        selectType.classList.add('selected');
+      }
+    });
