@@ -93,8 +93,8 @@ button:visited {
   outline: none !important;
 }
 .unactive-service-button:hover {
-  background-color: white !important;
-  color: black !important;
+  background-color: #666a7d !important;
+  color: white !important;
   outline: none !important;
 }
 /* #home [aria-current]:is([aria-current="true"]) {
@@ -176,4 +176,9 @@ button.center, button.small-center{
 
 video::-webkit-media-controls-start-playback-button {
   display: none !important;
+}
+
+iframe{
+  position: relative;
+  z-index: 0 !important;
 }

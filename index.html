@@ -134,6 +134,15 @@
     <meta
       name="description"
       content="Miela Digital is an agency specialized in the Gaming and iGaming sectors. We are dedicated to generating activations focused on brand awareness and user acquisition. We differentiate ourselves by focusing on the narrow part of the funnel: conversion." />
+
+    <style>
+      .dropdown-menu {
+        z-index: 9999;
+      }
+      iframe {
+        z-index: 0 !important;
+      }
+    </style>
   </head>
   <body
     class="w-full p-0 m-0 relative scroll-smooth bg-black"
@@ -152,8 +161,7 @@
             src="./src/images/Logos/M_logo_copy.png"
             alt="logo" />
         </a>
-        <div
-          class="hidden md:flex flex-col-reverse md:flex-row items-center md:gap-4">
+        <div class="flex flex-col-reverse md:flex-row items-center md:gap-4">
           <ul
             class="w-fit absolute right-0 top-0 h-screen md:h-fit md:relative flex flex-col md:flex-row gap-6 lg:gap-10 bg-custom-black backdrop-blur md:bg-transparent md:items-center text-custom-white md:text-[#272727] transition-all duration-150 overflow-hidden pl-10 pr-5 md:px-0 md:py-0 md:!pr-0 text-lg box-border z-[60] font-montserrat"
             :class="{'w-4/5 sm:w-3/5 opacity-100 ': open, ' w-0 opacity-0 hidden md:flex md:w-fit md:opacity-100': !open}">
@@ -172,8 +180,13 @@
               @click.inside="open = false">
               Our Team
             </li>
+            <li
+              class="md:text-[15px] md:font-semibold md:py-3 cursor-pointer hover:!cursor-pointer active:text-custom-yellow transition-all duration-75 md:duration-100 overflow-hidden px-2.5 pb-2 border-b-4 nav_link inactive_link"
+              @click.inside="open = false">
+              Events
+            </li>
           </ul>
-          <div class="hidden">
+          <div class="md:hidden">
             <button
               class="w-10 h-10 relative focus:outline-none bg-black md:hidden z-[70]"
               @click="open = !open">
@@ -197,7 +210,7 @@
           </div>
         </div>
         <button
-          class="md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none block font-montserrat"
+          class="hidden md:block md:py-3 cursor-pointer hover:!cursor-pointer active:bg-custom-ash transition-all duration-300 md:duration-300 overflow-hidden w-fit px-3.5 py-2 sm:px-4 sm:py-2.5 bg-custom-yellow hover:bg-off-yellow font-semibold !border-none !outline-none font-montserrat"
           @click=" open = false, showModal = !showModal">
           Contact us
         </button>
@@ -255,6 +268,15 @@
             onsubmit="SubmitContactForm(event)"
             method="POST"
             class="w-full space-y-2.5 text-base md:text-lg">
+            <select
+              id="selectType"
+              name="selectType"
+              class="w-full p-2 md:p-2.5 focus:!outline-white focus:!ring-custom-yellow text-sm sm:text-base md:text-lg border border-custom-ash">
+              <option value="" disabled selected>I'm a (Select)</option>
+              <option value="company">Company</option>
+              <option value="influencer">Influencer</option>
+              <option value="others">Others</option>
+            </select>
             <input
               type="text"
               name="author"
@@ -267,6 +289,7 @@
               name="email"
               class="w-full p-2 md:p-2.5 focus:!outline-white focus:!ring-custom-yellow text-sm sm:text-base md:text-lg border border-custom-ash"
               placeholder="Email" />
+            
             <input
               type="text"
               id="subject"
@@ -1678,158 +1701,258 @@
       class="section bg-black py-8 md:py-10 lg:py-14 overflow-hidden">
       <div class="w-11/12 md:w-full 2xl:w-[1400px] mx-auto">
         <h2
-          class="md:text-center text-3xl md:text-4xl lg:text-5xl w-fit md:mx-auto text-custom-yellow font-black mb-8 md:mb-16 text-[#f3f3f3] font-helveticaneue-condensedblack"
+          class="md:text-center text-3xl md:text-4xl lg:text-5xl w-fit md:mx-auto text-custom-yellow font-black mb-8 md:mb-16 font-helveticaneue-condensedblack"
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100">
           What We Believe
         </h2>
-        <!-- <div data-aos="fade-up" data-aos-duration="1300" data-aos-delay="100" class="md:hidden">
-          <iframe
-            class="w-full md:w-[75%] aspect-video mx-auto"
-            src="https://www.youtube.com/embed/5fj6Im0zA78?si=YdKeLJUsMMQWioYt"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
-        </div> -->
-
-        <!-- Mobile Carousel dropdown -->
-        <div class="w-11/12 mx-auto hidden">
-          <div class=" w-full bg-white flex justify-end">
-            <div>
-              <label
-                id="listbox-label"
-                class="block text-sm font-medium leading-6 text-gray-900">
-                Select Episode
-              </label>
-              <div class="relative mt-2">
-                <button
-                  type="button"
-                  class="relative w-[250px] cursor-default rounded-md bg-white py-1.5 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  aria-haspopup="listbox"
-                  aria-expanded="true"
-                  aria-labelledby="listbox-label">
-                  <span class="flex items-center">
-                    <span class="ml-3 block truncate border">Episode One</span>
-                  </span>
-                  <span
-                    class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
-                    <svg
-                      class="h-5 w-5 text-gray-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true">
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
-                        clip-rule="evenodd" />
-                    </svg>
-                  </span>
-                </button>
-
-                <!--
-                  Select popover, show/hide based on select state.
-            
-                  Entering: ""
-                    From: ""
-                    To: ""
-                  Leaving: "transition ease-in duration-100"
-                    From: "opacity-100"
-                    To: "opacity-0"
-                -->
-                <ul
-                  class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-                  tabindex="-1"
-                  role="listbox"
-                  aria-labelledby="listbox-label"
-                  aria-activedescendant="listbox-option-3">
-                  <!--
-                    Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
-            
-                    Highlighted: "bg-indigo-600 text-white", Not Highlighted: "text-gray-900"
-                  -->
-                  <li
-                    class="relative cursor-default select-none py-2 pr-9 text-gray-900"
-                    id="listbox-option-0"
-                    role="option">
-                    <div class="flex items-center">
-                      <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-                      <span class="ml-3 block truncate font-normal">
-                        Episode One
-                      </span>
-                    </div>
-
-                    <!--
-                      Checkmark, only display for selected option.
-            
-                      Highlighted: "text-white", Not Highlighted: "text-indigo-600"
-                    -->
-                    <span
-                      class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600">
-                      <svg
-                        class="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true">
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                          clip-rule="evenodd" />
-                      </svg>
-                    </span>
-                  </li>
-
-                  <!-- More items... -->
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- Highlight Carousel -->
         <div
           data-aos="fade-up"
           data-aos-duration="1300"
           data-aos-delay="100"
-          class="relative w-full font-montserrat flex flex-col md:flex-row aspect-video md:aspect-auto">
+          class="relative z-0 w-full font-montserrat flex flex-col md:flex-row aspect-video md:aspect-auto">
+          <!-- Mobile Carousel dropdown -->
+          <div class="mb-6 relative md:hidden top-0 left-0 z-[90] inset-0">
+            <div class="text-gray-900 antialiased">
+              <div class="">
+                <div class="w-full max-w-[160px]">
+                  <div
+                    class="space-y-1"
+                    x-data="Components.customSelect({ open: false, value: 1, selected: 1 })"
+                    x-init="init()">
+                    <div class="relative">
+                      <span class="inline-block w-full rounded-md shadow-sm">
+                        <button
+                          x-ref="button"
+                          @click="onButtonClick()"
+                          type="button"
+                          aria-haspopup="listbox"
+                          :aria-expanded="open"
+                          aria-labelledby="assigned-to-label"
+                          class="cursor-default relative w-full rounded-md border border-gray-300 text-black bg-white font-medium pl-2 pr-6 py-1.5 text-left focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition ease-in-out duration-150 text-[12px] sm:leading-5">
+                          <div class="flex items-center space-x-3">
+                            <span
+                              x-text="['Season 1 Episode 1', 'Season 1 Episode 2', 'Season 1 Episode 3', 'Season 2 Episode 1'][value - 1]"
+                              class="block truncate">
+                              Season 1 Episode 1
+                            </span>
+                          </div>
+                          <span
+                            class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                            <svg
+                              class="h-5 w-5 text-gray-400"
+                              fill="currentColor"
+                              viewBox="0 0 20 20">
+                              <path
+                                d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                                fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                        </button>
+                      </span>
+                      <div
+                        x-show="open"
+                        @focusout="onEscape()"
+                        @click.away="open = false"
+                        x-description="Select popover, show/hide based on select state."
+                        x-transition:leave="transition ease-in duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        class="absolute mt-1 w-full rounded-md bg-white shadow-lg z-[999]"
+                        style="display: none">
+                        <ul
+                          @keydown.enter.stop.prevent="onOptionSelect()"
+                          @keydown.space.stop.prevent="onOptionSelect()"
+                          @keydown.escape="onEscape()"
+                          @keydown.arrow-up.prevent="onArrowUp()"
+                          @keydown.arrow-down.prevent="onArrowDown()"
+                          x-ref="listbox"
+                          tabindex="-1"
+                          role="listbox"
+                          aria-labelledby="assigned-to-label"
+                          :aria-activedescendant="activeDescendant"
+                          class="max-h-56 rounded-md py-1 leading-6 shadow-xs overflow-auto focus:outline-none text-[12px] sm:leading-5">
+                          <li
+                            id="assigned-to-option-1"
+                            role="option"
+                            @click="choose(1)"
+                            @mouseenter="selected = 1"
+                            @mouseleave="selected = null"
+                            :class="{ 'text-white bg-custom-yellow': selected === 1, 'text-gray-900': !(selected === 1) }"
+                            class="text-gray-900 cursor-default select-none relative py-1.5 pl-2 pr-7">
+                            <div class="flex items-center space-x-3">
+                              <span
+                                :class="{ 'font-semibold': value === 1, 'font-normal': !(value === 1) }"
+                                class="font-normal block truncate">
+                                Season 1 Episode 1
+                              </span>
+                            </div>
+                            <span
+                              x-show="value === 1"
+                              :class="{ 'text-white': selected === 1, 'text-custom-yellow': !(selected === 1) }"
+                              class="absolute inset-y-0 right-0 flex items-center pr-2 text-custom-yellow"
+                              style="display: none">
+                              <svg
+                                class="h-5 w-5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"></path>
+                              </svg>
+                            </span>
+                          </li>
+                          <li
+                            id="assigned-to-option-2"
+                            role="option"
+                            @click="choose(2)"
+                            @mouseenter="selected = 2"
+                            @mouseleave="selected = null"
+                            aria-selected="true"
+                            :class="{ 'text-white bg-custom-yellow': selected === 2, 'text-gray-900': !(selected === 2) }"
+                            class="text-gray-900 cursor-default select-none relative py-1.5 pl-2 pr-7">
+                            <div class="flex items-center space-x-3">
+                              <span
+                                :class="{ 'font-semibold': value === 2, 'font-normal': !(value === 2) }"
+                                class="font-normal block truncate">
+                                Season 1 Episode 2
+                              </span>
+                            </div>
+                            <span
+                              x-show="value === 2"
+                              :class="{ 'text-white': selected === 2, 'text-custom-yellow': !(selected === 2) }"
+                              class="absolute inset-y-0 right-0 flex items-center pr-2 text-custom-yellow"
+                              style="display: none">
+                              <svg
+                                class="h-5 w-5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"></path>
+                              </svg>
+                            </span>
+                          </li>
+                          <li
+                            id="assigned-to-option-3"
+                            role="option"
+                            @click="choose(3)"
+                            @mouseenter="selected = 3"
+                            @mouseleave="selected = null"
+                            :class="{ 'text-white bg-custom-yellow': selected === 3, 'text-gray-900': !(selected === 3) }"
+                            class="text-gray-900 cursor-default select-none relative py-1.5 pl-2 pr-7">
+                            <div class="flex items-center space-x-3">
+                              <span
+                                :class="{ 'font-semibold': value === 3, 'font-normal': !(value === 3) }"
+                                class="font-normal block truncate">
+                                Season 1 Episode 3
+                              </span>
+                            </div>
+                            <span
+                              x-show="value === 3"
+                              :class="{ 'text-white': selected === 3, 'text-custom-yellow': !(selected === 3) }"
+                              class="absolute inset-y-0 right-0 flex items-center pr-2 text-custom-yellow"
+                              style="display: none">
+                              <svg
+                                class="h-5 w-5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"></path>
+                              </svg>
+                            </span>
+                          </li>
+                          <li
+                            id="assigned-to-option-4"
+                            role="option"
+                            @click="choose(4)"
+                            @mouseenter="selected = 4"
+                            @mouseleave="selected = null"
+                            :class="{ 'text-white bg-custom-yellow': selected === 4, 'text-gray-900': !(selected === 4) }"
+                            class="bg-custom-yellow text-white cursor-default select-none relative py-1.5 pl-2 pr-7">
+                            <div class="flex items-center space-x-3">
+                              <span
+                                :class="{ 'font-semibold': value === 4, 'font-normal': !(value === 4) }"
+                                class="font-semibold block truncate">
+                                Season 2 Episode 1
+                              </span>
+                            </div>
+                            <span
+                              x-show="value === 4"
+                              :class="{ 'text-white': selected === 4, 'text-custom-yellow': !(selected === 4) }"
+                              class="absolute inset-y-0 right-0 flex items-center pr-2 text-white">
+                              <svg
+                                class="h-5 w-5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"></path>
+                              </svg>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Carousel indicators -->
           <div
-            class="highlights hidden w-[300px] md:flex flex-row md:!flex-col font-montserrat z-30">
+            class="highlights hidden w-[300px] md:flex flex-row md:!flex-col font-montserrat z-[999]">
             <button
               type="button"
               id="highlight-one-button"
-              class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group highlightButton active-service-button">
+              class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group highlightButton active-service-button z-[999]">
               <p
                 class="text-center md:!text-left text-sm font-semibold md:text-lg flex flex-col">
+                Season 1
+                <br />
                 Episode 1
               </p>
             </button>
             <button
               type="button"
               id="highlight-two-button"
-              class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group highlightButton unactive-service-button">
+              class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group highlightButton unactive-service-button z-[999]">
               <p
                 class="text-center md:!text-left text-sm font-semibold md:text-lg flex flex-col">
+                Season 1
+                <br />
                 Episode 2
               </p>
             </button>
             <button
               type="button"
               id="highlight-three-button"
-              class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group highlightButton unactive-service-button">
+              class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group highlightButton unactive-service-button z-[999]">
               <p
                 class="text-center md:!text-left text-sm font-semibold md:text-lg flex flex-col">
+                Season 1
+                <br />
                 Episode 3
               </p>
             </button>
             <button
               type="button"
               id="highlight-four-button"
-              class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group highlightButton unactive-service-button">
+              class="w-full h-full aspect-video md:aspect-auto flex items-center justify-center border-b border-[#2a2c37] cursor-pointer group highlightButton unactive-service-button z-[999]">
               <p
                 class="text-center md:!text-left text-sm font-semibold md:text-lg flex flex-col">
+                Season 1
+                <br />
                 Episode 4
               </p>
             </button>
@@ -1841,10 +1964,11 @@
               <div
                 class="swiper-slide h-full relative w-full aspect-video md:aspect-auto">
                 <iframe
-                  class="w-full aspect-video mx-auto"
+                  class="w-full aspect-video mx-auto relative"
                   src="https://www.youtube.com/embed/5fj6Im0zA78?si=AWihFhKMhGLJ9rSX"
                   title="YouTube video player"
                   frameborder="0"
+                  style="z-index: 0 !important"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen></iframe>
@@ -3409,6 +3533,10 @@
       const firstEventSwiperImages = document.querySelectorAll(".firstSet");
 
       var eventSwiperOne = new Swiper(".eventSwiperOne", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -3467,6 +3595,10 @@
       const secondEventSwiperImages = document.querySelectorAll(".secondSet");
 
       var eventSwiperTwo = new Swiper(".eventSwiperTwo", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -3524,6 +3656,10 @@
     <script>
       const thirdEventSwiperImages = document.querySelectorAll(".thirdSet");
       var eventSwiperThree = new Swiper(".eventSwiperThree", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -3581,6 +3717,10 @@
     <script>
       const fourthEventSwiperImages = document.querySelectorAll(".fourthSet");
       var eventSwiperFour = new Swiper(".eventSwiperFour", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -3638,6 +3778,10 @@
     <script>
       const fifthEventSwiperImages = document.querySelectorAll(".fifthSet");
       var eventSwiperFive = new Swiper(".eventSwiperFive", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -3695,6 +3839,10 @@
     <script>
       const sixthEventSwiperImages = document.querySelectorAll(".sixthSet");
       var eventSwiperSix = new Swiper(".eventSwiperSix", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -3752,6 +3900,10 @@
     <script>
       const seventhEventSwiperImages = document.querySelectorAll(".seventhSet");
       var eventSwiperSeven = new Swiper(".eventSwiperSeven", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -3809,6 +3961,10 @@
     <script>
       const eigthEventSwiperImages = document.querySelectorAll(".eigthSet");
       var eventSwiperEight = new Swiper(".eventSwiperEight", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -3866,6 +4022,10 @@
     <script>
       const ninthEventSwiperImages = document.querySelectorAll(".ninthSet");
       var eventSwiperNine = new Swiper(".eventSwiperNine", {
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         spaceBetween: 30,
         centeredSlides: true,
         speed: 1500,
@@ -4013,6 +4173,41 @@
         highlightSwiper.slideTo(2);
       });
       highlightFourButton.addEventListener("click", function () {
+        highlightSwiper.slideTo(3);
+      });
+
+      highlightPrevButton.addEventListener("click", function () {
+        highlightSwiper.slidePrev(); // Go to the previous slide
+      });
+
+      highlightNextButton.addEventListener("click", function () {
+        highlightSwiper.slideNext(); // Go to the next slide
+      });
+
+      const highlightOneSelect = document.getElementById(
+        "assigned-to-option-1"
+      );
+      const highlightTwoSelect = document.getElementById(
+        "assigned-to-option-2"
+      );
+      const highlightThreeSelect = document.getElementById(
+        "assigned-to-option-3"
+      );
+      const highlightFourSelect = document.getElementById(
+        "assigned-to-option-4"
+      );
+
+      // Event Listeners for the service buttons
+      highlightOneSelect.addEventListener("click", function () {
+        highlightSwiper.slideTo(0);
+      });
+      highlightTwoSelect.addEventListener("click", function () {
+        highlightSwiper.slideTo(1);
+      });
+      highlightThreeSelect.addEventListener("click", function () {
+        highlightSwiper.slideTo(2);
+      });
+      highlightFourSelect.addEventListener("click", function () {
         highlightSwiper.slideTo(3);
       });
 
@@ -4206,6 +4401,75 @@
         serviceSwiper.slideNext(); // Go to the next slide
         serviceWordSwiper.slideNext();
       });
+    </script>
+    <script>
+      window.Components = {
+        customSelect(options) {
+          return {
+            init() {
+              this.$refs.listbox.focus();
+              this.optionCount = this.$refs.listbox.children.length;
+              this.$watch("selected", value => {
+                if (!this.open) return;
+
+                if (this.selected === null) {
+                  this.activeDescendant = "";
+                  return;
+                }
+
+                this.activeDescendant =
+                  this.$refs.listbox.children[this.selected - 1].id;
+              });
+            },
+            activeDescendant: null,
+            optionCount: null,
+            open: false,
+            selected: null,
+            value: 1,
+            choose(option) {
+              this.value = option;
+              this.open = false;
+            },
+            onButtonClick() {
+              if (this.open) return;
+              this.selected = this.value;
+              this.open = true;
+              this.$nextTick(() => {
+                this.$refs.listbox.focus();
+                this.$refs.listbox.children[this.selected - 1].scrollIntoView({
+                  block: "nearest"
+                });
+              });
+            },
+            onOptionSelect() {
+              if (this.selected !== null) {
+                this.value = this.selected;
+              }
+              this.open = false;
+              this.$refs.button.focus();
+            },
+            onEscape() {
+              this.open = false;
+              this.$refs.button.focus();
+            },
+            onArrowUp() {
+              this.selected =
+                this.selected - 1 < 1 ? this.optionCount : this.selected - 1;
+              this.$refs.listbox.children[this.selected - 1].scrollIntoView({
+                block: "nearest"
+              });
+            },
+            onArrowDown() {
+              this.selected =
+                this.selected + 1 > this.optionCount ? 1 : this.selected + 1;
+              this.$refs.listbox.children[this.selected - 1].scrollIntoView({
+                block: "nearest"
+              });
+            },
+            ...options
+          };
+        }
+      };
     </script>
 
     <!-- Initialize Mobile Swiper -->
