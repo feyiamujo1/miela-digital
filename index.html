@@ -272,10 +272,28 @@
               id="selectType"
               name="selectType"
               class="w-full p-2 md:p-2.5 focus:!outline-white focus:!ring-custom-yellow text-sm sm:text-base md:text-lg border border-custom-ash">
-              <option value="" class="!text-[#9ba3af] text-sm sm:text-base md:text-lg" disabled selected><span class="text-[#f6f6f6]">I am (Select)</span></option>
-              <option value="A company" class="!text-[#9ba3af] text-sm sm:text-base md:text-lg">Company</option>
-              <option value="An influencer" class="!text-[#9ba3af] text-sm sm:text-base md:text-lg">Influencer</option>
-              <option value="Other" class="!text-[#9ba3af] text-sm sm:text-base md:text-lg">Others</option>
+              <option
+                value=""
+                class="!text-[#9ba3af] text-sm sm:text-base md:text-lg"
+                disabled
+                selected>
+                <span class="text-[#f6f6f6]">I am (Select)</span>
+              </option>
+              <option
+                value="A company"
+                class="!text-[#9ba3af] text-sm sm:text-base md:text-lg">
+                Company
+              </option>
+              <option
+                value="An influencer"
+                class="!text-[#9ba3af] text-sm sm:text-base md:text-lg">
+                Influencer
+              </option>
+              <option
+                value="Other"
+                class="!text-[#9ba3af] text-sm sm:text-base md:text-lg">
+                Others
+              </option>
             </select>
             <input
               type="text"
@@ -289,7 +307,7 @@
               name="email"
               class="w-full p-2 md:p-2.5 focus:!outline-white focus:!ring-custom-yellow text-sm sm:text-base md:text-lg border border-custom-ash"
               placeholder="Email" />
-            
+
             <input
               type="text"
               id="subject"
@@ -1708,8 +1726,9 @@
           What We Believe
         </h2>
         <p class="md:text-lg text-white font-montserrat md:text-center mb-12">
-            Talents is our podcast where we discuss about our experience and how to do effective campaigns.
-          </p>
+          Talents is our podcast where we discuss about our experience and how
+          to do effective campaigns.
+        </p>
 
         <!-- Highlight Carousel -->
         <div
@@ -2237,7 +2256,7 @@
             @click=" open = false, showEventSliderThree = !showEventSliderThree">
             <div class="relative w-full overflow-hidden">
               <img
-                src="./src/images/events/ICE-London-2024/S - 20240207160925_IMG_0013.JPG"
+                src="./src/images/events/ICE-London-2024/London.png"
                 alt=""
                 class="relative z-0 w-full object-cover bg-white group-hover:scale-[105%] duration-500 transition-all aspect-video" />
             </div>
@@ -2549,7 +2568,7 @@
               <div
                 class="swiper-slide h-full relative w-full aspect-video eventSwiperImage thirdSet">
                 <img
-                  src="./src/images/events/ICE-London-2024/S - 20240207160925_IMG_0013.JPG"
+                  src="./src/images/events/ICE-London-2024/London.png"
                   alt=""
                   class="relative z-0 w-full object-cover bg-white aspect-video" />
               </div>
@@ -2569,7 +2588,6 @@
                   alt=""
                   class="relative z-0 w-full object-cover bg-white aspect-video" />
               </div>
-              
             </div>
             <!-- Carousel Nav buttons -->
             <div
@@ -2760,7 +2778,7 @@
               <div
                 class="swiper-slide h-full relative w-full aspect-video eventSwiperImage fifthSet">
                 <img
-                  src="./src/images/events/PGS-Lima-2024/E-CHB_1412.jpg"
+                  src="./src/images/events/PGS-Lima-2024/PSG.png"
                   alt=""
                   class="relative z-0 w-full object-cover bg-white aspect-video" />
               </div>
@@ -2933,38 +2951,6 @@
                 class="swiper-slide h-full relative w-full aspect-video eventSwiperImage seventhSet">
                 <img
                   src="./src/images/events/SBC-Miami/IMG_2164.JPG"
-                  alt=""
-                  class="relative z-0 w-full object-cover bg-white aspect-video" />
-              </div>
-              <!--Item 2 -->
-              <div
-                class="swiper-slide h-full relative w-full aspect-video eventSwiperImage seventhSet">
-                <img
-                  src="./src/images/events/SBC-Miami/IMG_2165.JPG"
-                  alt=""
-                  class="relative z-0 w-full object-cover bg-white aspect-video" />
-              </div>
-              <!--Item 3 -->
-              <div
-                class="swiper-slide h-full relative w-full aspect-video eventSwiperImage seventhSet">
-                <img
-                  src="./src/images/events/SBC-Miami/IMG_2169.JPG"
-                  alt=""
-                  class="relative z-0 w-full object-top object-cover bg-white aspect-video" />
-              </div>
-              <!--Item 4 -->
-              <div
-                class="swiper-slide h-full relative w-full aspect-video eventSwiperImage seventhSet">
-                <img
-                  src="./src/images/events/SBC-Miami/IMG_2170.JPG"
-                  alt=""
-                  class="relative z-0 w-full object-top object-cover bg-white aspect-video" />
-              </div>
-              <!--Item 5 -->
-              <div
-                class="swiper-slide h-full relative w-full aspect-video eventSwiperImage seventhSet">
-                <img
-                  src="./src/images/events/SBC-Miami/IMG_2171.JPG"
                   alt=""
                   class="relative z-0 w-full object-cover bg-white aspect-video" />
               </div>
@@ -3897,6 +3883,10 @@
                   "opacity-50",
                   "pointer-events-none"
                 );
+                eventSevenSwiperNextButton.classList.add(
+                  "opacity-50",
+                  "pointer-events-none"
+                );
               } else if (activeIndex === seventhEventSwiperImages.length - 1) {
                 eventSevenSwiperNextButton.classList.add(
                   "opacity-50",
@@ -3920,6 +3910,14 @@
           prevEl: ".events-seven-carousel-prev-button"
         }
       });
+      eventSevenSwiperPrevButton.classList.add(
+        "opacity-50",
+        "pointer-events-none"
+      );
+      eventSevenSwiperNextButton.classList.add(
+        "opacity-50",
+        "pointer-events-none"
+      );
 
       const eventSevenSwiperPrevButton = document.getElementById(
         "events-seven-carousel-prev-button"
