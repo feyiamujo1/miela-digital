@@ -2226,7 +2226,7 @@
         </div>
         <div
           class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 2xl:gap-7">
-          <!-- <div
+          <div
             data-aos="zoom-in"
             data-aos-duration="1300"
             data-aos-delay="100"
@@ -2234,15 +2234,15 @@
             @click=" open = false, showEventSliderTwo = !showEventSliderTwo">
             <div class="relative w-full overflow-hidden">
               <img
-                src="./src/images/events/Gamers-City-Santiago-2023/20230416_161829.jpg"
+                src="./src/images/events/Tokyo-games/tokyo-1.jpeg"
                 alt=""
                 class="relative z-0 w-full object-cover bg-white group-hover:scale-[105%] duration-500 transition-all aspect-video" />
             </div>
             <p
               class="w-full text-lg font-medium line-clamp-2 text-ellipsis group-hover:text-[#878787] duration-500 transition-all">
-              Gamers City Santiago 2023
+              Tokyo Game Show 2024
             </p>
-          </div> -->
+          </div>
           <div
             data-aos="zoom-in"
             data-aos-duration="1300"
@@ -2266,8 +2266,7 @@
             data-aos-duration="1300"
             data-aos-delay="100"
             class="w-full space-y-2 overflow-hidden cursor-pointer group"
-            @click=" open = false, showEventSliderFive = !showEventSliderFive"
-            >
+            @click=" open = false, showEventSliderFive = !showEventSliderFive">
             <div class="relative w-full overflow-hidden">
               <img
                 src="./src/images/events/PGS-Lima-2024/E- CHB_1397.jpg"
@@ -2280,22 +2279,22 @@
             </p>
           </div>
           <div
-          data-aos="zoom-in"
-          data-aos-duration="1300"
-          data-aos-delay="100"
-          class="w-full space-y-2 overflow-hidden cursor-pointer group event-control-Image"
-          @click=" open = false, showEventSliderEight = !showEventSliderEight">
-          <div class="relative w-full overflow-hidden">
-            <img
-              src="./src/images/events/SIGMA-Manila-2024/MIELA Digital 05.06.2024 037.jpg"
-              alt=""
-              class="relative z-0 w-full object-cover bg-white group-hover:scale-[105%] duration-500 transition-all aspect-video" />
+            data-aos="zoom-in"
+            data-aos-duration="1300"
+            data-aos-delay="100"
+            class="w-full space-y-2 overflow-hidden cursor-pointer group event-control-Image"
+            @click=" open = false, showEventSliderEight = !showEventSliderEight">
+            <div class="relative w-full overflow-hidden">
+              <img
+                src="./src/images/events/SIGMA-Manila-2024/MIELA Digital 05.06.2024 037.jpg"
+                alt=""
+                class="relative z-0 w-full object-cover bg-white group-hover:scale-[105%] duration-500 transition-all aspect-video" />
+            </div>
+            <p
+              class="w-full text-lg font-medium line-clamp-2 text-ellipsis group-hover:text-[#878787] duration-500 transition-all">
+              SIGMA Manila 2024
+            </p>
           </div>
-          <p
-            class="w-full text-lg font-medium line-clamp-2 text-ellipsis group-hover:text-[#878787] duration-500 transition-all">
-            SIGMA Manila 2024
-          </p>
-        </div>
           <div
             data-aos="zoom-in"
             data-aos-duration="1300"
@@ -2386,6 +2385,101 @@
     </section>
 
     <!-- Events Slider 1 -->
+    <div
+      class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
+      x-show.transition.opacity.duration.600ms="showEventSliderTwo"
+      :class="{' block opacity-100': showEventSliderTwo, ' hidden scale-75': !showEventSliderTwo}">
+      <div
+        class="w-11/12 md:w-9/12 mx-auto gap-3 md:gap-5 relative rounded-sm transition-all duration-500"
+        x-show.transition.scale.duration.800ms="showEventSliderTwo"
+        x-transition.delay.50ms>
+        <div @click.away="showEventSliderTwo = false" class="mx-auto relative">
+          <div class="swiper eventSwiperTwo w-full relative">
+            <div class="swiper-wrapper">
+              <!-- Item 1 -->
+              <div
+                class="swiper-slide h-full relative w-full aspect-video eventSwiperImage secondSet">
+                <img
+                  src="./src/images/events/Tokyo-games/tokyo-1.jpeg"
+                  alt=""
+                  class="relative z-0 w-full object-cover bg-white aspect-video" />
+              </div>
+              <div
+                class="swiper-slide h-full relative w-full aspect-video eventSwiperImage secondSet">
+                <img
+                  src="./src/images/events/Tokyo-games/tokyo-2.jpeg"
+                  alt=""
+                  class="relative z-0 w-full object-cover bg-white aspect-video" />
+              </div>
+              <div
+                class="swiper-slide h-full relative w-full aspect-video eventSwiperImage secondSet">
+                <img
+                  src="./src/images/events/Tokyo-games/tokyo-3.jpeg"
+                  alt=""
+                  class="relative z-0 w-full object-cover bg-white aspect-video" />
+              </div>
+            </div>
+            <!-- Carousel Nav buttons -->
+            <div
+              class="absolute w-full h-fit p-2.5 pb-3 md:p-10 md:pb-12 2xl:pb-24 z-30 top-0 bottom-0 left-0 right-0 m-auto">
+              <div class="flex w-full justify-between items-center">
+                <button
+                  type="button"
+                  id="events-two-carousel-prev-button"
+                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group opacity-50 pointer-events-none">
+                  <svg
+                    class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 492 492"
+                    xml:space="preserve">
+                    <g>
+                      <g>
+                        <path
+                          d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124
+    c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844
+    L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412
+    c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008
+    c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788
+    C492,219.198,479.172,207.418,464.344,207.418z" />
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  id="events-two-carousel-next-button"
+                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
+                  <svg
+                    class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 492.004 492.004"
+                    xml:space="preserve">
+                    <g>
+                      <g>
+                        <path
+                          d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136
+    c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002
+    v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864
+    c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872
+    l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z" />
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Events Slider 2 -->
     <div
       class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
       x-show.transition.opacity.duration.600ms="showEventSliderOne"
@@ -2481,88 +2575,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Events Slider 2 -->
-    <!-- <div
-      class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
-      x-show.transition.opacity.duration.600ms="showEventSliderTwo"
-      :class="{' block opacity-100': showEventSliderTwo, ' hidden scale-75': !showEventSliderTwo}">
-      <div
-        class="w-11/12 md:w-9/12 mx-auto gap-3 md:gap-5 relative rounded-sm transition-all duration-500"
-        x-show.transition.scale.duration.800ms="showEventSliderTwo"
-        x-transition.delay.50ms>
-        <div @click.away="showEventSliderTwo = false" class="mx-auto relative">
-          <div class="swiper eventSwiperTwo w-full relative">
-            <div class="swiper-wrapper">
-              Item 1
-              <div
-                class="swiper-slide h-full relative w-full aspect-video eventSwiperImage secondSet">
-                <img
-                  src="./src/images/events/Gamers-City-Santiago-2023/20230416_161829.jpg"
-                  alt=""
-                  class="relative z-0 w-full object-cover bg-white aspect-video" />
-              </div>
-            </div>
-            Carousel Nav buttons
-            <div
-              class="absolute w-full h-fit p-2.5 pb-3 md:p-10 md:pb-12 2xl:pb-24 z-30 top-0 bottom-0 left-0 right-0 m-auto">
-              <div class="flex w-full justify-between items-center">
-                <button
-                  type="button"
-                  id="events-two-carousel-prev-button"
-                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group opacity-50 pointer-events-none">
-                  <svg
-                    class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
-                    version="1.1"
-                    id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 492 492"
-                    xml:space="preserve">
-                    <g>
-                      <g>
-                        <path
-                          d="M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124
-    c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844
-    L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412
-    c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008
-    c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788
-    C492,219.198,479.172,207.418,464.344,207.418z" />
-                      </g>
-                    </g>
-                  </svg>
-                </button>
-                <button
-                  type="button"
-                  id="events-two-carousel-next-button"
-                  class="rounded-full w-8 h-8 sm:w-10 sm:h-10 p-2.5 flex items-center justify-center bg-black bg-opacity-75 hover:bg-opacity-100 transition-opacity duration-300 group">
-                  <svg
-                    class="w-full fill-white group-hover:scale-90 transition-[scale] duration-300"
-                    version="1.1"
-                    id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 492.004 492.004"
-                    xml:space="preserve">
-                    <g>
-                      <g>
-                        <path
-                          d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136
-    c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002
-    v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864
-    c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872
-    l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z" />
-                      </g>
-                    </g>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <!-- Events Slider 3 -->
     <div
       class="white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.3)] backdrop-blur-sm fixed z-50 top-0 bottom-0 left-0 right-0 opacity-0"
@@ -3564,7 +3576,7 @@
     </script>
 
     <!-- Events Swipers 2-->
-    <!-- <script>
+    <script>
       const secondEventSwiperImages = document.querySelectorAll(".secondSet");
 
       var eventSwiperTwo = new Swiper(".eventSwiperTwo", {
@@ -3617,13 +3629,13 @@
       );
 
       eventTwoSwiperPrevButton.addEventListener("click", function () {
-        eventSwiperTwo.slidePrev(); 
+        eventSwiperTwo.slidePrev();
       });
 
       eventTwoSwiperNextButton.addEventListener("click", function () {
-        eventSwiperTwo.slideNext(); 
+        eventSwiperTwo.slideNext();
       });
-    </script> -->
+    </script>
 
     <!-- Events Swipers 3-->
     <script>
@@ -3823,13 +3835,13 @@
           slideChange: () => {
             if (eventSwiperSix) {
               const activeIndex = eventSwiperSix.realIndex;
-              
+
               if (activeIndex === 0) {
                 eventSixSwiperPrevButton.classList.add(
                   "opacity-50",
                   "pointer-events-none"
                 );
-              } else if (activeIndex === sixthEventSwiperImages.length-1) {
+              } else if (activeIndex === sixthEventSwiperImages.length - 1) {
                 eventSixSwiperNextButton.classList.add(
                   "opacity-50",
                   "pointer-events-none"
@@ -3861,11 +3873,11 @@
       );
 
       eventSixSwiperPrevButton.addEventListener("click", function () {
-        eventSwiperSix.slidePrev(); 
+        eventSwiperSix.slidePrev();
       });
 
       eventSixSwiperNextButton.addEventListener("click", function () {
-        eventSwiperSix.slideNext(); 
+        eventSwiperSix.slideNext();
       });
     </script>
 
